@@ -1,149 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title>Inventario TIC</title>
-  <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+<meta charset="utf-8">
+ <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">-->
+ <meta http-equiv="Content-Security-Policy" content="default-src https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://www.gstatic.com https://apis.google.com https://yzmaya.github.io https://vue-test-e6acb.firebaseapp.com https://www.googleapis.com; worker-src 'none'; object-src 'none'">
+<meta name="google-site-verification" content="S2jThbJL30wF4EeZVQDVUEm4cHdOrkEuSpwlPddAbDI" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+ 
 </head>
 <body>
 
 <div class="container">
-	
+ <h1>Inventario TIC</h1>
 
-	<div class="alert" style="text-align: center;">
-    <h3><strong>Inventario general de recursos de tecnologías de la información en oficinas centrales</strong></h3>
-  </div>
-  <br>
-  <form class="form-horizontal" action="">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Unidad o Dirección General:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="dgeneral" placeholder="" name="">
-      </div>
-    </div>
-    <span></span>
-    <div class="alert alert-success">
-    <strong>I RECURSOS HUMANOS</strong>
-  </div>
-    <p><strong>PERSONAL RESPONSABLE</strong></p>
-  <div class="table-responsive form-horizontal">          
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Nombre</th>
-        <th>Cargo</th>
-        <th>Sede</th>
-        <th>Teléfono</th>
-        <th>Correo Electrónico</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="col-sm-2">Responsable de TIC en la UR</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-      </tr>
-      <tr>
-        <td class="col-sm-2">Responsable de desarrollo y mantenimiento de sistema informáticos</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-      </tr>
-      <tr>
-        <td class="col-sm-2">Responsable de soporte técnico y enlace informático ante la DGTIC</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
+   <!-- Modal -->
 
-  <strong>PERSONAL DE APOYO</strong>
-   <div class="table-responsive">          
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Especialidad</th>
-        <th>Nombre</th>
-        <th>Perfil Académico</th>
-        <th>Tipo de Plaza</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="col-sm-2">Desarrollo y mantenimiento de sistema informáticos</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><button type="button" class="btn btn-success">+</button></td>
-      </tr>
-      <tr>
-        <td class="col-sm-2">Soporte Técnico</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><button type="button" class="btn btn-success">+</button></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-
-<div class="alert alert-success">
-    <strong>II Equipamiento</strong>
-  </div>
-  <p><strong>COMPUTADORAS PERSONALES</strong></p>
-
-  <div class="table-responsive">          
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Inmueble</th>
-        <th>Perfil SAC o resúmen de características</th>
-        <th>Cantidad</th>
-        <th>Origen</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><button type="button" class="btn btn-success">+</button></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-
-<div class="alert alert-info">
-    <ol>
-    	<li>Agregue más filas y especifique los cargos si cuenta con personal que participa en otros servicios de TIC.</li>
-    	<li>Estructura, Eventual, Honorarios, Docente, Confianza o Base.</li>
-    	<li>Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo.</li>
-    	<li>Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc.</li>
-    </ol>
-  </div>
-
-
-
-
-  </form>
+  
 </div>
 
 
+<!--Esto es bootstrap  esta es la vista principal de redes sociales-->
+<div class="container">
+  <div class="login-container">
+            <div class=""><h3>Inicia Sesión</h3></div>
+            <div class="form-box">
+
+            </div>
+
+        </div>
+        
+</div>
+
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
