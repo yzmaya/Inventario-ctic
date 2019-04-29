@@ -1,8 +1,11 @@
-body{background: #eee 
+body{
+  background-color: #7BB0A8;
+  /*/background-image: url("img/fondo.png")*/ 
 }
 html,body{
     position: relative;
     height: 100%;
+
 }
 
 .error { color: red; }

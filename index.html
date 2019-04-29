@@ -5,42 +5,90 @@
 <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
 <meta charset="utf-8">
- <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">-->
- <meta http-equiv="Content-Security-Policy" content="default-src https://ajax.googleapis.com https://maxcdn.bootstrapcdn.com https://www.gstatic.com https://apis.google.com https://yzmaya.github.io https://vue-test-e6acb.firebaseapp.com https://www.googleapis.com; worker-src 'none'; object-src 'none'">
-<meta name="google-site-verification" content="S2jThbJL30wF4EeZVQDVUEm4cHdOrkEuSpwlPddAbDI" />
+ 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+
  
 </head>
-<body>
+<body >
 
-<div class="container">
- <h1>Inventario TIC</h1>
+	<div class="container">
 
-   <!-- Modal -->
-
-  
-</div>
-
-
-<!--Esto es bootstrap  esta es la vista principal de redes sociales-->
-<div class="container">
   <div class="login-container">
-            <div class=""><h3>Inicia Sesión</h3></div>
-            <div class="form-box">
-
-            </div>
-
-        </div>
-        
+            <div class=""><h3>Inventario TIC</h3></div>
+            
+               <form class="form-horizontal" >
+                <div class="form-group">
+                  <div class="">
+                    <input type="email" class="form-control" id="email" placeholder="Correo Electrónico" name="email" required="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="">          
+                    <input type="password" class="form-control" id="pwd" placeholder="Ingresar Contraseña" name="pwd" required="">
+                  </div>
+                </div>
+                <div class="form-group">        
+                  <div class="">
+                    <span><a href=""> ¿Olvidaste tu contraseña?</a></span><br><br>
+                    <button type="submit" class="btn btn-success">Iniciar Sesión</button>
+                  </div>
+                </div>
+                 <div class="form-group">        
+                  <div class="">
+                    <span>¿No tienes una cuenta? <a href="" data-target="#myModal" data-toggle="modal">Regístrate</a></span><br><br>
+                  </div>
+                </div>
+              </form>
 </div>
 
-<script type="text/javascript" src="js/app.js"></script>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Registrate</h4>
+        </div>
+        <div class="modal-body">
+        	
+				  <form action="">
+				    <div class="form-group">
+				      <label for="email">Correo Electrónico:</label>
+				      <input type="email" class="form-control" id="email" placeholder="Captura tu dirección de email" name="email">
+				    </div>
+				    <div class="form-group">
+				      <label for="pwd">Contraseña:</label>
+				      <input type="password" class="form-control" id="pwd" placeholder="Captura tu contraseña" name="pwd">
+				    </div>
+				    <button type="submit" class="btn btn-success">Listo!</button>
+				  </form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+
+
+
+
+</div>
+
 </body>
 </html>
