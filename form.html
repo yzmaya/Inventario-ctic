@@ -50,15 +50,15 @@
   </div>
     <p><strong>PERSONAL RESPONSABLE</strong></p>
   <div class="table-responsive form-horizontal">          
-  <table class="table table-bordered">
+  <table style="text-align: center;"   class="table table-bordered">
     <thead>
       <tr>
-        <th></th>
-        <th>Nombre</th>
-        <th>Cargo</th>
-        <th>Sede</th>
-        <th>Teléfono</th>
-        <th>Correo Electrónico</th>
+        <td></td>
+        <td>Nombre</td>
+        <td>Cargo</td>
+        <td>Sede</td>
+        <td>Teléfono</td>
+        <td>Correo Electrónico</td>
       </tr>
     </thead>
     <tbody>
@@ -92,14 +92,14 @@
 
   <strong>PERSONAL DE APOYO</strong>
    <div class="table-responsive">          
-  <table class="table table-bordered">
+  <table style="text-align: center;"   class="table table-bordered" id="tablaPersonalApoyo">
     <thead>
       <tr>
-        <th>Especialidad</th>
-        <th>Nombre</th>
-        <th>Perfil Académico</th>
-        <th>Tipo de Plaza</th>
-        <th></th>
+        <td>Especialidad</td>
+        <td>Nombre</td>
+        <td>Perfil Académico</td>
+        <td>Tipo de Plaza</td>
+        <td></td>
       </tr>
     </thead>
     <tbody>
@@ -107,15 +107,31 @@
         <td class="col-sm-2">Desarrollo y mantenimiento de sistema informáticos</td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><button type="button" class="btn btn-success">+</button></td>
+        <td><select class="form-control">
+          <option selected>Selecciona una Opción</option>
+          <option value="Estructura">Estructura</option>
+          <option value="Eventual">Eventual</option>
+          <option value="Honorarios">Honorarios</option>
+          <option value="Docente">Docente</option>
+          <option value="Confianza">Confianza</option>
+          <option value="Base">Base</option>
+        </select></td>
+        <td></td>
       </tr>
       <tr>
         <td class="col-sm-2">Soporte Técnico</td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><button type="button" class="btn btn-success">+</button></td>
+        <td><select class="form-control">
+          <option selected>Selecciona una Opción</option>
+          <option value="Estructura">Estructura</option>
+          <option value="Eventual">Eventual</option>
+          <option value="Honorarios">Honorarios</option>
+          <option value="Docente">Docente</option>
+          <option value="Confianza">Confianza</option>
+          <option value="Base">Base</option>
+        </select></td>
+        <td><button type="button" class="btn btn-success" data-toggle="tooltip" title="Agregue más filas y especifique los cargos si cuenta con personal que participa en otros servicios de TIC." onclick="agregarFilaPersonalApoyo()">+</button></td>
       </tr>
     </tbody>
   </table>
@@ -127,42 +143,391 @@
   <p><strong>COMPUTADORAS PERSONALES</strong></p>
 
   <div class="table-responsive">          
-  <table class="table table-bordered">
+  <table style="text-align: center;"   class="table table-bordered" id="tablaCompuPersonal">
     <thead>
       <tr>
-        <th>Inmueble</th>
-        <th>Perfil SAC o resúmen de características</th>
-        <th>Cantidad</th>
-        <th>Origen</th>
-        <th></th>
+        <td>Inmueble</td>
+        <td>Perfil SAC o resúmen de características</td>
+        <td>Cantidad</td>
+        <td>Origen</td>
+        <td></td>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><button type="button" class="btn btn-success">+</button></td>
+        <td><input type="text" class="form-control" placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." data-toggle="tooltip" title="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." ></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaCompusPersonales()">+</button></td>
       </tr>
     </tbody>
   </table>
   </div>
 
-<div class="alert alert-info">
-    <ol>
-      <li>Agregue más filas y especifique los cargos si cuenta con personal que participa en otros servicios de TIC.</li>
-      <li>Estructura, Eventual, Honorarios, Docente, Confianza o Base.</li>
-      <li>Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo.</li>
-      <li>Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc.</li>
-    </ol>
+ <p><strong>SERVIDORES</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaServidores">
+    <thead>
+      <tr>
+        <td>Ubicación</td>
+        <td>Resumen de características </td>
+        <td>Cantidad</td>
+        <td>Origen</td>
+        <td>Propósito</td>
+        <td></td>
+      </tr>
+    </thead>  
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." data-toggle="tooltip" title="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." ></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaServidores()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+   <p><strong>IMPRESORAS Y ESCÁNERES</strong></p>
+
+  <div class="table-responsive">         
+  <table style="text-align: center;"   class="table table-bordered" id="tablaImpEsc">
+    <thead>
+      <tr>
+        <td>Inmueble</td>
+        <td>Perfíl SAID ó resumen de características </td>
+        <td>Cantidad</td>
+        <td>Origen</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="" data-toggle="tooltip" title="Tipo de impresión o digitalización, velocidad, máxima resolución." placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución."></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaImpresorasEscaneres()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+<p><strong>EQUIPOS AUDIOVISUALES</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaEquipAudiovisual">
+    <thead>
+      <tr>
+        <td>Inmueble</td>
+        <td>Perfíl SAC ó resúmen de características </td>
+        <td>Cantidad</td>
+        <td>Origen</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" placeholder="Resolución, luminosidad, etc." id="" data-toggle="tooltip" title="Resolución, luminosidad, etc." ></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaEquiAudiovisual()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><strong>OTROS DISPOSITIVOS</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaOtrosDispositivos">
+    <thead>
+      <tr>
+        <td>Inmueble</td>
+        <td>Resúmen de características </td>
+        <td>Cantidad</td>
+        <td>Origen</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id="" data-toggle="tooltip" title="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." ></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc.""></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaOtrosDispositivos()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+<div class="alert alert-success">
+    <strong>III Servicios de Comunicaciones</strong>
+  </div>
+  <p><strong>TELEFONÍA IP</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaTelefoniaIp">
+    <thead>
+      <tr>
+        <td>Inmueble</td>
+        <td>Perfil RIMA</td>
+        <td>Cantidad</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="" data-toggle="tooltip" title="" ></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaTelIp()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+<p><strong>INFRAESTRUCTURA DE REDES</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaRedes">
+    <thead>
+      <tr>
+        <td>Inmueble</td>
+        <td>Resúmen de Características</td>
+        <td>Cantidad</td>
+        <td>Origen</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." data-toggle="tooltip" title="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." ></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaRedes()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+<div class="alert alert-success">
+    <strong>IV Licenciamiento</strong>
+  </div>
+  <p><strong>SOFTWARE COMERCIAL</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaSoftware">
+    <thead>
+      <tr>
+        <td>Paquete</td>
+        <td>Versión</td>
+        <td>Sistema Operativo</td>
+        <td>Cantidad de Licencias</td>
+        <td>Origen</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="" data-toggle="tooltip" title="" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaSoftware()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><strong>SOFTWARE LIBRE O EN EVALUACIÓN</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaSoftwareFree">
+    <thead>
+      <tr>
+        <td>Paquete</td>
+        <td>Versión</td>
+        <td>Sistema Operativo</td>
+        <td>Cantidad de Instalaciones</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="" data-toggle="tooltip" title="" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaSoftwareFree()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+  <div class="alert alert-success">
+    <strong>V Sistemas y aplicaciones</strong>
+  </div>
+  <p><strong>SISTEMAS INFORMÁTICOS EN PRODUCCIÓN</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaSystemProd">
+    <thead>
+      <tr>
+        <td>Nombre y Acrónimo del Sistema</td>
+        <td>Propósito</td>
+        <td>Desarrollo Interno o Contratado</td>
+        <td>¿Está debidamente Documentado?</td>
+        <td>Cantidad Estimada de Usuarios</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc." data-toggle="tooltip" title="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc."></td>
+        <td><input type="text" class="form-control" id="" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaSystemProd()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><strong>SISTEMAS INFORMÁTICOS EN DESARROLLO</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaSystemDes">
+    <thead>
+      <tr>
+        <td>Nombre y Acrónimo del Sistema</td>
+        <td>Propósito</td>
+        <td>Desarrollo Interno o Contratado</td>
+        <td>¿Está debidamente Documentado?</td>
+        <td>Cantidad Estimada de Usuarios</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc." data-toggle="tooltip" title="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc."></td>
+        <td><input type="text" class="form-control" id="" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaSystemDes()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
   </div>
 
 
 
+<div class="alert alert-success">
+    <strong>VI Otros Recursos</strong>
+  </div>
+  <p><strong>NECESIDADES DE TIC PENDIENTES DE ATENCIÓN</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaNecesidades">
+    <thead>
+      <tr>
+        <td>Tipo de Recurso</td>
+        <td>Propósito</td>
+        <td>Principales Características</td>
+        <td>Cantidad Requerida</td>
+        <td>Causa de la falta de atención</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc." data-toggle="tooltip" title="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc."></td>
+        <td><input type="text" class="form-control" id="" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaNecesidades()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
 
   </form>
 </div>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+
+function agregarFilaPersonalApoyo(){
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+
+function agregarFilaCompusPersonales(){
+  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaServidores(){
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaImpresorasEscaneres(){
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td>';
+}
+
+function agregarFilaEquiAudiovisual(){
+  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+
+function agregarFilaOtrosDispositivos(){
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaTelIp(){
+  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaRedes(){
+  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaSoftware(){
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaSoftwareFree(){
+  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaSystemProd(){
+  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+
+function agregarFilaSystemDes(){
+  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaNecesidades(){
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+</script>
 
 
 <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
