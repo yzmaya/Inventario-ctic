@@ -8,10 +8,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     if(user != null){
 
-      var email_id = user.email;
-      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-      console.log('usuario logueado con no null');
-
     }
 
   } else {
@@ -39,6 +35,51 @@ function login(){
 
 }
 
-function logout(){
-  firebase.auth().signOut();
+function cuentaNueva(){
+
+  var newEmail = document.getElementById('nuevo_email').value;
+  var newPwd = document.getElementById('nuevo_pwd').value;
+
+  firebase.auth().createUserWithEmailAndPassword(newEmail, newPwd).catch(function(error) {
+  // Handle Errors here.
+
+
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+
+  window.alert(errorMessage);
+});
 }
+
+
+function restablecePwd(){
+  var auth = firebase.auth();
+  
+var correo = document.getElementById('restablece_email').value;
+
+auth.sendPasswordResetEmail(correo).then(function() {
+  // Email sent.
+}).catch(function(error) {
+  // An error happened.
+  window.alert(error);
+});
+
+}
+
+
+
+// Añadir un listener en tiempo real
+ //  firebase.auth().onAuthStateChanged( firebaseUser => {
+//Si existe autenticación hacer.....
+   // if(firebaseUser) {
+     //    window.location.href = "form.html";
+    //} else {
+      //console.log('no logueado');
+
+    //}    
+  //});
+
+
+
+
