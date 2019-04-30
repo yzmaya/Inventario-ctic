@@ -9,34 +9,34 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
  
 </head>
-<body >
+<body style="background-color: #F6F6F6;">
 
 	<div class="container">
 
-  <div class="login-container">
+  <div class="login-container" id="login_div">
             <div class=""><h3>Inventario TIC</h3></div>
             
-               <form class="form-horizontal" >
+              
                 <div class="form-group">
                   <div class="">
-                    <input type="email" class="form-control" id="email" placeholder="Correo Electrónico" name="email" required="">
+                    <input type="email" class="form-control" id="campo_email" placeholder="Correo Electrónico" name="email" required="">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="">          
-                    <input type="password" class="form-control" id="pwd" placeholder="Ingresar Contraseña" name="pwd" required="">
+                    <input type="password" class="form-control" id="campo_pwd" placeholder="Ingresar Contraseña" name="pwd" required="">
                   </div>
                 </div>
                 <div class="form-group">        
                   <div class="">
                     <span><a href=""> ¿Olvidaste tu contraseña?</a></span><br><br>
-                    <button type="submit" class="btn btn-success">Iniciar Sesión</button>
+                    <button  class="btn btn-success" onclick="login()">Iniciar Sesión</button>
                   </div>
                 </div>
                  <div class="form-group">        
@@ -44,7 +44,7 @@
                     <span>¿No tienes una cuenta? <a href="" data-target="#myModal" data-toggle="modal">Regístrate</a></span><br><br>
                   </div>
                 </div>
-              </form>
+              
 </div>
 
 
@@ -81,14 +81,24 @@
       
     </div>
   </div>
-  
-
-
-
-
-
 
 </div>
 
+
+
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAOAkG1s0doBtE2xArxUJ4L039ic2xUO34",
+    authDomain: "proyecto-tic-294a3.firebaseapp.com",
+    databaseURL: "https://proyecto-tic-294a3.firebaseio.com",
+    projectId: "proyecto-tic-294a3",
+    storageBucket: "proyecto-tic-294a3.appspot.com",
+    messagingSenderId: "254246387905"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/app.js"></script>
 </body>
 </html>

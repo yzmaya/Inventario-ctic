@@ -11,6 +11,7 @@
 <body>
 
 <div class="container">
+  <button onclick="logout()">LOG OUT</button>
 	
 
 	<div class="alert" style="text-align: center;">
@@ -144,6 +145,19 @@
   </form>
 </div>
 
-
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAOAkG1s0doBtE2xArxUJ4L039ic2xUO34",
+    authDomain: "proyecto-tic-294a3.firebaseapp.com",
+    databaseURL: "https://proyecto-tic-294a3.firebaseio.com",
+    projectId: "proyecto-tic-294a3",
+    storageBucket: "proyecto-tic-294a3.appspot.com",
+    messagingSenderId: "254246387905"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/nolog.js"></script>
 </body>
 </html>
