@@ -25,19 +25,20 @@
         <li class="active"><a href="">Información Requerida</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="" onclick="logout()"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a></li>
       </ul>
     </div>
   </div>
 </nav>
   
-  <div class="container">
+<div class="container"></div>
+<button onclick="logout()">LOG OUT</button>
+  
 
   <div class="alert" style="text-align: center;">
     <h3><strong>Inventario general de recursos de tecnologías de la información en oficinas centrales</strong></h3>
   </div>
   <br>
-  <span id="info">span </span>
   <form class="form-horizontal" action="">
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Unidad o Dirección General:</label>
@@ -164,7 +165,6 @@
 
   </form>
 </div>
-
 
 <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 <script>
