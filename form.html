@@ -46,11 +46,11 @@
     </div>
     <span></span>
     <div class="alert alert-success">
-    <strong>I RECURSOS HUMANOS</strong>
+    <strong>I Recursos Humanos</strong>
   </div>
     <p><strong>PERSONAL RESPONSABLE</strong></p>
   <div class="table-responsive form-horizontal">          
-  <table style="text-align: center;"   class="table table-bordered">
+  <table style="text-align: center;"   class="table table-bordered" id="tablaPersonalResponsable">
     <thead>
       <tr>
         <td></td>
@@ -59,6 +59,7 @@
         <td>Sede</td>
         <td>Teléfono</td>
         <td>Correo Electrónico</td>
+        <td></td>
       </tr>
     </thead>
     <tbody>
@@ -69,6 +70,7 @@
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td></td>
       </tr>
       <tr>
         <td class="col-sm-2">Responsable de desarrollo y mantenimiento de sistema informáticos</td>
@@ -77,6 +79,7 @@
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td></td>
       </tr>
       <tr>
         <td class="col-sm-2">Responsable de soporte técnico y enlace informático ante la DGTIC</td>
@@ -85,6 +88,7 @@
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><button type="button" class="btn btn-success" data-toggle="tooltip" title="Agregue más filas." onclick="agregarFilaPersonalResponsable()">+</button></td>
       </tr>
     </tbody>
   </table>
@@ -199,7 +203,7 @@
     <thead>
       <tr>
         <td>Inmueble</td>
-        <td>Perfíl SAID ó resumen de características </td>
+        <td>Perfíl SAID o resumen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
         <td></td>
@@ -225,7 +229,7 @@
     <thead>
       <tr>
         <td>Inmueble</td>
-        <td>Perfíl SAC ó resúmen de características </td>
+        <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
         <td></td>
@@ -261,7 +265,7 @@
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><input type="text" class="form-control" placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id="" data-toggle="tooltip" title="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." ></td>
         <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc.""></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaOtrosDispositivos()">+</button></td>
       </tr>
     </tbody>
@@ -314,6 +318,31 @@
         <td><input type="number" class="form-control" ></td>
         <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaRedes()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+   <p><strong>OTROS SERVICIOS</strong></p>
+
+  <div class="table-responsive">          
+  <table style="text-align: center;"   class="table table-bordered" id="tablaOtrosServicios">
+    <thead>
+      <tr>
+        <td>Inmueble</td>
+        <td>Resúmen de características </td>
+        <td>Cantidad</td>
+        <td>Origen</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" placeholder="" id="" data-toggle="tooltip" title="" ></td>
+        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaOtrosServicios()">+</button></td>
       </tr>
     </tbody>
   </table>
@@ -398,7 +427,7 @@
         <td><input type="text" class="form-control" id="" placeholder="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc." data-toggle="tooltip" title="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc."></td>
         <td><input type="text" class="form-control" id="" ></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" ></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaSystemProd()">+</button></td>
       </tr>
@@ -415,17 +444,17 @@
         <td>Nombre y Acrónimo del Sistema</td>
         <td>Propósito</td>
         <td>Desarrollo Interno o Contratado</td>
-        <td>¿Está debidamente Documentado?</td>
+        <td>Fecha estimada de comclusión de Desarrollo</td>
         <td>Cantidad Estimada de Usuarios</td>
         <td></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc." data-toggle="tooltip" title="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc."></td>
+        <td><input type="text" class="form-control" id="" placeholder="" data-toggle="tooltip" title=""></td>
         <td><input type="text" class="form-control" id="" ></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" ></td>
         <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaSystemDes()">+</button></td>
       </tr>
@@ -465,6 +494,10 @@
   </table>
   </div>
 
+  <div class="alert alert-info">
+    <strong>En caso de dudas sobre el llenado del cuestionario, llamar a las extensiones 55384, 50644 y 50656</strong>
+  </div>
+
 
   </form>
 </div>
@@ -472,6 +505,10 @@
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
+
+function agregarFilaPersonalResponsable(){
+  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
 
 function agregarFilaPersonalApoyo(){
   document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
@@ -505,6 +542,10 @@ function agregarFilaTelIp(){
 
 function agregarFilaRedes(){
   document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+}
+
+function agregarFilaOtrosServicios(){
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
 }
 
 function agregarFilaSoftware(){

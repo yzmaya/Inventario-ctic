@@ -39,18 +39,19 @@
                     <button  class="btn btn-success" onclick="login()">Iniciar Sesión</button>
                   </div>
                 </div>
+                <!-- dIV Para registro como nuevo usuarios
                 <div class="well">
             <span>¿No tienes una cuenta? <a href="" data-target="#myModal" data-toggle="modal">Regístrate</a></span>
-                </div>
+                </div> -->
 </div>
 
+ <!-- MODAL PARA REGISTRARSE COMO NUEVO USUARIO  -->
 
-
-  <!-- Modal -->
+  <!-- Modal 
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
-      <!-- Modal content-->
+    
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -76,7 +77,7 @@
       
     </div>
   </div>
-
+-->
 
   <div class="modal fade" id="myModal2" role="dialog">
     <div class="modal-dialog">
@@ -94,7 +95,7 @@
             </div>
             <button class="btn btn-success" onclick="restablecePwd()">Enviar</button> 
             <br>
-            <span style="color: red;">Se ha enviado tu contraseña al correo escrito.</span>
+            <span id="mensajito" style="color: red; display: none; ">Se ha enviado tu contraseña al correo capturado.</span>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>

@@ -59,6 +59,7 @@ function restablecePwd(){
 var correo = document.getElementById('restablece_email').value;
 
 auth.sendPasswordResetEmail(correo).then(function() {
+  $('#mensajito').show();
   // Email sent.
 }).catch(function(error) {
   // An error happened.
