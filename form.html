@@ -25,7 +25,11 @@
         <li class="active"><a  id="info"></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a style="display: none;" id="verifica"><span class="glyphicon glyphicon-ok"></span> Se han Guardado tus cambios</a></li>
+        <li><button onclick="getInfo()">HOLA</button></li>
+        <li class="active"><a style="cursor: pointer;" onclick="saveInformation()"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</a></li>        
         <li><a href="" onclick="logout()"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a></li>
+        <li><p  id="uid" style="display: none;"></p></li>
       </ul>
     </div>
   </div>
@@ -37,11 +41,16 @@
     <h3><strong>Inventario general de recursos de tecnologías de la información en oficinas centrales</strong></h3>
   </div>
   <br>
+
+
+
+ 
+
   <form class="form-horizontal" action="">
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Unidad o Dirección General:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="dgeneral" placeholder="" name="">
+        <input type="text" class="form-control" id="campo1" placeholder="" name="">
       </div>
     </div>
     <span></span>
@@ -53,7 +62,7 @@
   <table style="text-align: center;"   class="table table-bordered" id="tablaPersonalResponsable">
     <thead>
       <tr>
-        <td></td>
+        <td><input type="text" value="0" id="contador1"/></td>
         <td>Nombre</td>
         <td>Cargo</td>
         <td>Sede</td>
@@ -65,29 +74,29 @@
     <tbody>
       <tr>
         <td class="col-sm-2">Responsable de TIC en la UR</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="uno_name" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="uno_cargo" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="uno_sede" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="uno_telefono" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="uno_correo" placeholder="" name=""></td>
         <td></td>
       </tr>
       <tr>
         <td class="col-sm-2">Responsable de desarrollo y mantenimiento de sistema informáticos</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="dos_name" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="dos_cargo" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="dos_sede" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="dos_telefono" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="dos_correo" placeholder="" name=""></td>
         <td></td>
       </tr>
       <tr>
         <td class="col-sm-2">Responsable de soporte técnico y enlace informático ante la DGTIC</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="tres_name" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="tres_cargo" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="tres_sede" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="tres_telefono" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="tres_correo" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" data-toggle="tooltip" title="Agregue más filas." onclick="agregarFilaPersonalResponsable()">+</button></td>
       </tr>
     </tbody>
@@ -506,8 +515,60 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
 
+
 function agregarFilaPersonalResponsable(){
-  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador1");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var PersonalR = res.value + '_PersonalR';
+    var nombre = res.value + '_name';
+    var cargo = res.value + '_cargo';
+    var sede = res.value + '_sede';
+    var telefono = res.value + '_telefono';
+    var correo = res.value + '_correo';
+
+  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><input type=text id='+PersonalR + ' class=form-control></td><td><input type=text id= ' +nombre + ' class=form-control></td><td><input type=text id=' +cargo + ' class=form-control></td><td><input type=text id=' + sede + ' class=form-control></td><td><input type=text id=' + telefono + ' class=form-control></td><td><input type=text id=' + correo + ' class=form-control></td><td></td>';
+}else{
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_PR' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_PersonalR').val();
+var B = $('#'+res.value +'_name').val();
+var C = $('#'+res.value +'_cargo').val();
+var D = $('#'+res.value +'_sede').val();
+var E = $('#'+res.value +'_telefono').val();
+var F = $('#'+res.value +'_correo').val();
+
+ajua2.set({
+  
+    E_PR1: A,
+    E_PR2: B,
+    E_PR3: C,
+    E_PR4: D,
+    E_PR5: E,
+    E_PR6: F
+  }); 
+
+console.log(ajua);
+res.value++;
+var PersonalR = res.value + '_PersonalR';
+    var nombre = res.value + '_name';
+    var cargo = res.value + '_cargo';
+    var sede = res.value + '_sede';
+    var telefono = res.value + '_telefono';
+    var correo = res.value + '_correo';
+
+  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><input type=text id='+PersonalR + ' class=form-control></td><td><input type=text id= ' +nombre + ' class=form-control></td><td><input type=text id=' +cargo + ' class=form-control></td><td><input type=text id=' + sede + ' class=form-control></td><td><input type=text id=' + telefono + ' class=form-control></td><td><input type=text id=' + correo + ' class=form-control></td><td></td>';
+
+}
+
 }
 
 function agregarFilaPersonalApoyo(){
@@ -571,7 +632,8 @@ function agregarFilaNecesidades(){
 </script>
 
 
-<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>>
+
 <script>
   // Initialize Firebase
   var config = {
@@ -582,7 +644,120 @@ function agregarFilaNecesidades(){
     storageBucket: "proyecto-tic-294a3.appspot.com",
     messagingSenderId: "254246387905"
   };
-  firebase.initializeApp(config);
+  firebase.initializeApp(config)
+
+
+  function getInfo(){
+
+
+
+  }
+  
+
+function saveInformation() {
+
+
+ var uuid = $('p:first').text()
+ var inv_tic = firebase.database().ref(uuid);
+
+
+var campo1 =  $('#campo1').val();
+var fecha = 'PENDIENTE DE CONFG';
+
+//RECURSOS HUMANOS
+//PERSONAL RESPONSABLE
+
+var uno_name = $('#uno_name').val();
+var uno_cargo = $('#uno_cargo').val();
+var uno_sede = $('#uno_sede').val();
+var uno_telefono = $('#uno_telefono').val();
+var uno_correo = $('#uno_correo').val();
+
+var dos_name = $('#dos_name').val();
+var dos_cargo = $('#dos_cargo').val();
+var dos_sede = $('#dos_sede').val();
+var dos_telefono = $('#dos_telefono').val();
+var dos_correo = $('#dos_correo').val();
+
+var tres_name = $('#tres_name').val();
+var tres_cargo = $('#tres_cargo').val();
+var tres_sede = $('#tres_sede').val();
+var tres_telefono = $('#tres_telefono').val();
+var tres_correo = $('#tres_correo').val();
+secc1_1 = document.getElementById('contador1');
+secc1_1.value = parseInt(secc1_1.value);
+
+
+
+inv_tic.push({
+    unidad_responsable: campo1,
+    fecha_registro: fecha,
+
+    PR_1_name: uno_name,
+    PR_1_cargo: uno_cargo,
+    PR_1_sede: uno_sede,
+    PR_1_tel: uno_telefono,
+    PR_1_email: uno_correo,
+
+    PR_2_name: dos_name,
+    PR_2_cargo: dos_cargo,
+    PR_2_sede: dos_sede,
+    PR_2_tel: dos_telefono,
+    PR_2_email: dos_correo,
+
+    PR_3_name: tres_name,
+    PR_3_cargo: tres_cargo,
+    PR_3_sede: tres_sede,
+    PR_3_tel: tres_telefono,
+    PR_3_email: tres_correo,
+    SECCION1_1: secc1_1.value 
+  });
+$('#verifica').show();
+
+
+
+res = document.getElementById("contador1");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+    var ajua = uuid + '/E_PR' + i+1;
+    var ajua2 = firebase.database().ref(ajua);
+
+    var A = $('#'+i+1 +'_PersonalR').val();
+    var B = $('#'+i+1 +'_name').val();
+    var C = $('#'+i+1 +'_cargo').val();
+    var D = $('#'+i+1 +'_sede').val();
+    var E = $('#'+i+1 +'_telefono').val();
+    var F = $('#'+i+1 +'_correo').val();
+
+    ajua2.set({
+      
+        E_PR1: A,
+        E_PR2: B,
+        E_PR3: C,
+        E_PR4: D,
+        E_PR5: E,
+        E_PR6: F
+      }); 
+    }
+
+
+
+
+
+//CIERRA LA FUNCION SAVE INFORMATION()
+}
+
+ 
+
+
+//chicas.on('child_added', function(data) {
+  
+  //var numero = data.val().contact;
+  //var nombre = data.val().girl;
+
+  //$('#lista').prepend('<p> ❤️ ' + nombre + ': ' + numero + '</p>' );
+//});
 </script>
 <script src="js/nolog.js"></script>
 </body>
