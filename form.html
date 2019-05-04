@@ -112,15 +112,15 @@
         <td>Nombre</td>
         <td>Perfil Académico</td>
         <td>Tipo de Plaza</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador2"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td class="col-sm-2">Desarrollo y mantenimiento de sistema informáticos</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><select class="form-control">
+        <td><input type="text" class="form-control" id="uno_pa_name" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="uno_pa_perfil" placeholder="" name=""></td>
+        <td><select class="form-control" id="uno_pa_plaza">
           <option selected>Selecciona una Opción</option>
           <option value="Estructura">Estructura</option>
           <option value="Eventual">Eventual</option>
@@ -133,9 +133,9 @@
       </tr>
       <tr>
         <td class="col-sm-2">Soporte Técnico</td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><select class="form-control">
+        <td><input type="text" class="form-control" id="dos_pa_name" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="dos_pa_perfil" placeholder="" name=""></td>
+        <td><select class="form-control" id="dos_pa_plaza">
           <option selected>Selecciona una Opción</option>
           <option value="Estructura">Estructura</option>
           <option value="Eventual">Eventual</option>
@@ -163,21 +163,20 @@
         <td>Perfil SAC o resúmen de características</td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador3"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." data-toggle="tooltip" title="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." ></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="E_CP_inmueble" placeholder="" name=""></td>
+        <td><input id="E_CP_perfil_sac" type="text" class="form-control" placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." data-toggle="tooltip" title="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." ></td>
+        <td><input type="number" class="form-control" id="E_CP_cantidad"></td>
+        <td><input type="text" class="form-control" id="E_CP_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaCompusPersonales()">+</button></td>
       </tr>
     </tbody>
   </table>
   </div>
-
  <p><strong>SERVIDORES</strong></p>
 
   <div class="table-responsive">          
@@ -189,16 +188,16 @@
         <td>Cantidad</td>
         <td>Origen</td>
         <td>Propósito</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador4"/></td>
       </tr>
     </thead>  
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." data-toggle="tooltip" title="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." ></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="E_SERV_ubicacion" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="E_SERV_resumen" placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." data-toggle="tooltip" title="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." ></td>
+        <td><input type="number" class="form-control" id="E_SERV_cantidad" ></td>
+        <td><input type="text" class="form-control" id="E_SERV_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="E_SERV_proposito" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaServidores()">+</button></td>
       </tr>
     </tbody>
@@ -215,21 +214,20 @@
         <td>Perfíl SAID o resumen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador5"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" data-toggle="tooltip" title="Tipo de impresión o digitalización, velocidad, máxima resolución." placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución."></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="E_IMP_ESC_inmueble" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="E_IMP_ESC_perfil_said" data-toggle="tooltip" title="Tipo de impresión o digitalización, velocidad, máxima resolución."  placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución."></td>
+        <td><input type="number" class="form-control" id="E_IMP_ESC_cantidad" ></td>
+        <td><input type="text" class="form-control" id="E_IMP_ESC_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaImpresorasEscaneres()">+</button></td>
       </tr>
     </tbody>
   </table>
   </div>
-
 
 <p><strong>EQUIPOS AUDIOVISUALES</strong></p>
 
@@ -241,15 +239,15 @@
         <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador6"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" placeholder="Resolución, luminosidad, etc." id="" data-toggle="tooltip" title="Resolución, luminosidad, etc." ></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="E_EA_inmueble" placeholder="" name=""></td>
+        <td><input type="text" class="form-control"  placeholder="Resolución, luminosidad, etc." id="E_EA_resumen" data-toggle="tooltip" title="Resolución, luminosidad, etc." ></td>
+        <td><input type="number" class="form-control" id="E_EA_cantidad"></td>
+        <td><input type="text" class="form-control" id="E_EA_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaEquiAudiovisual()">+</button></td>
       </tr>
     </tbody>
@@ -266,15 +264,15 @@
         <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador7"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id="" data-toggle="tooltip" title="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." ></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="E_OD_inmueble" placeholder="" name=""></td>
+        <td><input type="text" id="E_OD_resumen" class="form-control" placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." data-toggle="tooltip" title="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." ></td>
+        <td><input type="number" class="form-control" id="E_OD_cantidad"></td>
+        <td><input type="text" class="form-control" id="E_OD_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaOtrosDispositivos()">+</button></td>
       </tr>
     </tbody>
@@ -293,14 +291,14 @@
         <td>Inmueble</td>
         <td>Perfil RIMA</td>
         <td>Cantidad</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador8"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" data-toggle="tooltip" title="" ></td>
-        <td><input type="number" class="form-control" ></td>
+        <td><input type="text" class="form-control" id="SC_IP_inmueble" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="SC_IP_perfil" data-toggle="tooltip" title="" ></td>
+        <td><input type="number" class="form-control" id="SC_IP_cantidad" ></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaTelIp()">+</button></td>
       </tr>
     </tbody>
@@ -317,15 +315,15 @@
         <td>Resúmen de Características</td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador9"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." data-toggle="tooltip" title="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." ></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="SC_IR_inmueble" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="SC_IR_resumen" placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." data-toggle="tooltip" title="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." ></td>
+        <td><input type="number" class="form-control" id="SC_IR_cantidad" ></td>
+        <td><input type="text" class="form-control" id="SC_IR_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaRedes()">+</button></td>
       </tr>
     </tbody>
@@ -342,21 +340,20 @@
         <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador10"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" placeholder="" id="" data-toggle="tooltip" title="" ></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="SC_OS_inmueble" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" placeholder="" id="SC_OS_resumen" data-toggle="tooltip" title="" ></td>
+        <td><input type="number" class="form-control" id="SC_OS_cantidad"></td>
+        <td><input type="text" class="form-control" id="SC_OS_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaOtrosServicios()">+</button></td>
       </tr>
     </tbody>
   </table>
   </div>
-
 
 <div class="alert alert-success">
     <strong>IV Licenciamiento</strong>
@@ -372,16 +369,16 @@
         <td>Sistema Operativo</td>
         <td>Cantidad de Licencias</td>
         <td>Origen</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador11"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" data-toggle="tooltip" title="" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td><input type="text" class="form-control" id="L_SC_paquete" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="L_SC_version" data-toggle="tooltip" title="" ></td>
+        <td><input type="text" class="form-control" id="L_SC_so" placeholder="" name=""></td>
+        <td><input type="number" class="form-control" id="L_SC_cant_lic"></td>
+        <td><input type="text" class="form-control" id="L_SC_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaSoftware()">+</button></td>
       </tr>
     </tbody>
@@ -398,21 +395,20 @@
         <td>Versión</td>
         <td>Sistema Operativo</td>
         <td>Cantidad de Instalaciones</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador12"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" data-toggle="tooltip" title="" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="L_SL_paquete" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="L_SL_version" data-toggle="tooltip" title="" ></td>
+        <td><input type="text" class="form-control" id="L_SL_so" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="L_SL_cant_lic" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaSoftwareFree()">+</button></td>
       </tr>
     </tbody>
   </table>
   </div>
-
 
   <div class="alert alert-success">
     <strong>V Sistemas y aplicaciones</strong>
@@ -428,21 +424,22 @@
         <td>Desarrollo Interno o Contratado</td>
         <td>¿Está debidamente Documentado?</td>
         <td>Cantidad Estimada de Usuarios</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador13"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc." data-toggle="tooltip" title="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc."></td>
-        <td><input type="text" class="form-control" id="" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="SA_SIP_nombre" placeholder="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc." data-toggle="tooltip" title="No incluir sistemas generales de la SEP: Control de Gestión, Nómina, Gestión Financiera, etc."></td>
+        <td><input type="text" class="form-control" id="SA_SIP_proposito" ></td>
+        <td><input type="text" class="form-control" id="SA_SIP_desarrollo" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="SA_SIP_pregunta" ></td>
+        <td><input type="number" class="form-control" id="SA_SIP_cantidad" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaSystemProd()">+</button></td>
       </tr>
     </tbody>
   </table>
   </div>
+
 
   <p><strong>SISTEMAS INFORMÁTICOS EN DESARROLLO</strong></p>
 
@@ -455,22 +452,21 @@
         <td>Desarrollo Interno o Contratado</td>
         <td>Fecha estimada de comclusión de Desarrollo</td>
         <td>Cantidad Estimada de Usuarios</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador14"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="" data-toggle="tooltip" title=""></td>
-        <td><input type="text" class="form-control" id="" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="SA_SID_nombre" placeholder="" data-toggle="tooltip" title=""></td>
+        <td><input type="text" class="form-control" id="SA_SID_proposito" ></td>
+        <td><input type="text" class="form-control" id="SA_SID_desarrollo" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="SA_SID_pregunta"></td>
+        <td><input type="number" class="form-control" id="SA_SID_cantidad" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaSystemDes()">+</button></td>
       </tr>
     </tbody>
   </table>
   </div>
-
 
 
 <div class="alert alert-success">
@@ -487,16 +483,16 @@
         <td>Principales Características</td>
         <td>Cantidad Requerida</td>
         <td>Causa de la falta de atención</td>
-        <td></td>
+        <td><input type="text" value="0" id="contador15"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="" placeholder="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc." data-toggle="tooltip" title="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc."></td>
-        <td><input type="text" class="form-control" id="" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
-        <td><input type="number" class="form-control" ></td>
-        <td><input type="text" class="form-control" id="" placeholder="" name=""></td>
+        <td><input type="text" class="form-control" id="N_OR_tipo" placeholder="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc." data-toggle="tooltip" title="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc."></td>
+        <td><input type="text" class="form-control" id="N_OR_proposito" ></td>
+        <td><input type="text" class="form-control" id="N_OR_caracteristicas" placeholder="" name=""></td>
+        <td><input type="number" class="form-control" id="N_OR_cantidad"></td>
+        <td><input type="text" class="form-control" id="N_OR_causa" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaNecesidades()">+</button></td>
       </tr>
     </tbody>
@@ -650,15 +646,17 @@ function agregarFilaNecesidades(){
   function getInfo(){
 
 
+}
 
-  }
+
   
 
 function saveInformation() {
 
 
  var uuid = $('p:first').text()
- var inv_tic = firebase.database().ref(uuid);
+ var ALL = uuid + '/ALL';
+ var inv_tic = firebase.database().ref(ALL);
 
 
 var campo1 =  $('#campo1').val();
@@ -688,8 +686,175 @@ secc1_1 = document.getElementById('contador1');
 secc1_1.value = parseInt(secc1_1.value);
 
 
+//PERSONAL DE APOYO
 
-inv_tic.push({
+var uno_name = $('#uno_pa_name').val();
+var uno_academico = $('#uno_pa_perfil').val();
+var uno_plaza = $('#uno_pa_plaza').val();
+
+var dos_name = $('#dos_pa_name').val();
+var dos_academico = $('#dos_pa_perfil').val();
+var dos_plaza = $('#dos_pa_plaza').val();
+
+
+secc1_2 = document.getElementById('contador2');
+secc1_2.value = parseInt(secc1_2.value);
+
+//COMPUTADORAS PERSONALES
+
+var E_CP_inmueble = $('#E_CP_inmueble').val();
+var E_CP_perfil_sac = $('#E_CP_perfil_sac').val();
+var E_CP_cantidad = $('#E_CP_cantidad').val();
+var E_CP_origen = $('#E_CP_origen').val();
+
+secc2_1 = document.getElementById('contador3');
+secc2_1.value = parseInt(secc2_1.value);
+
+//SERVIDORES
+
+var E_SERV_ubicacion = $('#E_SERV_ubicacion').val();
+var E_SERV_resumen = $('#E_SERV_resumen').val();
+var E_SERV_cantidad = $('#E_SERV_cantidad').val();
+var E_SERV_origen = $('#E_SERV_origen').val();
+var E_SERV_proposito = $('#E_SERV_proposito').val();
+
+
+secc2_2 = document.getElementById('contador4');
+secc2_2.value = parseInt(secc2_2.value);
+
+
+//IMPRESORAS Y ESCANERES
+
+var E_IMP_ESC_inmueble = $('#E_IMP_ESC_inmueble').val();
+var E_IMP_ESC_perfil_said = $('#E_IMP_ESC_perfil_said').val();
+var E_IMP_ESC_cantidad = $('#E_IMP_ESC_cantidad').val();
+var E_IMP_ESC_origen = $('#E_IMP_ESC_origen').val();
+
+
+secc2_3 = document.getElementById('contador5');
+secc2_3.value = parseInt(secc2_3.value);
+
+
+//EQUIPOS AUDIOVISUALES
+
+var E_EA_inmueble = $('#E_EA_inmueble').val();
+var E_EA_resumen = $('#E_EA_resumen').val();
+var E_EA_cantidad = $('#E_EA_cantidad').val();
+var E_EA_origen = $('#E_EA_origen').val();
+
+
+secc2_4 = document.getElementById('contador6');
+secc2_4.value = parseInt(secc2_4.value);
+
+
+//EQUIPOS OTROS DISPOSITIVOS
+
+var E_OD_inmueble = $('#E_OD_inmueble').val();
+var E_OD_resumen = $('#E_OD_resumen').val();
+var E_OD_cantidad = $('#E_OD_cantidad').val();
+var E_OD_origen = $('#E_OD_origen').val();
+
+
+secc2_5 = document.getElementById('contador7');
+secc2_5.value = parseInt(secc2_5.value);
+
+//TELEFONIA IP
+
+var SC_IP_inmueble = $('#SC_IP_inmueble').val();
+var SC_IP_perfil = $('#SC_IP_perfil').val();
+var SC_IP_cantidad = $('#SC_IP_cantidad').val();
+
+
+secc3_1 = document.getElementById('contador8');
+secc3_1.value = parseInt(secc3_1.value);
+
+
+//INFRAESTRUCTURA DE REDES
+
+var SC_IR_inmueble = $('#SC_IR_inmueble').val();
+var SC_IR_resumen = $('#SC_IR_resumen').val();
+var SC_IR_cantidad = $('#SC_IR_cantidad').val();
+var SC_IR_origen = $('#SC_IR_origen').val();
+
+secc3_2 = document.getElementById('contador9');
+secc3_2.value = parseInt(secc3_2.value);
+
+//OTROS SERVICIOS
+
+var SC_OS_inmueble = $('#SC_OS_inmueble').val();
+var SC_OS_resumen = $('#SC_OS_resumen').val();
+var SC_OS_cantidad = $('#SC_OS_cantidad').val();
+var SC_OS_origen = $('#SC_OS_origen').val();
+
+secc3_3 = document.getElementById('contador10');
+secc3_3.value = parseInt(secc3_3.value);
+
+
+//SOFTWARE COMERCIAL
+
+var L_SC_paquete = $('#L_SC_paquete').val();
+var L_SC_version = $('#L_SC_version').val();
+var L_SC_so = $('#L_SC_so').val();
+var L_SC_cant_lic = $('#L_SC_cant_lic').val();
+var L_SC_origen = $('#L_SC_origen').val();
+
+secc4_1 = document.getElementById('contador11');
+secc4_1.value = parseInt(secc4_1.value);
+
+//SOFTWARE LIBRE
+
+var L_SL_paquete = $('#L_SL_paquete').val();
+var L_SL_version = $('#L_SL_version').val();
+var L_SL_so = $('#L_SL_so').val();
+var L_SL_cant_lic = $('#L_SL_cant_lic').val();
+
+
+secc4_2 = document.getElementById('contador12');
+secc4_2.value = parseInt(secc4_2.value);
+
+//SISTEMAS INFORMATICOS EN PRODUCCION
+
+var SA_SIP_nombre = $('#SA_SIP_nombre').val();
+var SA_SIP_proposito = $('#SA_SIP_proposito').val();
+var SA_SIP_desarrollo = $('#SA_SIP_desarrollo').val();
+var SA_SIP_pregunta = $('#SA_SIP_pregunta').val();
+var SA_SIP_cantidad = $('#SA_SIP_cantidad').val();
+
+
+secc5_1 = document.getElementById('contador13');
+secc5_1.value = parseInt(secc5_1.value);
+
+
+//SISTEMAS INFORMATICOS EN DESARROLLO
+
+var SA_SID_nombre = $('#SA_SID_nombre').val();
+var SA_SID_proposito = $('#SA_SID_proposito').val();
+var SA_SID_desarrollo = $('#SA_SID_desarrollo').val();
+var SA_SID_pregunta = $('#SA_SID_pregunta').val();
+var SA_SID_cantidad = $('#SA_SID_cantidad').val();
+
+
+secc5_2 = document.getElementById('contador14');
+secc5_2.value = parseInt(secc5_2.value);
+
+
+//NECESIUDADES
+
+
+var N_OR_tipo = $('#N_OR_tipo').val();
+var N_OR_proposito = $('#N_OR_proposito').val();
+var N_OR_caracteristicas = $('#N_OR_caracteristicas').val();
+var N_OR_cantidad = $('#N_OR_cantidad').val();
+var N_OR_causa = $('#N_OR_causa').val();
+
+
+secc6_1 = document.getElementById('contador15');
+secc6_1.value = parseInt(secc6_1.value);
+
+
+//se guardan en ALL
+
+inv_tic.set({
     unidad_responsable: campo1,
     fecha_registro: fecha,
 
@@ -710,54 +875,141 @@ inv_tic.push({
     PR_3_sede: tres_sede,
     PR_3_tel: tres_telefono,
     PR_3_email: tres_correo,
-    SECCION1_1: secc1_1.value 
+    SECCION1_1: secc1_1.value,
+
+     PA_1_name: uno_name,
+    PA_1_academico: uno_academico,
+    PA_1_plaza: uno_plaza,
+
+    PA_2_name: dos_name,
+    PA_2_academico: dos_academico,
+    PA_2_plaza: dos_plaza,
+    SECCION1_2: secc1_2.value,
+
+    E_CP_1: E_CP_inmueble,
+    E_CP_2: E_CP_perfil_sac,
+    E_CP_3: E_CP_cantidad,
+    E_CP_4: E_CP_origen,
+    SECCION2_1: secc2_1.value,
+
+    E_SERV_1: E_SERV_ubicacion,
+    E_SERV_2: E_SERV_resumen,
+    E_SERV_3: E_SERV_cantidad,
+    E_SERV_4: E_SERV_origen,
+    E_SERV_5: E_SERV_proposito,
+    SECCION2_2: secc2_2.value,
+
+    E_IMP_ESC_1: E_IMP_ESC_inmueble,
+    E_IMP_ESC_2: E_IMP_ESC_perfil_said,
+    E_IMP_ESC_3: E_IMP_ESC_cantidad,
+    E_IMP_ESC_4: E_IMP_ESC_origen,
+    SECCION2_3: secc2_3.value,
+
+    E_EA_1: E_EA_inmueble,
+    E_EA_2: E_EA_resumen,
+    E_EA_3: E_EA_cantidad,
+    E_EA_4: E_EA_origen,
+    SECCION2_4: secc2_4.value,
+
+    E_OD_1: E_OD_inmueble,
+    E_OD_2: E_OD_resumen,
+    E_OD_3: E_OD_cantidad,
+    E_OD_4: E_OD_origen,
+    SECCION2_5: secc2_5.value,
+
+    SC_IP_1: SC_IP_inmueble,
+    SC_IP_2: SC_IP_perfil,
+    SC_IP_3: SC_IP_cantidad,
+    SECCION3_1: secc3_1.value,
+
+    SC_IR_1: SC_IR_inmueble,
+    SC_IR_2: SC_IR_resumen,
+    SC_IR_3: SC_IR_cantidad,
+    SC_IR_4: SC_IR_origen,
+    SECCION3_1: secc3_2.value,
+
+    SC_OS_1: SC_OS_inmueble,
+    SC_OS_2: SC_OS_resumen,
+    SC_OS_3: SC_OS_cantidad,
+    SC_OS_4: SC_OS_origen,
+    SECCION3_3: secc3_3.value,
+
+    L_SC_1: L_SC_paquete,
+    L_SC_2: L_SC_version,
+    L_SC_3: L_SC_so,
+    L_SC_4: L_SC_cant_lic,
+    L_SC_5: L_SC_origen,
+    SECCION4_1: secc4_1.value,
+
+    L_SL_1: L_SL_paquete,
+    L_SL_2: L_SL_version,
+    L_SL_3: L_SL_so,
+    L_SL_4: L_SL_cant_lic,
+    SECCION4_2: secc4_2.value,
+
+    SA_SIP_1: SA_SIP_nombre,
+    SA_SIP_2: SA_SIP_proposito,
+    SA_SIP_3: SA_SIP_desarrollo,
+    SA_SIP_4: SA_SIP_pregunta,
+    SA_SIP_5: SA_SIP_cantidad,
+    SECCION5_1: secc5_1.value,
+
+
+    SA_SID_1: SA_SID_nombre,
+    SA_SID_2: SA_SID_proposito,
+    SA_SID_3: SA_SID_desarrollo,
+    SA_SID_4: SA_SID_pregunta,
+    SA_SID_5: SA_SID_cantidad,
+    SECCION5_1: secc5_2.value, 
+
+    N_OR_1: N_OR_tipo,
+    N_OR_2: N_OR_proposito,
+    N_OR_3: N_OR_caracteristicas,
+    N_OR_4: N_OR_cantidad,
+    N_OR_5: N_OR_causa,
+    SECCION6_1: secc6_1.value 
+
   });
 $('#verifica').show();
 
 
-
+//SE GUARDAN LOS EXTRAS DE PERSONAL RESPONSABLE
 res = document.getElementById("contador1");
  res.value = parseInt(res.value);
 
+ 
 for (var i=0; i< res.value; i++) {
-    var ajua = uuid + '/E_PR' + i+1;
-    var ajua2 = firebase.database().ref(ajua);
+  var cont1 = 1;
+  cont1 = cont1 + i;
 
-    var A = $('#'+i+1 +'_PersonalR').val();
-    var B = $('#'+i+1 +'_name').val();
-    var C = $('#'+i+1 +'_cargo').val();
-    var D = $('#'+i+1 +'_sede').val();
-    var E = $('#'+i+1 +'_telefono').val();
-    var F = $('#'+i+1 +'_correo').val();
+  var ch_pr = uuid + '/E_PR' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
 
-    ajua2.set({
-      
-        E_PR1: A,
-        E_PR2: B,
-        E_PR3: C,
-        E_PR4: D,
-        E_PR5: E,
-        E_PR6: F
+console.log(cont1);
+  var A = $('#'+cont1+'_PersonalR').val();
+  var B = $('#'+cont1+'_name').val();
+  var C = $('#'+cont1+'_cargo').val();
+  var D = $('#'+cont1+'_sede').val();
+  var E = $('#'+cont1+'_telefono').val();
+  var F = $('#'+cont1+'_correo').val();
+
+   ch_pr2.set({
+       E_PR1: A,
+       E_PR2: B,
+       E_PR3: C,
+       E_PR4: D,
+       E_PR5: E,
+       E_PR6: F
       }); 
+
+   
     }
-
-
 
 
 
 //CIERRA LA FUNCION SAVE INFORMATION()
 }
 
- 
-
-
-//chicas.on('child_added', function(data) {
-  
-  //var numero = data.val().contact;
-  //var nombre = data.val().girl;
-
-  //$('#lista').prepend('<p> ❤️ ' + nombre + ': ' + numero + '</p>' );
-//});
 </script>
 <script src="js/nolog.js"></script>
 </body>
