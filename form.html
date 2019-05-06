@@ -568,62 +568,691 @@ var PersonalR = res.value + '_PersonalR';
 }
 
 function agregarFilaPersonalApoyo(){
-  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+  var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador2");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var PA_especialidad = res.value + '_PA_especialidad';
+    var PA_nombre = res.value + '_PA_nombre';
+    var PA_perfil = res.value + '_PA_perfil';
+    var PA_tipo = res.value + '_PA_tipo';
+
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id=' +PA_especialidad+ '  class=form-control></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><input type=text id='+ PA_perfil + '  class=form-control></td><td><input type=text id='+PA_tipo + ' class=form-control></td><td></td>';
+}else{
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_PA' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_PA_especialidad').val();
+var B = $('#'+res.value +'_PA_nombre').val();
+var C = $('#'+res.value +'_PA_perfil').val();
+var D = $('#'+res.value +'_PA_tipo').val();
+
+ajua2.set({
+  
+    E_PA1: A,
+    E_PA2: B,
+    E_PA3: C,
+    E_PA4: D
+  }); 
+
+console.log(ajua);
+res.value++;
+
+var PA_especialidad = res.value + '_PA_especialidad';
+    var PA_nombre = res.value + '_PA_nombre';
+    var PA_perfil = res.value + '_PA_perfil';
+    var PA_tipo = res.value + '_PA_tipo';
+
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id=' +PA_especialidad+ '  class=form-control></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><input type=text id='+ PA_perfil + '  class=form-control></td><td><input type=text id='+PA_tipo + ' class=form-control></td><td></td>';
+
+}
+
 }
 
 
 function agregarFilaCompusPersonales(){
-  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+    var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador3");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var CP_inmueble = res.value + '_CP_inmueble';
+    var CP_perfil = res.value + '_CP_perfil';
+    var CP_cantidad = res.value + '_CP_cantidad';
+    var CP_origen = res.value + '_CP_origen';
+
+  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+CP_inmueble+ '  class=form-control></td><td><input type=text id='+CP_perfil + ' class=form-control></td><td><input type=text id='+CP_cantidad + ' class=form-control></td><td><input type=text id='+CP_origen+ ' class=form-control></td><td></td>';
+}else{
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_CP' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_CP_inmueble').val();
+var B = $('#'+res.value +'_CP_perfil').val();
+var C = $('#'+res.value +'_CP_cantidad').val();
+var D = $('#'+res.value +'_CP_origen').val();
+
+ajua2.set({
+  
+    E_CP1: A,
+    E_CP2: B,
+    E_CP3: C,
+    E_CP4: D
+  }); 
+
+console.log(ajua);
+res.value++;
+
+  var CP_inmueble = res.value + '_CP_inmueble';
+    var CP_perfil = res.value + '_CP_perfil';
+    var CP_cantidad = res.value + '_CP_cantidad';
+    var CP_origen = res.value + '_CP_origen';
+
+  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+CP_inmueble+ '  class=form-control></td><td><input type=text id='+CP_perfil + ' class=form-control></td><td><input type=text id='+CP_cantidad + ' class=form-control></td><td><input type=text id='+CP_origen+ ' class=form-control></td><td></td>';
+
+}
+
 }
 
 function agregarFilaServidores(){
-  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+    var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador4");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var SERV_ubicacion = res.value + '_SERV_ubicacion';
+    var SERV_resumen = res.value + '_SERV_resumen';
+    var SERV_cantidad = res.value + '_SERV_cantidad';
+    var SERV_origen = res.value + '_SERV_origen';
+    var SERV_proposito = res.value + '_SERV_proposito';
+
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+SERV_ubicacion + ' class=form-control></td><td><input type=text id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><input type=text id='+SERV_origen + ' class=form-control></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
+}else{
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_SERVS' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_SERV_ubicacion').val();
+var B = $('#'+res.value +'_SERV_resumen').val();
+var C = $('#'+res.value +'_SERV_cantidad').val();
+var D = $('#'+res.value +'_SERV_origen').val();
+var E = $('#'+res.value +'_SERV_proposito').val();
+
+ajua2.set({
+  
+    E_SERV1: A,
+    E_SERV2: B,
+    E_SERV3: C,
+    E_SERV4: D,
+    E_SERV5: E
+  }); 
+
+console.log(ajua);
+res.value++;
+
+ var SERV_ubicacion = res.value + '_SERV_ubicacion';
+    var SERV_resumen = res.value + '_SERV_resumen';
+    var SERV_cantidad = res.value + '_SERV_cantidad';
+    var SERV_origen = res.value + '_SERV_origen';
+    var SERV_proposito = res.value + '_SERV_proposito';
+
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+SERV_ubicacion + ' class=form-control></td><td><input type=text id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><input type=text id='+SERV_origen + ' class=form-control></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
+}
+
 }
 
 function agregarFilaImpresorasEscaneres(){
-  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td>';
+   var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador5");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var IE_inmueble = res.value + '_IE_inmueble';
+    var IE_perfil = res.value + '_IE_perfil';
+    var IE_cantidad = res.value + '_IE_cantidad';
+    var IE_origen = res.value + '_IE_origen';
+
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+IE_inmueble + '  class=form-control></td><td><input type=text id='+IE_perfil + ' class=form-control></td><td><input type=text id='+IE_cantidad + ' class=form-control></td><td><input type=text id='+IE_origen + ' class=form-control></td><td>';
+}else{
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_IMP_ESC' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_IE_inmueble').val();
+var B = $('#'+res.value +'_IE_perfil').val();
+var C = $('#'+res.value +'_IE_cantidad').val();
+var D = $('#'+res.value +'_IE_origen').val();
+
+ajua2.set({
+  
+    E_IE1: A,
+    E_IE2: B,
+    E_IE3: C,
+    E_IE4: D
+  }); 
+
+console.log(ajua);
+res.value++;
+
+     var IE_inmueble = res.value + '_IE_inmueble';
+    var IE_perfil = res.value + '_IE_perfil';
+    var IE_cantidad = res.value + '_IE_cantidad';
+    var IE_origen = res.value + '_IE_origen';
+
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+IE_inmueble + '  class=form-control></td><td><input type=text id='+IE_perfil + ' class=form-control></td><td><input type=text id='+IE_cantidad + ' class=form-control></td><td><input type=text id='+IE_origen + ' class=form-control></td><td>';
+}
 }
 
 function agregarFilaEquiAudiovisual(){
-  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+  var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador6");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var EA_inmueble = res.value + '_EA_inmueble';
+    var EA_perfil = res.value + '_EA_perfil';
+    var EA_cantidad = res.value + '_EA_cantidad';
+    var EA_origen = res.value + '_EA_origen';
+
+  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+EA_inmueble + '  class=form-control></td><td><input type=text id='+EA_perfil + ' class=form-control></td><td><input type=text id='+EA_cantidad + ' class=form-control></td><td><input type=text id='+EA_origen + ' class=form-control></td><td>';
+
+}else{
+var ajua = uuid + '/E_EA' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_EA_inmueble').val();
+var B = $('#'+res.value +'_EA_perfil').val();
+var C = $('#'+res.value +'_EA_cantidad').val();
+var D = $('#'+res.value +'_EA_origen').val();
+
+ajua2.set({
+  
+    E_EA1: A,
+    E_EA2: B,
+    E_EA3: C,
+    E_EA4: D
+  }); 
+
+console.log(ajua);
+res.value++;
+
+   var EA_inmueble = res.value + '_EA_inmueble';
+    var EA_perfil = res.value + '_EA_perfil';
+    var EA_cantidad = res.value + '_EA_cantidad';
+    var EA_origen = res.value + '_EA_origen';
+
+  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+EA_inmueble + '  class=form-control></td><td><input type=text id='+EA_perfil + ' class=form-control></td><td><input type=text id='+EA_cantidad + ' class=form-control></td><td><input type=text id='+EA_origen + ' class=form-control></td><td>';
+
+}
+
 }
 
 
 function agregarFilaOtrosDispositivos(){
-  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+   var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador7");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var OD_inmueble = res.value + '_OD_inmueble';
+    var OD_perfil = res.value + '_OD_perfil';
+    var OD_cantidad = res.value + '_OD_cantidad';
+    var OD_origen = res.value + '_OD_origen';
+
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+OD_inmueble + '  class=form-control></td><td><input type=text id='+OD_perfil + ' class=form-control></td><td><input type=text id='+OD_cantidad + ' class=form-control></td><td><input type=text id='+OD_origen + ' class=form-control></td><td>';
+
+
+}else{
+var ajua = uuid + '/E_OD' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_OD_inmueble').val();
+var B = $('#'+res.value +'_OD_perfil').val();
+var C = $('#'+res.value +'_OD_cantidad').val();
+var D = $('#'+res.value +'_OD_origen').val();
+
+ajua2.set({
+  
+    E_OD1: A,
+    E_OD2: B,
+    E_OD3: C,
+    E_OD4: D
+  }); 
+
+console.log(ajua);
+res.value++;
+
+var OD_inmueble = res.value + '_OD_inmueble';
+    var OD_perfil = res.value + '_OD_perfil';
+    var OD_cantidad = res.value + '_OD_cantidad';
+    var OD_origen = res.value + '_OD_origen';
+
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+OD_inmueble + '  class=form-control></td><td><input type=text id='+OD_perfil + ' class=form-control></td><td><input type=text id='+OD_cantidad + ' class=form-control></td><td><input type=text id='+OD_origen + ' class=form-control></td><td></td>';
+
+}
+
 }
 
 function agregarFilaTelIp(){
-  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+    var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador8");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var T_IP_inmueble = res.value + '_T_IP_inmueble';
+    var T_IP_perfil = res.value + '_T_IP_perfil';
+    var T_IP_cantidad = res.value + '_T_IP_cantidad';
+    
+
+  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><input type=text id='+T_IP_inmueble + '  class=form-control></td><td><input type=text id='+T_IP_perfil + ' class=form-control></td><td><input type=text id='+T_IP_cantidad + ' class=form-control></td><td></td>';
+
+}else{
+  var ajua = uuid + '/E_T_IP' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_T_IP_inmueble').val();
+var B = $('#'+res.value +'_T_IP_perfil').val();
+var C = $('#'+res.value +'_T_IP_cantidad').val();
+
+ajua2.set({
+  
+    E_T_IP1: A,
+    E_T_IP2: B,
+    E_T_IP3: C
+  }); 
+
+console.log(ajua);
+res.value++;
+   var T_IP_inmueble = res.value + '_T_IP_inmueble';
+    var T_IP_perfil = res.value + '_T_IP_perfil';
+    var T_IP_cantidad = res.value + '_T_IP_cantidad';
+    
+
+  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><input type=text id='+T_IP_inmueble + '  class=form-control></td><td><input type=text id='+T_IP_perfil + ' class=form-control></td><td><input type=text id='+T_IP_cantidad + ' class=form-control></td><td></td>';
+
+}
+
 }
 
 function agregarFilaRedes(){
-  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+
+    var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador9");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var IR_inmueble = res.value + '_IR_inmueble';
+    var IR_resumen = res.value + '_IR_resumen';
+    var IR_cantidad = res.value + '_IR_cantidad';
+    var IR_origen = res.value + '_IR_origen';
+
+  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+IR_inmueble + '  class=form-control></td><td><input type=text id='+IR_resumen + ' class=form-control></td><td><input type=text id='+IR_cantidad + ' class=form-control></td><td><input type=text id='+IR_origen + ' class=form-control></td><td>';
+
+
+}else{
+var ajua = uuid + '/E_IR' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_IR_inmueble').val();
+var B = $('#'+res.value +'_IR_resumen').val();
+var C = $('#'+res.value +'_IR_cantidad').val();
+var D = $('#'+res.value +'_IR_origen').val();
+
+ajua2.set({
+  
+    E_IR1: A,
+    E_IR2: B,
+    E_IR3: C,
+    E_IR4: D
+  }); 
+
+console.log(ajua);
+res.value++;
+
+var IR_inmueble = res.value + '_IR_inmueble';
+    var IR_resumen = res.value + '_IR_resumen';
+    var IR_cantidad = res.value + '_IR_cantidad';
+    var IR_origen = res.value + '_IR_origen';
+
+ document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+IR_inmueble + '  class=form-control></td><td><input type=text id='+IR_resumen + ' class=form-control></td><td><input type=text id='+IR_cantidad + ' class=form-control></td><td><input type=text id='+IR_origen + ' class=form-control></td><td>';
+
+}
+
 }
 
 function agregarFilaOtrosServicios(){
-  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+  var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador10");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var OS_inmueble = res.value + '_OS_inmueble';
+    var OS_resumen = res.value + '_OS_resumen';
+    var OS_cantidad = res.value + '_OS_cantidad';
+    var OS_origen = res.value + '_OS_origen';
+
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+OS_inmueble + '  class=form-control></td><td><input type=text id='+OS_resumen + ' class=form-control></td><td><input type=text id='+OS_cantidad + ' class=form-control></td><td><input type=text id='+OS_origen + ' class=form-control></td><td>';
+
+
+}else{
+var ajua = uuid + '/E_OS' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_OS_inmueble').val();
+var B = $('#'+res.value +'_OS_resumen').val();
+var C = $('#'+res.value +'_OS_cantidad').val();
+var D = $('#'+res.value +'_OS_origen').val();
+
+ajua2.set({
+  
+    E_OS1: A,
+    E_OS2: B,
+    E_OS3: C,
+    E_OS4: D
+  }); 
+
+console.log(ajua);
+res.value++;
+
+var OS_inmueble = res.value + '_OS_inmueble';
+    var OS_resumen = res.value + '_OS_resumen';
+    var OS_cantidad = res.value + '_OS_cantidad';
+    var OS_origen = res.value + '_OS_origen';
+
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+OS_inmueble + '  class=form-control></td><td><input type=text id='+OS_resumen + ' class=form-control></td><td><input type=text id='+OS_cantidad + ' class=form-control></td><td><input type=text id='+OS_origen + ' class=form-control></td><td>';
+
+
+}
+
 }
 
 function agregarFilaSoftware(){
-  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+  var uuid = $('p:first').text()
+
+  res = document.getElementById("contador11");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var SC_paquete = res.value + '_SC_paquete';
+   var SC_version = res.value + '_SC_version';
+   var SC_so = res.value + '_SC_so';
+   var SC_licencias = res.value + '_SC_licencias';
+   var SC_origen = res.value + '_SC_origen';
+
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><input type=text id='+SC_so + ' class=form-control></td><td><input type=text id='+SC_licencias + ' class=form-control></td><td><input type=text id='+SC_origen + ' class=form-control></td><td></td>';
+
+}else{
+var ajua = uuid + '/E_SC' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_SC_paquete').val();
+var B = $('#'+res.value +'_SC_version').val();
+var C = $('#'+res.value +'_SC_so').val();
+var D = $('#'+res.value +'_SC_licencias').val();
+var E = $('#'+res.value +'_SC_origen').val();
+
+ajua2.set({
+  
+    E_SC1: A,
+    E_SC2: B,
+    E_SC3: C,
+    E_SC4: D,
+    E_SC5: E
+  }); 
+
+console.log(ajua);
+res.value++;
+var SC_paquete = res.value + '_SC_paquete';
+   var SC_version = res.value + '_SC_version';
+   var SC_so = res.value + '_SC_so';
+   var SC_licencias = res.value + '_SC_licencias';
+   var SC_origen = res.value + '_SC_origen';
+
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><input type=text id='+SC_so + ' class=form-control></td><td><input type=text id='+SC_licencias + ' class=form-control></td><td><input type=text id='+SC_origen + ' class=form-control></td><td></td>';
+
+}
+
 }
 
 function agregarFilaSoftwareFree(){
-  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+   var uuid = $('p:first').text()
+
+  res = document.getElementById("contador12");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var SL_paquete = res.value + '_SL_paquete';
+   var SL_version = res.value + '_SL_version';
+   var SL_so = res.value + '_SL_so';
+   var SL_licencias = res.value + '_SL_licencias';
+
+
+  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><input type=text id='+SL_so + ' class=form-control></td><td><input type=text id='+SL_licencias + ' class=form-control></td><td></td>';
+
+}else{
+var ajua = uuid + '/E_SL' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_SL_paquete').val();
+var B = $('#'+res.value +'_SL_version').val();
+var C = $('#'+res.value +'_SL_so').val();
+var D = $('#'+res.value +'_SL_licencias').val();
+
+ajua2.set({
+  
+    E_SL1: A,
+    E_SL2: B,
+    E_SL3: C,
+    E_SL4: D
+  }); 
+
+console.log(ajua);
+res.value++;
+var SL_paquete = res.value + '_SL_paquete';
+   var SL_version = res.value + '_SL_version';
+   var SL_so = res.value + '_SL_so';
+   var SL_licencias = res.value + '_SL_licencias';
+
+
+  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><input type=text id='+SL_so + ' class=form-control></td><td><input type=text id='+SL_licencias + ' class=form-control></td><td></td>';
+
+}
+
 }
 
 function agregarFilaSystemProd(){
-  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+   var uuid = $('p:first').text()
+
+  res = document.getElementById("contador13");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var SIP_nombre = res.value + '_SIP_nombre';
+   var SIP_proposito = res.value + '_SIP_proposito';
+   var SIP_desarrollo = res.value + '_SIP_desarrollo';
+   var SIP_documentado = res.value + '_SIP_documentado';
+   var SIP_cantidad = res.value + '_SIP_cantidad';
+
+
+  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text id='+SIP_nombre + '  class=form-control></td><td><input type=text id='+SIP_proposito + ' class=form-control></td><td><input type=text id='+SIP_desarrollo + ' class=form-control></td><td><input type=text id='+SIP_documentado + ' class=form-control></td><td><input type=text id='+SIP_cantidad + ' class=form-control></td><td></td>';
+}else{
+var ajua = uuid + '/E_SIP' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_SIP_nombre').val();
+var B = $('#'+res.value +'_SIP_proposito').val();
+var C = $('#'+res.value +'_SIP_desarrollo').val();
+var D = $('#'+res.value +'_SIP_documentado').val();
+var E = $('#'+res.value +'_SIP_cantidad').val();
+
+ajua2.set({
+  
+    E_SIP1: A,
+    E_SIP2: B,
+    E_SIP3: C,
+    E_SIP4: D,
+    E_SIP5: E
+  }); 
+
+console.log(ajua);
+res.value++;
+    var SIP_nombre = res.value + '_SIP_nombre';
+   var SIP_proposito = res.value + '_SIP_proposito';
+   var SIP_desarrollo = res.value + '_SIP_desarrollo';
+   var SIP_documentado = res.value + '_SIP_documentado';
+   var SIP_cantidad = res.value + '_SIP_cantidad';
+
+
+  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text id='+SIP_nombre + '  class=form-control></td><td><input type=text id='+SIP_proposito + ' class=form-control></td><td><input type=text id='+SIP_desarrollo + ' class=form-control></td><td><input type=text id='+SIP_documentado + ' class=form-control></td><td><input type=text id='+SIP_cantidad + ' class=form-control></td><td></td>';
+
+}
+
 }
 
 
 function agregarFilaSystemDes(){
-  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+     var uuid = $('p:first').text()
+
+  res = document.getElementById("contador14");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var SID_nombre = res.value + '_SID_nombre';
+   var SID_proposito = res.value + '_SID_proposito';
+   var SID_desarrollo = res.value + '_SID_desarrollo';
+   var SID_documentado = res.value + '_SID_documentado';
+   var SID_cantidad = res.value + '_SID_cantidad';
+
+
+  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text id='+SID_nombre + '  class=form-control></td><td><input type=text id='+SID_proposito + ' class=form-control></td><td><input type=text id='+SID_desarrollo + ' class=form-control></td><td><input type=text id='+SID_documentado + ' class=form-control></td><td><input type=text id='+SID_cantidad + ' class=form-control></td><td></td>';
+}else{
+var ajua = uuid + '/E_SID' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_SID_nombre').val();
+var B = $('#'+res.value +'_SID_proposito').val();
+var C = $('#'+res.value +'_SID_desarrollo').val();
+var D = $('#'+res.value +'_SID_documentado').val();
+var E = $('#'+res.value +'_SID_cantidad').val();
+
+ajua2.set({
+  
+    E_SID1: A,
+    E_SID2: B,
+    E_SID3: C,
+    E_SID4: D,
+    E_SID5: E
+  }); 
+
+console.log(ajua);
+res.value++;
+    var SID_nombre = res.value + '_SID_nombre';
+   var SID_proposito = res.value + '_SID_proposito';
+   var SID_desarrollo = res.value + '_SID_desarrollo';
+   var SID_documentado = res.value + '_SID_documentado';
+   var SID_cantidad = res.value + '_SID_cantidad';
+
+
+  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text id='+SID_nombre + '  class=form-control></td><td><input type=text id='+SID_proposito + ' class=form-control></td><td><input type=text id='+SID_desarrollo + ' class=form-control></td><td><input type=text id='+SID_documentado + ' class=form-control></td><td><input type=text id='+SID_cantidad + ' class=form-control></td><td></td>';
+ 
+  
+}
+
 }
 
 function agregarFilaNecesidades(){
-  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td><input type=text class=form-control></td><td></td>';
+   var uuid = $('p:first').text()
+
+  res = document.getElementById("contador15");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var NTIC_tipo = res.value + '_NTIC_tipo';
+   var NTIC_proposito = res.value + '_NTIC_proposito';
+    var NTIC_caracteristicas = res.value + '_NTIC_caracteristicas';
+     var NTIC_cantidad = res.value + '_NTIC_cantidad';
+      var NTIC_causa = res.value + '_NTIC_causa';
+
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=text id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
+}else{
+var ajua = uuid + '/E_NTIC' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_NTIC_tipo').val();
+var B = $('#'+res.value +'_NTIC_proposito').val();
+var C = $('#'+res.value +'_NTIC_caracteristicas').val();
+var D = $('#'+res.value +'_NTIC_cantidad').val();
+var E = $('#'+res.value +'_NTIC_causa').val();
+
+ajua2.set({
+  
+    E_NTIC1: A,
+    E_NTIC2: B,
+    E_NTIC3: C,
+    E_NTIC4: D,
+    E_NTIC5: E
+  }); 
+
+console.log(ajua);
+res.value++;
+  var NTIC_tipo = res.value + '_NTIC_tipo';
+   var NTIC_proposito = res.value + '_NTIC_proposito';
+    var NTIC_caracteristicas = res.value + '_NTIC_caracteristicas';
+     var NTIC_cantidad = res.value + '_NTIC_cantidad';
+      var NTIC_causa = res.value + '_NTIC_causa';
+
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=text id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
+  
+}
+
 }
 </script>
 
