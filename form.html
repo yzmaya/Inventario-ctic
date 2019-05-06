@@ -1250,7 +1250,7 @@ res.value++;
       var NTIC_causa = res.value + '_NTIC_causa';
 
   document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=text id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
-  
+
 }
 
 }
@@ -1633,6 +1633,400 @@ console.log(cont1);
 
    
     }
+
+    //SE GUARDAN LOS EXTRAS DE PERSONAL DE APOYO
+res = document.getElementById("contador2");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_PA' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_PA_especialidad').val();
+  var B = $('#'+cont1+'_PA_nombre').val();
+  var C = $('#'+cont1+'_PA_perfil').val();
+  var D = $('#'+cont1+'_PA_tipo').val();
+
+   ch_pr2.set({
+       E_PA1: A,
+       E_PA2: B,
+       E_PA3: C,
+       E_PA4: D
+      }); 
+
+   
+    }
+
+       //SE GUARDAN LOS EXTRAS DE COMPUTADORAS PERSONALES
+res = document.getElementById("contador3");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_CP' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_CP_inmueble').val();
+  var B = $('#'+cont1+'_CP_perfil').val();
+  var C = $('#'+cont1+'_CP_cantidad').val();
+  var D = $('#'+cont1+'_CP_origen').val();
+
+   ch_pr2.set({
+       E_CP1: A,
+       E_CP2: B,
+       E_CP3: C,
+       E_CP4: D
+      }); 
+
+   
+    }
+
+
+     //SE GUARDAN LOS EXTRAS DE SERVIDORES
+res = document.getElementById("contador4");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_SERVS' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_SERV_ubicacion').val();
+  var B = $('#'+cont1+'_SERV_resumen').val();
+  var C = $('#'+cont1+'_SERV_cantidad').val();
+  var D = $('#'+cont1+'_SERV_origen').val();
+  var E = $('#'+cont1+'_SERV_proposito').val();
+
+   ch_pr2.set({
+       E_SERV1: A,
+       E_SERV2: B,
+       E_SERV3: C,
+       E_SERV4: D,
+       E_SERV4: E
+      }); 
+
+   
+    }
+
+
+     //SE GUARDAN LOS EXTRAS DE IMPRESORAS Y ESCANERES
+res = document.getElementById("contador5");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_IMP_ESC' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_IE_inmueble').val();
+  var B = $('#'+cont1+'_IE_perfil').val();
+  var C = $('#'+cont1+'_IE_cantidad').val();
+  var D = $('#'+cont1+'_IE_origen').val();
+
+
+   ch_pr2.set({
+       E_IE1: A,
+       E_IE2: B,
+       E_IE3: C,
+       E_IE4: D
+      }); 
+    }
+
+
+     //SE GUARDAN LOS EXTRAS DE EQUIPO AUDIOVISUAL
+res = document.getElementById("contador6");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_EA' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_EA_inmueble').val();
+  var B = $('#'+cont1+'_EA_perfil').val();
+  var C = $('#'+cont1+'_EA_cantidad').val();
+  var D = $('#'+cont1+'_EA_origen').val();
+
+
+   ch_pr2.set({
+       E_EA1: A,
+       E_EA2: B,
+       E_EA3: C,
+       E_EA4: D
+      }); 
+    }
+
+     //SE GUARDAN LOS EXTRAS DE OTROS DISPOSITIVOS
+res = document.getElementById("contador7");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_OD' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_OD_inmueble').val();
+  var B = $('#'+cont1+'_OD_perfil').val();
+  var C = $('#'+cont1+'_OD_cantidad').val();
+  var D = $('#'+cont1+'_OD_origen').val();
+
+
+   ch_pr2.set({
+       E_OD1: A,
+       E_OD2: B,
+       E_OD3: C,
+       E_OD4: D
+      }); 
+    }
+
+
+     //SE GUARDAN LOS EXTRAS DE TELEFONIA IP
+res = document.getElementById("contador8");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_T_IP' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_T_IP_inmueble').val();
+  var B = $('#'+cont1+'_T_IP_perfil').val();
+  var C = $('#'+cont1+'_T_IP_cantidad').val();
+
+
+   ch_pr2.set({
+       E_T_IP1: A,
+       E_T_IP2: B,
+       E_T_IP3: C
+      }); 
+    }
+
+    //SE GUARDAN LOS EXTRAS DE INFRAESTRCTURA DE REDES
+res = document.getElementById("contador9");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_IR' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_IR_inmueble').val();
+  var B = $('#'+cont1+'_IR_resumen').val();
+  var C = $('#'+cont1+'_IR_cantidad').val();
+  var D = $('#'+cont1+'_IR_origen').val();
+
+
+   ch_pr2.set({
+       E_IR1: A,
+       E_IR2: B,
+       E_IR3: C,
+       E_IR4: D
+      }); 
+    }
+
+    //SE GUARDAN LOS EXTRAS DE OTROS SERVICIOS
+res = document.getElementById("contador10");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_OS' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_OS_inmueble').val();
+  var B = $('#'+cont1+'_OS_resumen').val();
+  var C = $('#'+cont1+'_OS_cantidad').val();
+  var D = $('#'+cont1+'_OS_origen').val();
+
+
+   ch_pr2.set({
+       E_OS1: A,
+       E_OS2: B,
+       E_OS3: C,
+       E_OS4: D
+      }); 
+    }
+
+   //SE GUARDAN LOS EXTRAS DE SOFTWARE COMERCIAL
+res = document.getElementById("contador11");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_SC' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_SC_paquete').val();
+  var B = $('#'+cont1+'_SC_version').val();
+  var C = $('#'+cont1+'_SC_so').val();
+  var D = $('#'+cont1+'_SC_licencias').val();
+  var E = $('#'+cont1+'_SC_origen').val();
+
+
+   ch_pr2.set({
+       E_SC1: A,
+       E_SC2: B,
+       E_SC3: C,
+       E_SC4: D,
+       E_SC5: E
+      }); 
+    }
+
+ //SE GUARDAN LOS EXTRAS DE SOFTWARE LIBRE
+res = document.getElementById("contador12");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_SL' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_SL_paquete').val();
+  var B = $('#'+cont1+'_SL_version').val();
+  var C = $('#'+cont1+'_SL_so').val();
+  var D = $('#'+cont1+'_SL_licencias').val();
+
+
+   ch_pr2.set({
+       E_SL1: A,
+       E_SL2: B,
+       E_SL3: C,
+       E_SL4: D
+      }); 
+    }
+
+ //SE GUARDAN LOS EXTRAS DE SISTEMA DE PRODUCCIÓN
+res = document.getElementById("contador13");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_SIP' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_SIP_nombre').val();
+  var B = $('#'+cont1+'_SIP_proposito').val();
+  var C = $('#'+cont1+'_SIP_desarrollo').val();
+  var D = $('#'+cont1+'_SIP_documentado').val();
+  var E = $('#'+cont1+'_SIP_cantidad').val();
+
+
+   ch_pr2.set({
+       E_SIP1: A,
+       E_SIP2: B,
+       E_SIP3: C,
+       E_SIP4: D,
+       E_SIP5: E
+      }); 
+    }
+
+ //SE GUARDAN LOS EXTRAS DE SISTEMA DE DESARROLLO
+res = document.getElementById("contador14");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_SID' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_SID_nombre').val();
+  var B = $('#'+cont1+'_SID_proposito').val();
+  var C = $('#'+cont1+'_SID_desarrollo').val();
+  var D = $('#'+cont1+'_SID_documentado').val();
+  var E = $('#'+cont1+'_SID_cantidad').val();
+
+
+   ch_pr2.set({
+       E_SID1: A,
+       E_SID2: B,
+       E_SID3: C,
+       E_SID4: D,
+       E_SID5: E
+      }); 
+    }
+
+//SE GUARDAN LOS EXTRAS DE NECESIDADES DE TICS
+res = document.getElementById("contador15");
+ res.value = parseInt(res.value);
+
+ 
+for (var i=0; i< res.value; i++) {
+  var cont1 = 1;
+  cont1 = cont1 + i;
+
+  var ch_pr = uuid + '/E_NTIC' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+console.log(cont1);
+  var A = $('#'+cont1+'_NTIC_tipo').val();
+  var B = $('#'+cont1+'_NTIC_proposito').val();
+  var C = $('#'+cont1+'_NTIC_caracteristicas').val();
+  var D = $('#'+cont1+'_NTIC_cantidad').val();
+  var E = $('#'+cont1+'_NTIC_causa').val();
+
+
+   ch_pr2.set({
+       E_NTIC11: A,
+       E_NTIC2: B,
+       E_NTIC3: C,
+       E_NTIC4: D,
+       E_NTIC5: E
+      }); 
+    }
+
 
 
 
