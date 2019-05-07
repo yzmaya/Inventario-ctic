@@ -43,7 +43,9 @@
   <br>
 
 
-
+<div id="lista">
+          
+</div>
  
 
   <form class="form-horizontal" action="">
@@ -506,6 +508,215 @@
 
   </form>
 </div>
+
+<script>
+
+
+
+   function getInfo(){
+
+var unico = $('p:first').text()
+var unico2 = unico + '/ALL'
+var normal = firebase.database().ref(unico2);
+
+//SE CARGAN LOS DATOS GUARDADOS ANTERIORMENTE
+
+  normal.on('value', function(data) {
+//PERSONAL RESPONSABLE
+ 
+  $('#campo1').val(data.val().unidad_responsable);
+  $('#uno_name').val(data.val().PR_1_name);
+  $('#uno_cargo').val(data.val().PR_1_cargo);
+  $('#uno_sede').val(data.val().PR_1_sede);
+  $('#uno_telefono').val(data.val().PR_1_tel);
+  $('#uno_correo').val(data.val().PR_1_email);
+  $('#dos_name').val(data.val().PR_2_name);
+  $('#dos_cargo').val(data.val().PR_2_cargo);
+  $('#dos_sede').val(data.val().PR_2_sede);
+  $('#dos_telefono').val(data.val().PR_2_tel);
+  $('#dos_correo').val(data.val().PR_2_email);
+  $('#tres_name').val(data.val().PR_3_name);
+  $('#tres_cargo').val(data.val().PR_3_cargo);
+  $('#tres_sede').val(data.val().PR_3_sede);
+  $('#tres_telefono').val(data.val().PR_3_tel);
+  $('#tres_correo').val(data.val().PR_3_email);
+
+  //PERSONAL DE APOYO
+
+  $('#uno_pa_name').val(data.val().PA_1_name);
+  $('#uno_pa_perfil').val(data.val().PA_1_academico);
+  $('#uno_pa_plaza').val(data.val().PA_1_plaza);
+  $('#dos_pa_name').val(data.val().PA_2_name);
+  $('#dos_pa_perfil').val(data.val().PA_2_academico);
+  $('#dos_pa_plaza').val(data.val().PA_2_plaza);
+
+
+//COMPUTADORAS PERSONALES
+
+$('#E_CP_inmueble').val(data.val().E_CP_1);
+$('#E_CP_perfil_sac').val(data.val().E_CP_2);
+$('#E_CP_cantidad').val(data.val().E_CP_3);
+$('#E_CP_origen').val(data.val().E_CP_4);
+
+//SERVIDORES
+
+$('#E_SERV_ubicacion').val(data.val().E_SERV_1);
+$('#E_SERV_resumen').val(data.val().E_SERV_2);
+$('#E_SERV_cantidad').val(data.val().E_SERV_3);
+$('#E_SERV_origen').val(data.val().E_SERV_4);
+$('#E_SERV_proposito').val(data.val().E_SERV_5);
+
+//IMPRESORAS Y ESCANERES
+
+$('#E_IMP_ESC_inmueble').val(data.val().E_IMP_ESC_1);
+$('#E_IMP_ESC_perfil_said').val(data.val().E_IMP_ESC_2);
+$('#E_IMP_ESC_cantidad').val(data.val().E_IMP_ESC_3);
+$('#E_IMP_ESC_origen').val(data.val().E_IMP_ESC_4);
+
+//EQUIPOS AUDIOVISUALES
+
+$('#E_EA_inmueble').val(data.val().E_EA_1);
+$('#E_EA_resumen').val(data.val().E_EA_2);
+$('#E_EA_cantidad').val(data.val().E_EA_3);
+$('#E_EA_origen').val(data.val().E_EA_4);
+
+//EQUIPOS OTROS DISPOSITIVOS
+
+$('#E_OD_inmueble').val(data.val().E_OD_1);
+$('#E_OD_resumen').val(data.val().E_OD_2);
+$('#E_OD_cantidad').val(data.val().E_OD_3);
+$('#E_OD_origen').val(data.val().E_OD_4);
+
+//TELEFONIA IP
+
+$('#SC_IP_inmueble').val(data.val().SC_IP_1);
+$('#SC_IP_perfil').val(data.val().SC_IP_2);
+$('#SC_IP_cantidad').val(data.val().SC_IP_3);
+
+//INFRAESTRUCTURA DE REDES
+
+$('#SC_IR_inmueble').val(data.val().SC_IR_1);
+$('#SC_IR_resumen').val(data.val().SC_IR_2);
+$('#SC_IR_cantidad').val(data.val().SC_IR_3);
+$('#SC_IR_origen').val(data.val().SC_IR_4);
+
+//OTROS SERVICIOS
+$('#SC_OS_inmueble').val(data.val().SC_OS_1);
+$('#SC_OS_resumen').val(data.val().SC_OS_2);
+$('#SC_OS_cantidad').val(data.val().SC_OS_3);
+$('#SC_OS_origen').val(data.val().SC_OS_4);
+
+//SOFTWARE COMERCIAL
+
+$('#L_SC_paquete').val(data.val().L_SC_1);
+$('#L_SC_version').val(data.val().L_SC_2);
+$('#L_SC_so').val(data.val().L_SC_3);
+$('#L_SC_cant_lic').val(data.val().L_SC_4);
+$('#L_SC_origen').val(data.val().L_SC_5);
+
+//SOFTWARE LIBRE
+
+$('#L_SL_paquete').val(data.val().L_SL_1);
+$('#L_SL_version').val(data.val().L_SL_2);
+$('#L_SL_so').val(data.val().L_SL_3);
+$('#L_SL_cant_lic').val(data.val().L_SL_4);
+
+//SISTEMAS INFORMATICOS EN PRODUCCION
+
+$('#SA_SIP_nombre').val(data.val().SA_SIP_1);
+$('#SA_SIP_proposito').val(data.val().SA_SIP_2);
+$('#SA_SIP_desarrollo').val(data.val().SA_SIP_3);
+$('#SA_SIP_pregunta').val(data.val().SA_SIP_4);
+$('#SA_SIP_cantidad').val(data.val().SA_SIP_5);
+
+//SISTEMAS INFORMATICOS EN DESARROLLO
+
+$('#SA_SID_nombre').val(data.val().SA_SID_1);
+$('#SA_SID_proposito').val(data.val().SA_SID_2);
+$('#SA_SID_desarrollo').val(data.val().SA_SID_3);
+$('#SA_SID_pregunta').val(data.val().SA_SID_4);
+$('#SA_SID_cantidad').val(data.val().SA_SID_5);
+
+//NECESIUDADES
+
+
+$('#N_OR_tipo').val(data.val().N_OR_1);
+$('#N_OR_proposito').val(data.val().N_OR_2);
+$('#N_OR_caracteristicas').val(data.val().N_OR_3);
+$('#N_OR_cantidad').val(data.val().N_OR_4);
+$('#N_OR_causa').val(data.val().N_OR_5);
+
+
+ var SECCION1_1 = data.val().SECCION1_1;
+  $('#contador1').val(SECCION1_1);
+  var calcular = $('#contador1').val();
+  
+
+if (calcular == 0) {    
+console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador1");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_PR' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_PersonalR';
+    const B = cont1 + '_name';
+    const C = cont1 + '_cargo';
+    const D = cont1 + '_sede';
+    const E = cont1 + '_telefono';
+    const F = cont1 + '_correo';
+
+
+  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td><input type=text id=' + F + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_PR1;
+    var b = data.val().E_PR2;
+    var c = data.val().E_PR3;
+    var d = data.val().E_PR4;
+    var e = data.val().E_PR5;
+    var f = data.val().E_PR6;
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+    $('#'+F+'').val(f);
+  });
+  
+}
+
+
+
+
+};
+
+  //aqui termina el serializado value(data)
+});
+
+//aqui termina la funcion
+
+}
+
+</script>
+
+
+
+
+
+
+
 <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
@@ -1271,15 +1482,6 @@ res.value++;
   };
   firebase.initializeApp(config)
 
-
-  function getInfo(){
-
-
-}
-
-
-  
-
 function saveInformation() {
 
 
@@ -1317,13 +1519,13 @@ secc1_1.value = parseInt(secc1_1.value);
 
 //PERSONAL DE APOYO
 
-var uno_name = $('#uno_pa_name').val();
-var uno_academico = $('#uno_pa_perfil').val();
-var uno_plaza = $('#uno_pa_plaza').val();
+var uno_pa_name = $('#uno_pa_name').val();
+var uno_pa_academico = $('#uno_pa_perfil').val();
+var uno_pa_plaza = $('#uno_pa_plaza').val();
 
-var dos_name = $('#dos_pa_name').val();
-var dos_academico = $('#dos_pa_perfil').val();
-var dos_plaza = $('#dos_pa_plaza').val();
+var dos_pa_name = $('#dos_pa_name').val();
+var dos_pa_academico = $('#dos_pa_perfil').val();
+var dos_pa_plaza = $('#dos_pa_plaza').val();
 
 
 secc1_2 = document.getElementById('contador2');
@@ -1506,13 +1708,13 @@ inv_tic.set({
     PR_3_email: tres_correo,
     SECCION1_1: secc1_1.value,
 
-     PA_1_name: uno_name,
-    PA_1_academico: uno_academico,
-    PA_1_plaza: uno_plaza,
+    PA_1_name: uno_pa_name,
+    PA_1_academico: uno_pa_academico,
+    PA_1_plaza: uno_pa_plaza,
 
-    PA_2_name: dos_name,
-    PA_2_academico: dos_academico,
-    PA_2_plaza: dos_plaza,
+    PA_2_name: dos_pa_name,
+    PA_2_academico: dos_pa_academico,
+    PA_2_plaza: dos_pa_plaza,
     SECCION1_2: secc1_2.value,
 
     E_CP_1: E_CP_inmueble,
