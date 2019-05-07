@@ -453,7 +453,7 @@
         <td>Nombre y Acrónimo del Sistema</td>
         <td>Propósito</td>
         <td>Desarrollo Interno o Contratado</td>
-        <td>Fecha estimada de comclusión de Desarrollo</td>
+        <td>Fecha estimada de conclusión de Desarrollo</td>
         <td>Cantidad Estimada de Usuarios</td>
         <td><input type="text" value="0" size="1" id="contador14"/></td>
       </tr>
@@ -511,7 +511,8 @@
 </div>
 
 <script>
-var timer = setTimeout("getInfo()", 1000);
+var timer = setTimeout("getInfo()", 900);
+$('#verifica').toggle('slow');
 
    function getInfo(){
 
@@ -730,7 +731,11 @@ var uuid = $('p:first').text()
     const D = cont1 + '_PA_tipo';
 
 
-  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><select class=form-control id=' + D + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select><td></td>';
+
+
+
+
 
  ch_pr2.on('value', function(data) {
 
@@ -1413,17 +1418,8 @@ var uuid = $('p:first').text()
 
 };
 
-
-
-
-
-
-
-
-
-
-
-
+setTimeout(function(){ 
+  $('#verifica').toggle('slow'); }, 2000);
   //aqui termina el serializado value(data)
 });
 
@@ -1515,7 +1511,7 @@ if (res.value == 0) {
     var PA_perfil = res.value + '_PA_perfil';
     var PA_tipo = res.value + '_PA_tipo';
 
-  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id=' +PA_especialidad+ '  class=form-control></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><input type=text id='+ PA_perfil + '  class=form-control></td><td><input type=text id='+PA_tipo + ' class=form-control></td><td></td>';
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id=' +PA_especialidad+ '  class=form-control></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><input type=text id='+ PA_perfil + '  class=form-control></td><td><select class=form-control id=' + PA_tipo + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
 }else{
   //EXTRAS SECCION 1_!
 var ajua = uuid + '/E_PA' + res.value;
@@ -1542,7 +1538,7 @@ var PA_especialidad = res.value + '_PA_especialidad';
     var PA_perfil = res.value + '_PA_perfil';
     var PA_tipo = res.value + '_PA_tipo';
 
-  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id=' +PA_especialidad+ '  class=form-control></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><input type=text id='+ PA_perfil + '  class=form-control></td><td><input type=text id='+PA_tipo + ' class=form-control></td><td></td>';
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id=' +PA_especialidad+ '  class=form-control></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><input type=text id='+ PA_perfil + '  class=form-control></td><td><select class=form-control id=' + PA_tipo + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
 
 }
 
@@ -1564,8 +1560,9 @@ if (res.value == 0) {
     var CP_cantidad = res.value + '_CP_cantidad';
     var CP_origen = res.value + '_CP_origen';
 
-  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+CP_inmueble+ '  class=form-control></td><td><input type=text id='+CP_perfil + ' class=form-control></td><td><input type=text id='+CP_cantidad + ' class=form-control></td><td><input type=text id='+CP_origen+ ' class=form-control></td><td></td>';
+  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+CP_inmueble+ '  class=form-control></td><td><input type=text  placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo."  id='+CP_perfil + ' class=form-control></td><td><input type=number id='+CP_cantidad + ' class=form-control></td><td><input type=text id='+CP_origen+ ' class=form-control placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td><td></td>';
 }else{
+
   //EXTRAS SECCION 1_!
 var ajua = uuid + '/E_CP' + res.value;
 var ajua2 = firebase.database().ref(ajua);
@@ -1591,7 +1588,7 @@ res.value++;
     var CP_cantidad = res.value + '_CP_cantidad';
     var CP_origen = res.value + '_CP_origen';
 
-  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+CP_inmueble+ '  class=form-control></td><td><input type=text id='+CP_perfil + ' class=form-control></td><td><input type=text id='+CP_cantidad + ' class=form-control></td><td><input type=text id='+CP_origen+ ' class=form-control></td><td></td>';
+  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+CP_inmueble+ '  class=form-control></td><td><input type=text  placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+CP_perfil + ' class=form-control></td><td><input type=number id='+CP_cantidad + ' class=form-control></td><td><input type=text id='+CP_origen+ ' class=form-control placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td><td></td>';
 
 }
 
@@ -1613,7 +1610,7 @@ if (res.value == 0) {
     var SERV_origen = res.value + '_SERV_origen';
     var SERV_proposito = res.value + '_SERV_proposito';
 
-  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+SERV_ubicacion + ' class=form-control></td><td><input type=text id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><input type=text id='+SERV_origen + ' class=form-control></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+SERV_ubicacion + ' class=form-control></td><td><input type=text placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+SERV_origen + ' class=form-control></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
 }else{
   //EXTRAS SECCION 1_!
 var ajua = uuid + '/E_SERVS' + res.value;
@@ -1643,7 +1640,7 @@ res.value++;
     var SERV_origen = res.value + '_SERV_origen';
     var SERV_proposito = res.value + '_SERV_proposito';
 
-  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+SERV_ubicacion + ' class=form-control></td><td><input type=text id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><input type=text id='+SERV_origen + ' class=form-control></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+SERV_ubicacion + ' class=form-control></td><td><input type=text placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+SERV_origen + ' class=form-control></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
 }
 
 }
@@ -1663,7 +1660,7 @@ if (res.value == 0) {
     var IE_cantidad = res.value + '_IE_cantidad';
     var IE_origen = res.value + '_IE_origen';
 
-  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+IE_inmueble + '  class=form-control></td><td><input type=text id='+IE_perfil + ' class=form-control></td><td><input type=text id='+IE_cantidad + ' class=form-control></td><td><input type=text id='+IE_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+IE_inmueble + '  class=form-control></td><td><input type=text placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución." id='+IE_perfil + ' class=form-control></td><td><input type=number id='+IE_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+IE_origen + ' class=form-control></td><td>';
 }else{
   //EXTRAS SECCION 1_!
 var ajua = uuid + '/E_IMP_ESC' + res.value;
@@ -1690,7 +1687,7 @@ res.value++;
     var IE_cantidad = res.value + '_IE_cantidad';
     var IE_origen = res.value + '_IE_origen';
 
-  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+IE_inmueble + '  class=form-control></td><td><input type=text id='+IE_perfil + ' class=form-control></td><td><input type=text id='+IE_cantidad + ' class=form-control></td><td><input type=text id='+IE_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+IE_inmueble + '  class=form-control></td><td><input type=text placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución." id='+IE_perfil + ' class=form-control></td><td><input type=number id='+IE_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+IE_origen + ' class=form-control></td><td>';
 }
 }
 
@@ -1709,7 +1706,7 @@ if (res.value == 0) {
     var EA_cantidad = res.value + '_EA_cantidad';
     var EA_origen = res.value + '_EA_origen';
 
-  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+EA_inmueble + '  class=form-control></td><td><input type=text id='+EA_perfil + ' class=form-control></td><td><input type=text id='+EA_cantidad + ' class=form-control></td><td><input type=text id='+EA_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+EA_inmueble + '  class=form-control></td><td><input type=text placeholder="Resolución, luminosidad, etc."  id='+EA_perfil + ' class=form-control></td><td><input type=number id='+EA_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+EA_origen + ' class=form-control></td><td>';
 
 }else{
 var ajua = uuid + '/E_EA' + res.value;
@@ -1736,7 +1733,7 @@ res.value++;
     var EA_cantidad = res.value + '_EA_cantidad';
     var EA_origen = res.value + '_EA_origen';
 
-  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+EA_inmueble + '  class=form-control></td><td><input type=text id='+EA_perfil + ' class=form-control></td><td><input type=text id='+EA_cantidad + ' class=form-control></td><td><input type=text id='+EA_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+EA_inmueble + '  class=form-control></td><td><input type=text placeholder="Resolución, luminosidad, etc."  id='+EA_perfil + ' class=form-control></td><td><input type=number id='+EA_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+EA_origen + ' class=form-control></td><td>';
 
 }
 
@@ -1758,7 +1755,7 @@ if (res.value == 0) {
     var OD_cantidad = res.value + '_OD_cantidad';
     var OD_origen = res.value + '_OD_origen';
 
-  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+OD_inmueble + '  class=form-control></td><td><input type=text id='+OD_perfil + ' class=form-control></td><td><input type=text id='+OD_cantidad + ' class=form-control></td><td><input type=text id='+OD_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+OD_inmueble + '  class=form-control></td><td><input type=text placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id='+OD_perfil + ' class=form-control></td><td><input type=number id='+OD_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+OD_origen + ' class=form-control></td><td>';
 
 
 }else{
@@ -1786,7 +1783,7 @@ var OD_inmueble = res.value + '_OD_inmueble';
     var OD_cantidad = res.value + '_OD_cantidad';
     var OD_origen = res.value + '_OD_origen';
 
-  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+OD_inmueble + '  class=form-control></td><td><input type=text id='+OD_perfil + ' class=form-control></td><td><input type=text id='+OD_cantidad + ' class=form-control></td><td><input type=text id='+OD_origen + ' class=form-control></td><td></td>';
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+OD_inmueble + '  class=form-control></td><td><input type=text placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id='+OD_perfil + ' class=form-control></td><td><input type=number id='+OD_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+OD_origen + ' class=form-control></td><td></td>';
 
 }
 
@@ -1853,7 +1850,7 @@ if (res.value == 0) {
     var IR_cantidad = res.value + '_IR_cantidad';
     var IR_origen = res.value + '_IR_origen';
 
-  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+IR_inmueble + '  class=form-control></td><td><input type=text id='+IR_resumen + ' class=form-control></td><td><input type=text id='+IR_cantidad + ' class=form-control></td><td><input type=text id='+IR_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+IR_inmueble + '  class=form-control></td><td><input type=text placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." id='+IR_resumen + ' class=form-control></td><td><input type=number id='+IR_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+IR_origen + ' class=form-control></td><td>';
 
 
 }else{
@@ -1881,7 +1878,7 @@ var IR_inmueble = res.value + '_IR_inmueble';
     var IR_cantidad = res.value + '_IR_cantidad';
     var IR_origen = res.value + '_IR_origen';
 
- document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+IR_inmueble + '  class=form-control></td><td><input type=text id='+IR_resumen + ' class=form-control></td><td><input type=text id='+IR_cantidad + ' class=form-control></td><td><input type=text id='+IR_origen + ' class=form-control></td><td>';
+ document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+IR_inmueble + '  class=form-control></td><td><input type=text placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." id='+IR_resumen + ' class=form-control></td><td><input type=number id='+IR_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+IR_origen + ' class=form-control></td><td>';
 
 }
 
@@ -1902,7 +1899,7 @@ if (res.value == 0) {
     var OS_cantidad = res.value + '_OS_cantidad';
     var OS_origen = res.value + '_OS_origen';
 
-  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+OS_inmueble + '  class=form-control></td><td><input type=text id='+OS_resumen + ' class=form-control></td><td><input type=text id='+OS_cantidad + ' class=form-control></td><td><input type=text id='+OS_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+OS_inmueble + '  class=form-control></td><td><input type=text id='+OS_resumen + ' class=form-control></td><td><input type=number id='+OS_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+OS_origen + ' class=form-control></td><td>';
 
 
 }else{
@@ -1930,7 +1927,7 @@ var OS_inmueble = res.value + '_OS_inmueble';
     var OS_cantidad = res.value + '_OS_cantidad';
     var OS_origen = res.value + '_OS_origen';
 
-  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+OS_inmueble + '  class=form-control></td><td><input type=text id='+OS_resumen + ' class=form-control></td><td><input type=text id='+OS_cantidad + ' class=form-control></td><td><input type=text id='+OS_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+OS_inmueble + '  class=form-control></td><td><input type=text id='+OS_resumen + ' class=form-control></td><td><input type=number id='+OS_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+OS_origen + ' class=form-control></td><td>';
 
 
 }
@@ -1952,7 +1949,7 @@ if (res.value == 0) {
    var SC_licencias = res.value + '_SC_licencias';
    var SC_origen = res.value + '_SC_origen';
 
-  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><input type=text id='+SC_so + ' class=form-control></td><td><input type=text id='+SC_licencias + ' class=form-control></td><td><input type=text id='+SC_origen + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><input type=text id='+SC_so + ' class=form-control></td><td><input type=number  id='+SC_licencias + ' class=form-control></td><td><input placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." type=text id='+SC_origen + ' class=form-control></td><td></td>';
 
 }else{
 var ajua = uuid + '/E_SC' + res.value;
@@ -1981,7 +1978,7 @@ var SC_paquete = res.value + '_SC_paquete';
    var SC_licencias = res.value + '_SC_licencias';
    var SC_origen = res.value + '_SC_origen';
 
-  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><input type=text id='+SC_so + ' class=form-control></td><td><input type=text id='+SC_licencias + ' class=form-control></td><td><input type=text id='+SC_origen + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><input type=text id='+SC_so + ' class=form-control></td><td><input type=number id='+SC_licencias + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+SC_origen + ' class=form-control></td><td></td>';
 
 }
 
@@ -2002,7 +1999,7 @@ if (res.value == 0) {
    var SL_licencias = res.value + '_SL_licencias';
 
 
-  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><input type=text id='+SL_so + ' class=form-control></td><td><input type=text id='+SL_licencias + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><input type=text id='+SL_so + ' class=form-control></td><td><input type=number id='+SL_licencias + ' class=form-control></td><td></td>';
 
 }else{
 var ajua = uuid + '/E_SL' + res.value;
@@ -2029,7 +2026,7 @@ var SL_paquete = res.value + '_SL_paquete';
    var SL_licencias = res.value + '_SL_licencias';
 
 
-  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><input type=text id='+SL_so + ' class=form-control></td><td><input type=text id='+SL_licencias + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><input type=text id='+SL_so + ' class=form-control></td><td><input type=number id='+SL_licencias + ' class=form-control></td><td></td>';
 
 }
 
@@ -2051,7 +2048,7 @@ if (res.value == 0) {
    var SIP_cantidad = res.value + '_SIP_cantidad';
 
 
-  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text id='+SIP_nombre + '  class=form-control></td><td><input type=text id='+SIP_proposito + ' class=form-control></td><td><input type=text id='+SIP_desarrollo + ' class=form-control></td><td><input type=text id='+SIP_documentado + ' class=form-control></td><td><input type=text id='+SIP_cantidad + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text id='+SIP_nombre + '  class=form-control></td><td><input type=text id='+SIP_proposito + ' class=form-control></td><td><input type=text id='+SIP_desarrollo + ' class=form-control></td><td><input type=text id='+SIP_documentado + ' class=form-control></td><td><input type=number id='+SIP_cantidad + ' class=form-control></td><td></td>';
 }else{
 var ajua = uuid + '/E_SIP' + res.value;
 var ajua2 = firebase.database().ref(ajua);
@@ -2080,7 +2077,7 @@ res.value++;
    var SIP_cantidad = res.value + '_SIP_cantidad';
 
 
-  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text id='+SIP_nombre + '  class=form-control></td><td><input type=text id='+SIP_proposito + ' class=form-control></td><td><input type=text id='+SIP_desarrollo + ' class=form-control></td><td><input type=text id='+SIP_documentado + ' class=form-control></td><td><input type=text id='+SIP_cantidad + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text id='+SIP_nombre + '  class=form-control></td><td><input type=text id='+SIP_proposito + ' class=form-control></td><td><input type=text id='+SIP_desarrollo + ' class=form-control></td><td><input type=text id='+SIP_documentado + ' class=form-control></td><td><input type=number id='+SIP_cantidad + ' class=form-control></td><td></td>';
 
 }
 
@@ -2103,7 +2100,7 @@ if (res.value == 0) {
    var SID_cantidad = res.value + '_SID_cantidad';
 
 
-  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text id='+SID_nombre + '  class=form-control></td><td><input type=text id='+SID_proposito + ' class=form-control></td><td><input type=text id='+SID_desarrollo + ' class=form-control></td><td><input type=text id='+SID_documentado + ' class=form-control></td><td><input type=text id='+SID_cantidad + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text id='+SID_nombre + '  class=form-control></td><td><input type=text id='+SID_proposito + ' class=form-control></td><td><input type=text id='+SID_desarrollo + ' class=form-control></td><td><input type=text id='+SID_documentado + ' class=form-control></td><td><input type=number id='+SID_cantidad + ' class=form-control></td><td></td>';
 }else{
 var ajua = uuid + '/E_SID' + res.value;
 var ajua2 = firebase.database().ref(ajua);
@@ -2132,7 +2129,7 @@ res.value++;
    var SID_cantidad = res.value + '_SID_cantidad';
 
 
-  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text id='+SID_nombre + '  class=form-control></td><td><input type=text id='+SID_proposito + ' class=form-control></td><td><input type=text id='+SID_desarrollo + ' class=form-control></td><td><input type=text id='+SID_documentado + ' class=form-control></td><td><input type=text id='+SID_cantidad + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text id='+SID_nombre + '  class=form-control></td><td><input type=text id='+SID_proposito + ' class=form-control></td><td><input type=text id='+SID_desarrollo + ' class=form-control></td><td><input type=text id='+SID_documentado + ' class=form-control></td><td><input type=number id='+SID_cantidad + ' class=form-control></td><td></td>';
  
   
 }
@@ -2154,7 +2151,7 @@ if (res.value == 0) {
      var NTIC_cantidad = res.value + '_NTIC_cantidad';
       var NTIC_causa = res.value + '_NTIC_causa';
 
-  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=text id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text placeholder="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc." id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=number id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
 }else{
 var ajua = uuid + '/E_NTIC' + res.value;
 var ajua2 = firebase.database().ref(ajua);
@@ -2182,7 +2179,7 @@ res.value++;
      var NTIC_cantidad = res.value + '_NTIC_cantidad';
       var NTIC_causa = res.value + '_NTIC_causa';
 
-  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=text id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text placeholder="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc." id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=number id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
 
 }
 
@@ -2523,11 +2520,6 @@ inv_tic.set({
     SECCION6_1: secc6_1.value 
 
   });
-
-
-  
-   $('#verifica').toggle('slow');
- 
 
 
 //SE GUARDAN LOS EXTRAS DE PERSONAL RESPONSABLE
@@ -2955,10 +2947,9 @@ for (var i=0; i< res.value; i++) {
       }); 
     }
 
-//location.reload();
+location.reload();
 
-setTimeout(function(){ 
-  $('#verifica').toggle('slow'); }, 3000);
+
 //CIERRA LA FUNCION SAVE INFORMATION()
 }
 
