@@ -65,7 +65,7 @@
   <table style="text-align: center;"   class="table table-bordered" id="tablaPersonalResponsable">
     <thead>
       <tr>
-        <td><input type="text" size="1"  value="0" id="contador1"/></td>
+        <td><input type="text"  size="1"  value="0" id="contador1"/></td>
         <td>Nombre</td>
         <td>Cargo</td>
         <td>Sede</td>
@@ -704,7 +704,7 @@ var uuid = $('p:first').text()
 
 ///////////////////////////// SECCION 1_2 /////////////////////////////////////////////////7
  var SECCION1_2 = data.val().SECCION1_2;
-  $('#contador1').val(SECCION1_2);
+  $('#contador2').val(SECCION1_2);
   var calcular = $('#contador2').val();
   
 
@@ -2542,7 +2542,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_PR' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-//console.log(cont1);
+console.log(cont1);
   var A = $('#'+cont1+'_PersonalR').val();
   var B = $('#'+cont1+'_name').val();
   var C = $('#'+cont1+'_cargo').val();
