@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -2522,7 +2523,11 @@ inv_tic.set({
     SECCION6_1: secc6_1.value 
 
   });
-$('#verifica').show();
+
+
+  
+   $('#verifica').toggle('slow');
+ 
 
 
 //SE GUARDAN LOS EXTRAS DE PERSONAL RESPONSABLE
@@ -2952,7 +2957,8 @@ for (var i=0; i< res.value; i++) {
 
 //location.reload();
 
-
+setTimeout(function(){ 
+  $('#verifica').toggle('slow'); }, 3000);
 //CIERRA LA FUNCION SAVE INFORMATION()
 }
 
