@@ -26,7 +26,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a style="display: none;" id="verifica"><span class="glyphicon glyphicon-ok"></span> Se han Guardado tus cambios</a></li>
-        <li><button onclick="getInfo()">HOLA</button></li>
+       <!-- <li><button onclick="getInfo()">Cargar</button></li> -->
         <li class="active"><a style="cursor: pointer;" onclick="saveInformation()"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</a></li>        
         <li><a href="" onclick="logout()"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a></li>
         <li><p  id="uid" style="display: none;"></p></li>
@@ -64,7 +64,7 @@
   <table style="text-align: center;"   class="table table-bordered" id="tablaPersonalResponsable">
     <thead>
       <tr>
-        <td><input type="text" value="0" id="contador1"/></td>
+        <td><input type="text" size="1"  value="0" id="contador1"/></td>
         <td>Nombre</td>
         <td>Cargo</td>
         <td>Sede</td>
@@ -114,7 +114,7 @@
         <td>Nombre</td>
         <td>Perfil Académico</td>
         <td>Tipo de Plaza</td>
-        <td><input type="text" value="0" id="contador2"/></td>
+        <td><input type="text" size="1" value="0" id="contador2"/></td>
       </tr>
     </thead>
     <tbody>
@@ -165,7 +165,7 @@
         <td>Perfil SAC o resúmen de características</td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td><input type="text" value="0" id="contador3"/></td>
+        <td><input type="text" size="1" value="0" id="contador3"/></td>
       </tr>
     </thead>
     <tbody>
@@ -190,7 +190,7 @@
         <td>Cantidad</td>
         <td>Origen</td>
         <td>Propósito</td>
-        <td><input type="text" value="0" id="contador4"/></td>
+        <td><input type="text" size="1" value="0" id="contador4"/></td>
       </tr>
     </thead>  
     <tbody>
@@ -216,7 +216,7 @@
         <td>Perfíl SAID o resumen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td><input type="text" value="0" id="contador5"/></td>
+        <td><input type="text" size="1" value="0" id="contador5"/></td>
       </tr>
     </thead>
     <tbody>
@@ -241,7 +241,7 @@
         <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td><input type="text" value="0" id="contador6"/></td>
+        <td><input type="text" value="0" size="1" id="contador6"/></td>
       </tr>
     </thead>
     <tbody>
@@ -266,7 +266,7 @@
         <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td><input type="text" value="0" id="contador7"/></td>
+        <td><input type="text" value="0" size="1" id="contador7"/></td>
       </tr>
     </thead>
     <tbody>
@@ -287,13 +287,13 @@
   <p><strong>TELEFONÍA IP</strong></p>
 
   <div class="table-responsive">          
-  <table style="text-align: center;"   class="table table-bordered" id="tablaTelefoniaIp">
+  <table style="text-align: center;" class="table table-bordered" id="tablaTelefoniaIp">
     <thead>
       <tr>
         <td>Inmueble</td>
         <td>Perfil RIMA</td>
         <td>Cantidad</td>
-        <td><input type="text" value="0" id="contador8"/></td>
+        <td><input type="text" value="0" size="1" id="contador8"/></td>
       </tr>
     </thead>
     <tbody>
@@ -317,7 +317,7 @@
         <td>Resúmen de Características</td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td><input type="text" value="0" id="contador9"/></td>
+        <td><input type="text" value="0" size="1" id="contador9"/></td>
       </tr>
     </thead>
     <tbody>
@@ -342,7 +342,7 @@
         <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td><input type="text" value="0" id="contador10"/></td>
+        <td><input type="text" value="0" size="1" id="contador10"/></td>
       </tr>
     </thead>
     <tbody>
@@ -371,7 +371,7 @@
         <td>Sistema Operativo</td>
         <td>Cantidad de Licencias</td>
         <td>Origen</td>
-        <td><input type="text" value="0" id="contador11"/></td>
+        <td><input type="text" value="0" size="1" id="contador11"/></td>
       </tr>
     </thead>
     <tbody>
@@ -397,7 +397,7 @@
         <td>Versión</td>
         <td>Sistema Operativo</td>
         <td>Cantidad de Instalaciones</td>
-        <td><input type="text" value="0" id="contador12"/></td>
+        <td><input type="text" value="0" size="1" id="contador12"/></td>
       </tr>
     </thead>
     <tbody>
@@ -426,7 +426,7 @@
         <td>Desarrollo Interno o Contratado</td>
         <td>¿Está debidamente Documentado?</td>
         <td>Cantidad Estimada de Usuarios</td>
-        <td><input type="text" value="0" id="contador13"/></td>
+        <td><input type="text" value="0" size="1" id="contador13"/></td>
       </tr>
     </thead>
     <tbody>
@@ -454,7 +454,7 @@
         <td>Desarrollo Interno o Contratado</td>
         <td>Fecha estimada de comclusión de Desarrollo</td>
         <td>Cantidad Estimada de Usuarios</td>
-        <td><input type="text" value="0" id="contador14"/></td>
+        <td><input type="text" value="0" size="1" id="contador14"/></td>
       </tr>
     </thead>
     <tbody>
@@ -485,7 +485,7 @@
         <td>Principales Características</td>
         <td>Cantidad Requerida</td>
         <td>Causa de la falta de atención</td>
-        <td><input type="text" value="0" id="contador15"/></td>
+        <td><input type="text" value="0" size="1" id="contador15"/></td>
       </tr>
     </thead>
     <tbody>
@@ -510,8 +510,7 @@
 </div>
 
 <script>
-
-
+var timer = setTimeout("getInfo()", 1000);
 
    function getInfo(){
 
@@ -560,11 +559,11 @@ $('#E_CP_origen').val(data.val().E_CP_4);
 
 //SERVIDORES
 
-$('#E_SERV_ubicacion').val(data.val().E_SERV_1);
-$('#E_SERV_resumen').val(data.val().E_SERV_2);
-$('#E_SERV_cantidad').val(data.val().E_SERV_3);
-$('#E_SERV_origen').val(data.val().E_SERV_4);
-$('#E_SERV_proposito').val(data.val().E_SERV_5);
+$('#E_SERV_ubicacion').val(data.val().E_SERV1);
+$('#E_SERV_resumen').val(data.val().E_SERV2);
+$('#E_SERV_cantidad').val(data.val().E_SERV3);
+$('#E_SERV_origen').val(data.val().E_SERV4);
+$('#E_SERV_proposito').val(data.val().E_SERV5);
 
 //IMPRESORAS Y ESCANERES
 
@@ -646,14 +645,14 @@ $('#N_OR_caracteristicas').val(data.val().N_OR_3);
 $('#N_OR_cantidad').val(data.val().N_OR_4);
 $('#N_OR_causa').val(data.val().N_OR_5);
 
-
+///////////////////////////// SECCION 1_1 /////////////////////////////////////////////////7
  var SECCION1_1 = data.val().SECCION1_1;
   $('#contador1').val(SECCION1_1);
   var calcular = $('#contador1').val();
   
 
 if (calcular == 0) {    
-console.log('no hay nada extra dude');
+//console.log('no hay nada extra dude');
 }else{
 
 res = document.getElementById("contador1");
@@ -701,6 +700,728 @@ var uuid = $('p:first').text()
 
 
 };
+
+///////////////////////////// SECCION 1_2 /////////////////////////////////////////////////7
+ var SECCION1_2 = data.val().SECCION1_2;
+  $('#contador1').val(SECCION1_2);
+  var calcular = $('#contador2').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador2");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_PA' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_PA_especialidad';
+    const B = cont1 + '_PA_nombre';
+    const C = cont1 + '_PA_perfil';
+    const D = cont1 + '_PA_tipo';
+
+
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_PA1;
+    var b = data.val().E_PA2;
+    var c = data.val().E_PA3;
+    var d = data.val().E_PA4;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+  
+  });
+  
+}
+
+};
+
+
+
+///////////////////////////// SECCION 2_1 /////////////////////////////////////////////////7
+ var SECCION2_1 = data.val().SECCION2_1;
+  $('#contador3').val(SECCION2_1);
+  var calcular = $('#contador3').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador3");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_CP' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_CP_inmueble';
+    const B = cont1 + '_CP_perfil';
+    const C = cont1 + '_CP_cantidad';
+    const D = cont1 + '_CP_origen';
+
+
+  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_CP1;
+    var b = data.val().E_CP2;
+    var c = data.val().E_CP3;
+    var d = data.val().E_CP4;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+  
+  });
+  
+}
+
+};
+
+
+///////////////////////////// SECCION 2_2 /////////////////////////////////////////////////7
+ var SECCION2_2 = data.val().SECCION2_2;
+  $('#contador4').val(SECCION2_2);
+  var calcular = $('#contador4').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador4");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_SERVS' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_SERV_ubicacion';
+    const B = cont1 + '_SERV_resumen';
+    const C = cont1 + '_SERV_cantidad';
+    const D = cont1 + '_SERV_origen';
+    const E = cont1 + '_SERV_proposito';
+
+
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_SERV1;
+    var b = data.val().E_SERV2;
+    var c = data.val().E_SERV3;
+    var d = data.val().E_SERV4;
+    var e = data.val().E_SERV5;
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+  
+  });
+  
+}
+
+};
+
+
+
+///////////////////////////// SECCION 2_3 /////////////////////////////////////////////////7
+ var SECCION2_3 = data.val().SECCION2_3;
+  $('#contador5').val(SECCION2_3);
+  var calcular = $('#contador5').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador5");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_IMP_ESC' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_IE_inmueble';
+    const B = cont1 + '_IE_perfil';
+    const C = cont1 + '_IE_cantidad';
+    const D = cont1 + '_IE_origen';
+
+
+
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_IE1;
+    var b = data.val().E_IE2;
+    var c = data.val().E_IE3;
+    var d = data.val().E_IE4;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+  
+  });
+  
+}
+
+};
+
+///////////////////////////// SECCION 2_4 /////////////////////////////////////////////////7
+ var SECCION2_4 = data.val().SECCION2_4;
+  $('#contador6').val(SECCION2_4);
+  var calcular = $('#contador6').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador6");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_EA' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_EA_inmueble';
+    const B = cont1 + '_EA_perfil';
+    const C = cont1 + '_EA_cantidad';
+    const D = cont1 + '_EA_origen';
+
+
+  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_EA1;
+    var b = data.val().E_EA2;
+    var c = data.val().E_EA3;
+    var d = data.val().E_EA4;
+   
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+  
+  });
+  
+}
+
+};
+
+
+///////////////////////////// SECCION 2_5 /////////////////////////////////////////////////7
+ var SECCION2_5 = data.val().SECCION2_5;
+  $('#contador7').val(SECCION2_5);
+  var calcular = $('#contador7').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador7");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_OD' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_OD_inmueble';
+    const B = cont1 + '_OD_perfil';
+    const C = cont1 + '_OD_cantidad';
+    const D = cont1 + '_OD_origen';
+
+
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_OD1;
+    var b = data.val().E_OD2;
+    var c = data.val().E_OD3;
+    var d = data.val().E_OD4;
+   
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+  
+  });
+  
+}
+
+};
+
+///////////////////////////// SECCION 3_1 /////////////////////////////////////////////////7
+ var SECCION3_1 = data.val().SECCION3_1;
+  $('#contador8').val(SECCION3_1);
+  var calcular = $('#contador8').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador8");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_T_IP' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_T_IP_inmueble';
+    const B = cont1 + '_T_IP_perfil';
+    const C = cont1 + '_T_IP_cantidad';
+
+
+  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_T_IP1;
+    var b = data.val().E_T_IP2;
+    var c = data.val().E_T_IP3;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+  
+  });
+  
+}
+
+};
+
+///////////////////////////// SECCION 3_2 /////////////////////////////////////////////////7
+ var SECCION3_2 = data.val().SECCION3_2;
+  $('#contador9').val(SECCION3_2);
+  var calcular = $('#contador9').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador9");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_IR' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_IR_inmueble';
+    const B = cont1 + '_IR_resumen';
+    const C = cont1 + '_IR_cantidad';
+    const D = cont1 + '_IR_origen';
+
+
+  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' +D + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_IR1;
+    var b = data.val().E_IR2;
+    var c = data.val().E_IR3;
+    var d = data.val().E_IR4;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+  
+  });
+  
+}
+
+};
+
+
+///////////////////////////// SECCION 3_3/////////////////////////////////////////////////7
+ var SECCION3_3 = data.val().SECCION3_3
+  $('#contador10').val(SECCION3_3);
+ var calcular = $('#contador10').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador10");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_OS' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_OS_inmueble';
+    const B = cont1 + '_OS_resumen';
+    const C = cont1 + '_OS_cantidad';
+    const D = cont1 + '_OS_origen';
+
+
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' +D + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_OS1;
+    var b = data.val().E_OS2;
+    var c = data.val().E_OS3;
+    var d = data.val().E_OS4;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+  
+  });
+  
+}
+
+};
+
+
+///////////////////////////// SECCION 4_1 /////////////////////////////////////////////////7
+ var SECCION4_1 = data.val().SECCION4_1;
+  $('#contador11').val(SECCION4_1);
+  var calcular = $('#contador11').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador11");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_SC' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_SC_paquete';
+    const B = cont1 + '_SC_version';
+    const C = cont1 + '_SC_so';
+    const D = cont1 + '_SC_licencias';
+    const E = cont1 + '_SC_origen';
+
+
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_SC1;
+    var b = data.val().E_SC2;
+    var c = data.val().E_SC3;
+    var d = data.val().E_SC4;
+    var e = data.val().E_SC5;
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+  
+  });
+  
+}
+
+};
+
+
+
+///////////////////////////// SECCION 4_2/////////////////////////////////////////////////7
+ var SECCION4_2 = data.val().SECCION4_2
+  $('#contador12').val(SECCION4_2);
+ var calcular = $('#contador12').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador12");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_SL' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_SL_paquete';
+    const B = cont1 + '_SL_version';
+    const C = cont1 + '_SL_so';
+    const D = cont1 + '_SL_licencias';
+
+
+  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' +D + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_SL1;
+    var b = data.val().E_SL2;
+    var c = data.val().E_SL3;
+    var d = data.val().E_SL4;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+  
+  });
+  
+}
+
+};
+
+
+
+///////////////////////////// SECCION 5_1 /////////////////////////////////////////////////7
+ var SECCION5_1 = data.val().SECCION5_1;
+  $('#contador13').val(SECCION5_1);
+  var calcular = $('#contador13').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador13");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_SIP' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_SIP_nombre';
+    const B = cont1 + '_SIP_proposito';
+    const C = cont1 + '_SIP_desarrollo';
+    const D = cont1 + '_SIP_documentado';
+    const E = cont1 + '_SIP_cantidad';
+
+
+  document.getElementById("tablaSystemProd").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_SIP1;
+    var b = data.val().E_SIP2;
+    var c = data.val().E_SIP3;
+    var d = data.val().E_SIP4;
+    var e = data.val().E_SIP5;
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+  
+  });
+  
+}
+
+};
+
+///////////////////////////// SECCION 5_2 /////////////////////////////////////////////////7
+ var SECCION5_2 = data.val().SECCION5_2;
+  $('#contador14').val(SECCION5_2);
+  var calcular = $('#contador14').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador14");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_SID' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_SID_nombre';
+    const B = cont1 + '_SID_proposito';
+    const C = cont1 + '_SID_desarrollo';
+    const D = cont1 + '_SID_documentado';
+    const E = cont1 + '_SID_cantidad';
+
+
+  document.getElementById("tablaSystemDes").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_SID1;
+    var b = data.val().E_SID2;
+    var c = data.val().E_SID3;
+    var d = data.val().E_SID4;
+    var e = data.val().E_SID5;
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+  
+  });
+  
+}
+
+};
+
+
+
+
+///////////////////////////// SECCION 6_1 /////////////////////////////////////////////////7
+ var SECCION6_1 = data.val().SECCION6_1;
+  $('#contador15').val(SECCION6_1);
+  var calcular = $('#contador15').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador15");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_NTIC' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_NTIC_tipo';
+    const B = cont1 + '_NTIC_proposito';
+    const C = cont1 + '_NTIC_caracteristicas';
+    const D = cont1 + '_NTIC_cantidad';
+    const E = cont1 + '_NTIC_causa';
+
+
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_NTIC1;
+    var b = data.val().E_NTIC2;
+    var c = data.val().E_NTIC3;
+    var d = data.val().E_NTIC4;
+    var e = data.val().E_NTIC5;
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+  
+  });
+  
+}
+
+};
+
+
+
+
+
+
+
+
+
+
+
 
   //aqui termina el serializado value(data)
 });
@@ -763,7 +1484,7 @@ ajua2.set({
     E_PR6: F
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 var PersonalR = res.value + '_PersonalR';
     var nombre = res.value + '_name';
@@ -812,7 +1533,7 @@ ajua2.set({
     E_PA4: D
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 
 var PA_especialidad = res.value + '_PA_especialidad';
@@ -861,7 +1582,7 @@ ajua2.set({
     E_CP4: D
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 
   var CP_inmueble = res.value + '_CP_inmueble';
@@ -912,7 +1633,7 @@ ajua2.set({
     E_SERV5: E
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 
  var SERV_ubicacion = res.value + '_SERV_ubicacion';
@@ -960,7 +1681,7 @@ ajua2.set({
     E_IE4: D
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 
      var IE_inmueble = res.value + '_IE_inmueble';
@@ -1006,7 +1727,7 @@ ajua2.set({
     E_EA4: D
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 
    var EA_inmueble = res.value + '_EA_inmueble';
@@ -1056,7 +1777,7 @@ ajua2.set({
     E_OD4: D
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 
 var OD_inmueble = res.value + '_OD_inmueble';
@@ -1102,7 +1823,7 @@ ajua2.set({
     E_T_IP3: C
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
    var T_IP_inmueble = res.value + '_T_IP_inmueble';
     var T_IP_perfil = res.value + '_T_IP_perfil';
@@ -1151,7 +1872,7 @@ ajua2.set({
     E_IR4: D
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 
 var IR_inmueble = res.value + '_IR_inmueble';
@@ -1200,7 +1921,7 @@ ajua2.set({
     E_OS4: D
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 
 var OS_inmueble = res.value + '_OS_inmueble';
@@ -1251,7 +1972,7 @@ ajua2.set({
     E_SC5: E
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 var SC_paquete = res.value + '_SC_paquete';
    var SC_version = res.value + '_SC_version';
@@ -1299,7 +2020,7 @@ ajua2.set({
     E_SL4: D
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
 var SL_paquete = res.value + '_SL_paquete';
    var SL_version = res.value + '_SL_version';
@@ -1349,7 +2070,7 @@ ajua2.set({
     E_SIP5: E
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
     var SIP_nombre = res.value + '_SIP_nombre';
    var SIP_proposito = res.value + '_SIP_proposito';
@@ -1401,7 +2122,7 @@ ajua2.set({
     E_SID5: E
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
     var SID_nombre = res.value + '_SID_nombre';
    var SID_proposito = res.value + '_SID_proposito';
@@ -1452,7 +2173,7 @@ ajua2.set({
     E_NTIC5: E
   }); 
 
-console.log(ajua);
+//console.log(ajua);
 res.value++;
   var NTIC_tipo = res.value + '_NTIC_tipo';
    var NTIC_proposito = res.value + '_NTIC_proposito';
@@ -1757,7 +2478,7 @@ inv_tic.set({
     SC_IR_2: SC_IR_resumen,
     SC_IR_3: SC_IR_cantidad,
     SC_IR_4: SC_IR_origen,
-    SECCION3_1: secc3_2.value,
+    SECCION3_2: secc3_2.value,
 
     SC_OS_1: SC_OS_inmueble,
     SC_OS_2: SC_OS_resumen,
@@ -1791,7 +2512,7 @@ inv_tic.set({
     SA_SID_3: SA_SID_desarrollo,
     SA_SID_4: SA_SID_pregunta,
     SA_SID_5: SA_SID_cantidad,
-    SECCION5_1: secc5_2.value, 
+    SECCION5_2: secc5_2.value, 
 
     N_OR_1: N_OR_tipo,
     N_OR_2: N_OR_proposito,
@@ -1816,7 +2537,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_PR' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_PersonalR').val();
   var B = $('#'+cont1+'_name').val();
   var C = $('#'+cont1+'_cargo').val();
@@ -1848,7 +2569,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_PA' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_PA_especialidad').val();
   var B = $('#'+cont1+'_PA_nombre').val();
   var C = $('#'+cont1+'_PA_perfil').val();
@@ -1876,7 +2597,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_CP' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_CP_inmueble').val();
   var B = $('#'+cont1+'_CP_perfil').val();
   var C = $('#'+cont1+'_CP_cantidad').val();
@@ -1905,7 +2626,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_SERVS' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_SERV_ubicacion').val();
   var B = $('#'+cont1+'_SERV_resumen').val();
   var C = $('#'+cont1+'_SERV_cantidad').val();
@@ -1917,7 +2638,7 @@ console.log(cont1);
        E_SERV2: B,
        E_SERV3: C,
        E_SERV4: D,
-       E_SERV4: E
+       E_SERV5: E
       }); 
 
    
@@ -1936,7 +2657,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_IMP_ESC' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_IE_inmueble').val();
   var B = $('#'+cont1+'_IE_perfil').val();
   var C = $('#'+cont1+'_IE_cantidad').val();
@@ -1964,7 +2685,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_EA' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_EA_inmueble').val();
   var B = $('#'+cont1+'_EA_perfil').val();
   var C = $('#'+cont1+'_EA_cantidad').val();
@@ -1991,7 +2712,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_OD' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_OD_inmueble').val();
   var B = $('#'+cont1+'_OD_perfil').val();
   var C = $('#'+cont1+'_OD_cantidad').val();
@@ -2019,7 +2740,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_T_IP' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_T_IP_inmueble').val();
   var B = $('#'+cont1+'_T_IP_perfil').val();
   var C = $('#'+cont1+'_T_IP_cantidad').val();
@@ -2044,7 +2765,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_IR' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_IR_inmueble').val();
   var B = $('#'+cont1+'_IR_resumen').val();
   var C = $('#'+cont1+'_IR_cantidad').val();
@@ -2071,7 +2792,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_OS' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_OS_inmueble').val();
   var B = $('#'+cont1+'_OS_resumen').val();
   var C = $('#'+cont1+'_OS_cantidad').val();
@@ -2098,7 +2819,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_SC' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_SC_paquete').val();
   var B = $('#'+cont1+'_SC_version').val();
   var C = $('#'+cont1+'_SC_so').val();
@@ -2127,7 +2848,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_SL' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_SL_paquete').val();
   var B = $('#'+cont1+'_SL_version').val();
   var C = $('#'+cont1+'_SL_so').val();
@@ -2154,7 +2875,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_SIP' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_SIP_nombre').val();
   var B = $('#'+cont1+'_SIP_proposito').val();
   var C = $('#'+cont1+'_SIP_desarrollo').val();
@@ -2183,7 +2904,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_SID' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_SID_nombre').val();
   var B = $('#'+cont1+'_SID_proposito').val();
   var C = $('#'+cont1+'_SID_desarrollo').val();
@@ -2212,7 +2933,7 @@ for (var i=0; i< res.value; i++) {
   var ch_pr = uuid + '/E_NTIC' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-console.log(cont1);
+//console.log(cont1);
   var A = $('#'+cont1+'_NTIC_tipo').val();
   var B = $('#'+cont1+'_NTIC_proposito').val();
   var C = $('#'+cont1+'_NTIC_caracteristicas').val();
@@ -2221,7 +2942,7 @@ console.log(cont1);
 
 
    ch_pr2.set({
-       E_NTIC11: A,
+       E_NTIC1: A,
        E_NTIC2: B,
        E_NTIC3: C,
        E_NTIC4: D,
@@ -2229,7 +2950,7 @@ console.log(cont1);
       }); 
     }
 
-
+//location.reload();
 
 
 //CIERRA LA FUNCION SAVE INFORMATION()
