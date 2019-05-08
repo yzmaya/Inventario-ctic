@@ -56,10 +56,10 @@ $('#E_CP_origen').val(data.val().E_CP_4);
 
 //SERVIDORES
 
-$('#E_SERV_ubicacion').val(data.val().E_SERV1);
-$('#E_SERV_resumen').val(data.val().E_SERV2);
-$('#E_SERV_cantidad').val(data.val().E_SERV3);
-$('#E_SERV_origen').val(data.val().E_SERV4);
+$('#E_SERV_ubicacion').val(data.val().E_SERV_1);
+$('#E_SERV_resumen').val(data.val().E_SERV_2);
+$('#E_SERV_cantidad').val(data.val().E_SERV_3);
+$('#E_SERV_origen').val(data.val().E_SERV_4);
 $('#E_SERV_proposito').val(data.val().E_SERV5);
 
 //IMPRESORAS Y ESCANERES
