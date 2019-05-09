@@ -5,7 +5,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if(user != null){
 
     var email_id = user.email;
-    document.getElementById("info").innerHTML = "Usuario : " + email_id;
+    document.getElementById("info").innerHTML = email_id;
     var uid = user.uid;
      document.getElementById("uid").innerHTML = uid; 
   //   var timer = setTimeout("getInfo()", 1);

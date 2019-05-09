@@ -16,7 +16,7 @@ console.log('inicio boton save information');
  var ALL = uuid + '/ALL';
  var inv_tic = firebase.database().ref(ALL);
 
-
+var usuario = $('#info').text();
 var campo1 =  $('#campo1').val();
 var fecha = 'PENDIENTE DE CONFG';
 
@@ -213,6 +213,7 @@ secc6_1.value = parseInt(secc6_1.value);
 //se guardan en ALL
 
 inv_tic.set({
+    usuario: usuario,
     unidad_responsable: campo1,
     fecha_registro: fecha,
 

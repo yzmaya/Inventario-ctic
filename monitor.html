@@ -30,7 +30,7 @@
        <!-- <li><button onclick="getInfo()">Cargar</button></li> -->
         <li class="active"><a style="cursor: pointer;" onclick="Exportar()"><span class="glyphicon glyphicon-export"></span> Exportar a Excel</a></li>        
         <li><a href="" onclick="logout()"><span class="glyphicon glyphicon-user"></span> Cerrar Sesión</a></li>
-        <li><p  id="uid" style="display: none;"></p></li>
+        
       </ul>
     </div>
   </div>
@@ -38,39 +38,109 @@
   
   
 
-  <br><br><br>
-  <div class="container">
+  <br><br><br><br>
+<div class="container">
+   <form>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+      <input id="email" type="text" class="form-control" name="email" placeholder="Buscar ....">
+    </div>
+  </form>
+</div>
+  
+
+  <br><br>
+  <div class="container table-responsive">
              
-  <table class="table table-striped">
+  <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Usuario</th>
+        <th>Unidad o Dirección General</th>
+        <th>Responsable de TIC</th>
+        <th>Cargo</th>
+        <th>Sede</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+        <th>Responsable de desarrollo y mantenimiento</th>
+        <th>Cargo</th>
+        <th>Sede</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+        <th>Responsable de soporte técnico</th>
+        <th>Cargo</th>
+        <th>Sede</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+    <tbody id="tabla">
+      
     </tbody>
   </table>
 </div>
 
+<div id="info"></div>
 
- 
-<script src="js/nolog.js"></script>
+<span id="uid"></span>
+
+<div id="lista"></div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+ <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAOAkG1s0doBtE2xArxUJ4L039ic2xUO34",
+    authDomain: "proyecto-tic-294a3.firebaseapp.com",
+    databaseURL: "https://proyecto-tic-294a3.firebaseio.com",
+    projectId: "proyecto-tic-294a3",
+    storageBucket: "proyecto-tic-294a3.appspot.com",
+    messagingSenderId: "254246387905"
+  };
+  firebase.initializeApp(config);
+
+var informacion = firebase.database().ref('/');
+
+
+
+informacion.on('child_added', function(data) {
+
+  var usuario = data.val().ALL.usuario;
+  var dg = data.val().ALL.unidad_responsable;
+
+  var PR1 = data.val().ALL.PR_1_name;
+  var PR2 = data.val().ALL.PR_1_cargo;
+  var PR3 = data.val().ALL.PR_1_sede;
+  var PR4 = data.val().ALL.PR_1_tel;
+  var PR5 = data.val().ALL.PR_1_email;
+
+  var PR6 = data.val().ALL.PR_2_name;
+  var PR7 = data.val().ALL.PR_2_cargo;
+  var PR8 = data.val().ALL.PR_2_sede;
+  var PR9 = data.val().ALL.PR_2_tel;
+  var PR10 = data.val().ALL.PR_2_email;
+
+  var PR11 = data.val().ALL.PR_3_name;
+  var PR12 = data.val().ALL.PR_3_cargo;
+  var PR13 = data.val().ALL.PR_3_sede;
+  var PR14 = data.val().ALL.PR_3_tel;
+  var PR15 = data.val().ALL.PR_3_email;
+
+
+  console.log(dg);
+
+  $('#tabla').append('<tr><td>'+usuario+'</td><td>' + dg + '</td><td>'+ PR1 +'</td><td>'+PR2+'</td><td>'+PR3+'</td><td>'+PR4+'</td><td>'+PR5+'</td><td>'+ PR6 +'</td><td>'+PR7+'</td><td>'+PR8+'</td><td>'+PR9+'</td><td>'+PR10+'</td><td>'+PR11+'</td><td>'+ PR12 +'</td><td>'+PR13+'</td><td>'+PR14+'</td><td>'+PR15+'</td></tr>' );
+});
+
+ </script>
+
+
+
+<script src="js/appmonitor.js"></script>
+
+
+
+
 </body>
 </html>
