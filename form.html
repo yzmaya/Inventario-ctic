@@ -53,12 +53,26 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Unidad o Dirección General:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="campo1" placeholder="" name="">
+          <select class="form-control" id="campo1">
+           <option selected>Selecciona una Opción</option>
+          <option value="Colegio de Bachilleres (COLBACH)">Colegio de Bachilleres (COLBACH)</option>
+          <option value="Unidad de Educación Media Superior Tecnológica Industrial y de Servicio (UEMSTIS - DGETI)">Unidad de Educación Media Superior Tecnológica Industrial y de Servicio (UEMSTIS - DGETI)</option>
+          <option value="UEMSTAyCM (DGETAM)">UEMSTAyCM (DGETAM)</option>
+          <option value="Dirección General de Centros de Formación para el Trabajo (DGCFT)">Dirección General de Centros de Formación para el Trabajo (DGCFT)</option>
+          <option value="COLEGIO NACIONAL DE EDUCACIÓN PROFESIONAL TÉCNICA (CONALEP)">COLEGIO NACIONAL DE EDUCACIÓN PROFESIONAL TÉCNICA (CONALEP)</option>
+          <option value="DIRECCIÓN GENERAL DE BACHILLERATO (DGB)">DIRECCIÓN GENERAL DE BACHILLERATO (DGB)</option>
+          <option value="Centro de Enseñanza Técnica Industrial (CETI)">Centro de Enseñanza Técnica Industrial (CETI)</option>
+          <option value="Prepa en Línea">Prepa en Línea</option>
+          <option value="El Consejo Nacional de Normalización y Certificación de Competencias Laborales (CONOCER)">El Consejo Nacional de Normalización y Certificación de Competencias Laborales (CONOCER)</option>
+          <option value="CSPA">CSPA</option>
+          <option value="Coordinación Sectorial de Desarrollo Académico (COSDAC - CSFA)">Coordinación Sectorial de Desarrollo Académico (COSDAC - CSFA)</option>
+          <option value="Coordinación de Supervisión">Coordinación de Supervisión</option>
+        </select>
       </div>
     </div>
-    <span></span>
+
     <div class="alert alert-success">
-    <strong>I Recursos Humanos</strong>
+    <strong>I Recursos Humanos</strong> Este apartado capta información de los trabajadores para saber los conocimientos en general con base en su experiencia laboral.
   </div>
     <p><strong>PERSONAL RESPONSABLE</strong></p>
   <div class="table-responsive form-horizontal">          
@@ -78,8 +92,24 @@
       <tr>
         <td class="col-sm-2">Responsable de TIC en la UR</td>
         <td><input type="text" class="form-control" id="uno_name" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="uno_cargo" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="uno_sede" placeholder="" name=""></td>
+        <td>
+        <select class="form-control" id="uno_cargo">
+            <option value="Asistente">Asistente</option>
+            <option value="Director General">Director General</option>
+            <option value="Coordinador">Coordinador</option>
+            <option value="Jefe de la Unidad (encargado)">Jefe de la Unidad (encargado)</option>
+            <option value="Operativo">Operativo</option>
+            <option value="Subdirector de Área">Subdirector de Área</option>
+        </select>
+        </td>
+        <td>
+          <select class="form-control" id="uno_sede">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" id="uno_telefono" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="uno_correo" placeholder="" name=""></td>
         <td></td>
@@ -87,8 +117,24 @@
       <tr>
         <td class="col-sm-2">Responsable de desarrollo y mantenimiento de sistema informáticos</td>
         <td><input type="text" class="form-control" id="dos_name" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="dos_cargo" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="dos_sede" placeholder="" name=""></td>
+        <td>
+           <select class="form-control" id="dos_cargo">
+            <option value="Asistente">Asistente</option>
+            <option value="Director General">Director General</option>
+            <option value="Coordinador">Coordinador</option>
+            <option value="Jefe de la Unidad (encargado)">Jefe de la Unidad (encargado)</option>
+            <option value="Operativo">Operativo</option>
+            <option value="Subdirector de Área">Subdirector de Área</option>
+        </select>
+        </td>
+        <td>
+           <select class="form-control" id="dos_sede">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" id="dos_telefono" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="dos_correo" placeholder="" name=""></td>
         <td></td>
@@ -96,8 +142,24 @@
       <tr>
         <td class="col-sm-2">Responsable de soporte técnico y enlace informático ante la DGTIC</td>
         <td><input type="text" class="form-control" id="tres_name" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="tres_cargo" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="tres_sede" placeholder="" name=""></td>
+        <td>
+            <select class="form-control" id="tres_cargo">
+            <option value="Asistente">Asistente</option>
+            <option value="Director General">Director General</option>
+            <option value="Coordinador">Coordinador</option>
+            <option value="Jefe de la Unidad (encargado)">Jefe de la Unidad (encargado)</option>
+            <option value="Operativo">Operativo</option>
+            <option value="Subdirector de Área">Subdirector de Área</option>
+        </select>
+        </td>
+        <td>
+             <select class="form-control" id="tres_sede">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" id="tres_telefono" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="tres_correo" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" data-toggle="tooltip" title="Agregue más filas." onclick="agregarFilaPersonalResponsable()">+</button></td>
@@ -122,7 +184,16 @@
       <tr>
         <td class="col-sm-2">Desarrollo y mantenimiento de sistema informáticos</td>
         <td><input type="text" class="form-control" id="uno_pa_name" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="uno_pa_perfil" placeholder="" name=""></td>
+        <td>
+         <select class="form-control" id="uno_pa_perfil">
+            <option value="Asistente">Asistente</option>
+            <option value="Director General">Director General</option>
+            <option value="Coordinador">Coordinador</option>
+            <option value="Jefe de la Unidad (encargado)">Jefe de la Unidad (encargado)</option>
+            <option value="Operativo">Operativo</option>
+            <option value="Subdirector de Área">Subdirector de Área</option>
+        </select>
+        </td>
         <td><select class="form-control" id="uno_pa_plaza">
           <option selected>Selecciona una Opción</option>
           <option value="Estructura">Estructura</option>
@@ -154,7 +225,7 @@
   </div>
 
 <div class="alert alert-success">
-    <strong>II Equipamiento</strong>
+    <strong>II Equipamiento</strong> Este apartado está hecho para capatar el equipo que se encuentra en uso, en reparación y derivados.
   </div>
   <p><strong>COMPUTADORAS PERSONALES</strong></p>
 
@@ -283,7 +354,7 @@
   </div>
 
 <div class="alert alert-success">
-    <strong>III Servicios de Comunicaciones</strong>
+    <strong>III Servicios de Comunicaciones</strong>En esta sección se pretende tener un inventario con la información dedicada a redes de computación.
   </div>
   <p><strong>TELEFONÍA IP</strong></p>
 
@@ -359,7 +430,7 @@
   </div>
 
 <div class="alert alert-success">
-    <strong>IV Licenciamiento</strong>
+    <strong>IV Licenciamiento</strong> Esta sección pretende conocer los sistemas, aplicativos y portales web, para saber si usan de software comercial o libre.
   </div>
   <p><strong>SOFTWARE COMERCIAL</strong></p>
 
@@ -414,7 +485,7 @@
   </div>
 
   <div class="alert alert-success">
-    <strong>V Sistemas y aplicaciones</strong>
+    <strong>V Sistemas y aplicaciones</strong>Este apartado recaba información que tiene que ver con los sistemas, aplicaciones y portales web en desarrollo o producción
   </div>
   <p><strong>SISTEMAS INFORMÁTICOS EN PRODUCCIÓN</strong></p>
 
@@ -473,7 +544,7 @@
 
 
 <div class="alert alert-success">
-    <strong>VI Otros Recursos</strong>
+    <strong>VI Otros Recursos</strong>Esta sección, unicamente capta las necesidades de cada área de TIC, con esto se preveerán algunas necesidades.
   </div>
   <p><strong>NECESIDADES DE TIC PENDIENTES DE ATENCIÓN</strong></p>
 
