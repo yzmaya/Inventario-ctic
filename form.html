@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 
@@ -153,7 +152,7 @@
         </select>
         </td>
         <td>
-             <select class="form-control" id="tres_sede">
+         <select class="form-control" id="tres_sede">
             <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
             <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
             <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
@@ -186,12 +185,12 @@
         <td><input type="text" class="form-control" id="uno_pa_name" placeholder="" name=""></td>
         <td>
          <select class="form-control" id="uno_pa_perfil">
-            <option value="Asistente">Asistente</option>
-            <option value="Director General">Director General</option>
-            <option value="Coordinador">Coordinador</option>
-            <option value="Jefe de la Unidad (encargado)">Jefe de la Unidad (encargado)</option>
-            <option value="Operativo">Operativo</option>
-            <option value="Subdirector de Área">Subdirector de Área</option>
+            <option value="Lic en Informática">Lic en Informática</option>
+            <option value="Lic en Derecho">Lic en Derecho</option>
+            <option value="Lic en Administración de empresas">Lic en Administración de empresas</option>
+            <option value="Lic en Pedagogía">Lic en Pedagogía</option>
+            <option value="Lic en Telecomunicaciones">Lic en Telecomunicaciones</option>
+            <option value="Lic en Contaduría pública">Lic en Contaduría pública</option>
         </select>
         </td>
         <td><select class="form-control" id="uno_pa_plaza">
@@ -208,7 +207,16 @@
       <tr>
         <td class="col-sm-2">Soporte Técnico</td>
         <td><input type="text" class="form-control" id="dos_pa_name" placeholder="" name=""></td>
-        <td><input type="text" class="form-control" id="dos_pa_perfil" placeholder="" name=""></td>
+        <td>
+            <select class="form-control" id="dos_pa_perfil">
+            <option value="Lic en Informática">Lic en Informática</option>
+            <option value="Lic en Derecho">Lic en Derecho</option>
+            <option value="Lic en Administración de empresas">Lic en Administración de empresas</option>
+            <option value="Lic en Pedagogía">Lic en Pedagogía</option>
+            <option value="Lic en Telecomunicaciones">Lic en Telecomunicaciones</option>
+            <option value="Lic en Contaduría pública">Lic en Contaduría pública</option>
+        </select>
+        </td>
         <td><select class="form-control" id="dos_pa_plaza">
           <option selected>Selecciona una Opción</option>
           <option value="Estructura">Estructura</option>
@@ -242,10 +250,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="E_CP_inmueble" placeholder="" name=""></td>
+        <td>
+         <select class="form-control" id="E_CP_inmueble">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input id="E_CP_perfil_sac" type="text" class="form-control" placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." data-toggle="tooltip" title="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." ></td>
         <td><input type="number" class="form-control" id="E_CP_cantidad"></td>
-        <td><input type="text" class="form-control" id="E_CP_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td>
+        <select class="form-control" id="E_CP_origen">
+            <option value="Contrato con DGTIC">Contrato con DGTIC</option>
+            <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
+            <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
+         </select>
+        </td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaCompusPersonales()">+</button></td>
       </tr>
     </tbody>
@@ -267,10 +288,24 @@
     </thead>  
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="E_SERV_ubicacion" placeholder="" name=""></td>
+        <td>
+          <select class="form-control" id="E_SERV_ubicacion">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+
+        </td>
         <td><input type="text" class="form-control" id="E_SERV_resumen" placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." data-toggle="tooltip" title="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." ></td>
         <td><input type="number" class="form-control" id="E_SERV_cantidad" ></td>
-        <td><input type="text" class="form-control" id="E_SERV_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td>
+           <select class="form-control" id="E_SERV_origen">
+            <option value="Contrato con DGTIC">Contrato con DGTIC</option>
+            <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
+            <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" id="E_SERV_proposito" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaServidores()">+</button></td>
       </tr>
@@ -293,10 +328,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="E_IMP_ESC_inmueble" placeholder="" name=""></td>
+        <td>
+           <select class="form-control" id="E_IMP_ESC_inmueble">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" id="E_IMP_ESC_perfil_said" data-toggle="tooltip" title="Tipo de impresión o digitalización, velocidad, máxima resolución."  placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución."></td>
         <td><input type="number" class="form-control" id="E_IMP_ESC_cantidad" ></td>
-        <td><input type="text" class="form-control" id="E_IMP_ESC_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td>
+           <select class="form-control" id="E_IMP_ESC_origen">
+            <option value="Contrato con DGTIC">Contrato con DGTIC</option>
+            <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
+            <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
+         </select>
+        </td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaImpresorasEscaneres()">+</button></td>
       </tr>
     </tbody>
@@ -318,10 +366,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="E_EA_inmueble" placeholder="" name=""></td>
+        <td>
+           <select class="form-control" id="E_EA_inmueble">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control"  placeholder="Resolución, luminosidad, etc." id="E_EA_resumen" data-toggle="tooltip" title="Resolución, luminosidad, etc." ></td>
         <td><input type="number" class="form-control" id="E_EA_cantidad"></td>
-        <td><input type="text" class="form-control" id="E_EA_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td>
+          <select class="form-control" id="E_EA_origen">
+            <option value="Contrato con DGTIC">Contrato con DGTIC</option>
+            <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
+            <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
+         </select>
+        </td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaEquiAudiovisual()">+</button></td>
       </tr>
     </tbody>
@@ -343,10 +404,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="E_OD_inmueble" placeholder="" name=""></td>
+        <td>
+             <select class="form-control" id="E_OD_inmueble">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" id="E_OD_resumen" class="form-control" placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." data-toggle="tooltip" title="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." ></td>
         <td><input type="number" class="form-control" id="E_OD_cantidad"></td>
-        <td><input type="text" class="form-control" id="E_OD_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td>
+        <select class="form-control" id="E_OD_origen">
+            <option value="Contrato con DGTIC">Contrato con DGTIC</option>
+            <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
+            <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
+         </select>
+        </td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaOtrosDispositivos()">+</button></td>
       </tr>
     </tbody>
@@ -370,7 +444,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="SC_IP_inmueble" placeholder="" name=""></td>
+        <td>
+             <select class="form-control" id="SC_IP_inmueble">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" id="SC_IP_perfil" data-toggle="tooltip" title="" ></td>
         <td><input type="number" class="form-control" id="SC_IP_cantidad" ></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaTelIp()">+</button></td>
@@ -394,10 +475,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="SC_IR_inmueble" placeholder="" name=""></td>
+        <td>
+         <select class="form-control" id="SC_IR_inmueble">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" id="SC_IR_resumen" placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." data-toggle="tooltip" title="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." ></td>
         <td><input type="number" class="form-control" id="SC_IR_cantidad" ></td>
-        <td><input type="text" class="form-control" id="SC_IR_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td>
+         <select class="form-control" id="SC_IR_origen">
+            <option value="Contrato con DGTIC">Contrato con DGTIC</option>
+            <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
+            <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
+         </select>
+        </td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaRedes()">+</button></td>
       </tr>
     </tbody>
@@ -419,10 +513,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="SC_OS_inmueble" placeholder="" name=""></td>
+        <td>
+           <select class="form-control" id="SC_OS_inmueble">
+            <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
+            <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
+            <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
+            <option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" placeholder="" id="SC_OS_resumen" data-toggle="tooltip" title="" ></td>
         <td><input type="number" class="form-control" id="SC_OS_cantidad"></td>
-        <td><input type="text" class="form-control" id="SC_OS_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td>
+        <select class="form-control" id="SC_OS_origen">
+            <option value="Contrato con DGTIC">Contrato con DGTIC</option>
+            <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
+            <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
+         </select>
+        </td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaOtrosServicios()">+</button></td>
       </tr>
     </tbody>
@@ -450,9 +557,23 @@
       <tr>
         <td><input type="text" class="form-control" id="L_SC_paquete" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="L_SC_version" data-toggle="tooltip" title="" ></td>
-        <td><input type="text" class="form-control" id="L_SC_so" placeholder="" name=""></td>
+        <td>
+            <select class="form-control" id="L_SC_so">
+            <option value="Linux">Linux</option>
+            <option value="Mac">Mac</option>
+            <option value="Windows 10">Windows 10</option>
+            <option value="Windows Server">Windows Server</option>
+         </select>
+
+        </td>
         <td><input type="number" class="form-control" id="L_SC_cant_lic"></td>
-        <td><input type="text" class="form-control" id="L_SC_origen" placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." data-toggle="tooltip" title="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td>
+        <td>
+        <select class="form-control" id="L_SC_origen">
+            <option value="Contrato con DGTIC">Contrato con DGTIC</option>
+            <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
+            <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
+         </select>
+        </td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaSoftware()">+</button></td>
       </tr>
     </tbody>
@@ -476,7 +597,14 @@
       <tr>
         <td><input type="text" class="form-control" id="L_SL_paquete" placeholder="" name=""></td>
         <td><input type="text" class="form-control" id="L_SL_version" data-toggle="tooltip" title="" ></td>
-        <td><input type="text" class="form-control" id="L_SL_so" placeholder="" name=""></td>
+        <td>
+           <select class="form-control" id="L_SL_so">
+            <option value="Linux">Linux</option>
+            <option value="Mac">Mac</option>
+            <option value="Windows 10">Windows 10</option>
+            <option value="Windows Server">Windows Server</option>
+         </select>
+        </td>
         <td><input type="text" class="form-control" id="L_SL_cant_lic" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaSoftwareFree()">+</button></td>
       </tr>

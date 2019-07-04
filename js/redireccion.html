@@ -7,5 +7,18 @@
 <script type="text/javascript">
 window.location="http://educacionmediasuperior.sep.gob.mx/es_mx/sems";
 </script>
+
+<script type="text/javascript">
+var x = document.domain; 
+if(x=="sems.gob.mx"){
+	window.location="http://educacionmediasuperior.sep.gob.mx/es_mx/sems";
+}else if(x=="www.sems.gob.mx"){
+window.location="http://educacionmediasuperior.sep.gob.mx/es_mx/sems";
+}else if(x=="www.educacionmediasuperior.sep.gob.mx"){
+window.location="http://educacionmediasuperior.sep.gob.mx/es_mx/sems";
+}else{
+	console.log("/es_mx/sems");
+}
+</script>
 </body>
 </html>
