@@ -52,10 +52,34 @@ var uno_pa_name = $('#uno_pa_name').val();
 var uno_pa_academico = $('#uno_pa_perfil').val();
 var uno_pa_plaza = $('#uno_pa_plaza').val();
 
-var dos_pa_name = $('#dos_pa_name').val();
-var dos_pa_academico = $('#dos_pa_perfil').val();
-var dos_pa_plaza = $('#dos_pa_plaza').val();
+//PERSONAL DE APOYO CON PERFIL DE TICS DEDICANDOSE A OTRA COSA
 
+
+var uno_pa_perfiltics_other_especialidad = $('#uno_pa_perfiltics_other_especialidad').val();
+var uno_pa_perfiltics_other_name = $('#uno_pa_perfiltics_other_name').val();
+var uno_pa_perfiltics_other_perfil = $('#uno_pa_perfiltics_other_perfil').val();
+var uno_pa_perfiltics_other_plaza = $('#uno_pa_perfiltics_other_plaza').val();
+
+//PERSONAL DE APOYO CON PERFIL DE DESARROLLADOR DE APLICACIONES WEB
+
+
+var uno_pa_apps_especialidad = $('#uno_pa_apps_especialidad').val();
+var uno_pa_apps_paradigma = $('#uno_pa_apps_paradigma').val();
+var uno_pa_apps_lenguaje = $('#uno_pa_apps_lenguaje').val();
+var uno_pa_apps_arquitectura = $('#uno_pa_apps_arquitectura').val();
+var uno_pa_apps_name = $('#uno_pa_apps_name').val();
+var uno_pa_apps_perfil = $('#uno_pa_apps_perfil').val();
+var uno_pa_apps_plaza = $('#uno_pa_apps_plaza').val();
+
+//PERSONAL DE APOYP CON PERFIL DE BASES DE DATOS
+
+var uno_pa_db_especialidad = $('#uno_pa_db_especialidad').val();
+var uno_pa_db_paradigma = $('#uno_pa_db_paradigma').val();
+var uno_pa_db_motor = $('#uno_pa_db_motor').val();
+var uno_pa_db_arquitectura = $('#uno_pa_db_arquitectura').val();
+var uno_pa_db_name = $('#uno_pa_db_name').val();
+var uno_pa_db_perfil = $('#uno_pa_db_perfil').val();
+var uno_pa_db_plaza = $('#uno_pa_db_plaza').val();
 
 secc1_2 = document.getElementById('contador2');
 secc1_2.value = parseInt(secc1_2.value);
@@ -134,6 +158,9 @@ secc3_1.value = parseInt(secc3_1.value);
 var SC_IR_inmueble = $('#SC_IR_inmueble').val();
 var SC_IR_resumen = $('#SC_IR_resumen').val();
 var SC_IR_cantidad = $('#SC_IR_cantidad').val();
+var SC_IR_ptos_used = $('#SC_IR_ptos_used').val();
+var SC_IR_ptos_inused = $('#SC_IR_ptos_inused').val();
+var SC_IR_switch_available = $('#SC_IR_switch_available').val();
 var SC_IR_origen = $('#SC_IR_origen').val();
 
 secc3_2 = document.getElementById('contador9');
@@ -232,6 +259,29 @@ inv_tic.set({
     PA_1_academico: uno_pa_academico,
     PA_1_plaza: uno_pa_plaza,
 
+    PA_PERFIL_TICS_especialidad: uno_pa_perfiltics_other_especialidad, 
+    PA_PERFIL_TICS_name: uno_pa_perfiltics_other_name, 
+    PA_PERFIL_TICS_academico: uno_pa_perfiltics_other_perfil, 
+    PA_PERFIL_TICS_plaza: uno_pa_perfiltics_other_plaza, 
+
+
+    PA_PERFIL_WEBDEVELOPER_especialidad: uno_pa_apps_especialidad,
+    PA_PERFIL_WEBDEVELOPER_paradigma: uno_pa_apps_paradigma,
+    PA_PERFIL_WEBDEVELOPER_lenguaje: uno_pa_apps_lenguaje,
+    PA_PERFIL_WEBDEVELOPER_arquitectura: uno_pa_apps_arquitectura,
+    PA_PERFIL_WEBDEVELOPER_name: uno_pa_apps_name,
+    PA_PERFIL_WEBDEVELOPER_academico: uno_pa_apps_perfil,
+    PA_PERFIL_WEBDEVELOPER_plaza: uno_pa_apps_plaza,
+
+    PA_PERFIL_DATABASE_especialidad: uno_pa_db_especialidad,
+    PA_PERFIL_DATABASE_paradigma: uno_pa_db_paradigma,
+    PA_PERFIL_DATABASE_motor: uno_pa_db_motor,
+    PA_PERFIL_DATABASE_arquitectura: uno_pa_db_arquitectura,
+    PA_PERFIL_DATABASE_name: uno_pa_db_name,
+    PA_PERFIL_DATABASE_academico: uno_pa_db_perfil,
+    PA_PERFIL_DATABASE_plaza: uno_pa_db_plaza,
+
+
     SECCION1_2: secc1_2.value,
 
     E_CP_1: E_CP_inmueble,
@@ -273,7 +323,10 @@ inv_tic.set({
     SC_IR_1: SC_IR_inmueble,
     SC_IR_2: SC_IR_resumen,
     SC_IR_3: SC_IR_cantidad,
-    SC_IR_4: SC_IR_origen,
+    SC_IR_4: SC_IR_ptos_used,
+    SC_IR_5: SC_IR_ptos_inused,
+    SC_IR_6: SC_IR_switch_available,
+    SC_IR_7: SC_IR_origen,
     SECCION3_2: secc3_2.value,
 
     SC_OS_1: SC_OS_inmueble,

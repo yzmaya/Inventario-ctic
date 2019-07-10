@@ -35,6 +35,33 @@ var normal = firebase.database().ref(unico2);
   $('#uno_pa_perfil').val(data.val().PA_1_academico);
   $('#uno_pa_plaza').val(data.val().PA_1_plaza);
 
+  //PERSONAL DE APOYO CON PERFIL DE TICS DEDICANDOSE A OTRA COSA
+
+$('#uno_pa_perfiltics_other_especialidad').val(data.val().PA_PERFIL_TICS_especialidad);
+  $('#uno_pa_perfiltics_other_name').val(data.val().PA_PERFIL_TICS_name);
+  $('#uno_pa_perfiltics_other_perfil').val(data.val().PA_PERFIL_TICS_academico);
+  $('#uno_pa_perfiltics_other_plaza').val(data.val().PA_PERFIL_TICS_plaza);
+
+  //PERSONAL CON HABILIDADES DE PROGRAMACIÓN
+  
+  $('#uno_pa_apps_especialidad').val(data.val().PA_PERFIL_WEBDEVELOPER_especialidad);
+  $('#uno_pa_apps_paradigma').val(data.val().PA_PERFIL_WEBDEVELOPER_paradigma);
+  $('#uno_pa_apps_lenguaje').val(data.val().PA_PERFIL_WEBDEVELOPER_lenguaje);
+  $('#uno_pa_apps_arquitectura').val(data.val().PA_PERFIL_WEBDEVELOPER_arquitectura);
+  $('#uno_pa_apps_name').val(data.val().PA_PERFIL_WEBDEVELOPER_name);
+  $('#uno_pa_apps_perfil').val(data.val().PA_PERFIL_WEBDEVELOPER_academico);
+  $('#uno_pa_apps_plaza').val(data.val().PA_PERFIL_WEBDEVELOPER_plaza);
+
+  //PERSONAL CON HABILIDADES DE BASES DE DATOS
+  
+  $('#uno_pa_db_especialidad').val(data.val().PA_PERFIL_DATABASE_especialidad);
+  $('#uno_pa_db_paradigma').val(data.val().PA_PERFIL_DATABASE_paradigma);
+  $('#uno_pa_db_motor').val(data.val().PA_PERFIL_DATABASE_motor);
+  $('#uno_pa_db_arquitectura').val(data.val().PA_PERFIL_DATABASE_arquitectura);
+  $('#uno_pa_db_name').val(data.val().PA_PERFIL_DATABASE_name);
+  $('#uno_pa_db_perfil').val(data.val().PA_PERFIL_DATABASE_academico);
+  $('#uno_pa_db_plaza').val(data.val().PA_PERFIL_DATABASE_plaza);
+
 
 //COMPUTADORAS PERSONALES
 
@@ -83,7 +110,10 @@ $('#SC_IP_cantidad').val(data.val().SC_IP_3);
 $('#SC_IR_inmueble').val(data.val().SC_IR_1);
 $('#SC_IR_resumen').val(data.val().SC_IR_2);
 $('#SC_IR_cantidad').val(data.val().SC_IR_3);
-$('#SC_IR_origen').val(data.val().SC_IR_4);
+$('#SC_IR_ptos_used').val(data.val().SC_IR_4);
+$('#SC_IR_ptos_inused').val(data.val().SC_IR_5);
+$('#SC_IR_switch_available').val(data.val().SC_IR_6);
+$('#SC_IR_origen').val(data.val().SC_IR_7);
 
 //OTROS SERVICIOS
 $('#SC_OS_inmueble').val(data.val().SC_OS_1);
