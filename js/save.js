@@ -23,6 +23,7 @@ var fecha = 'PENDIENTE DE CONFG';
 //RECURSOS HUMANOS
 //PERSONAL RESPONSABLE
 
+var uno_pr = $('#uno_pr').val();
 var uno_name = $('#uno_name').val();
 var uno_cargo = $('#uno_cargo').val();
 var uno_sede = $('#uno_sede').val();
@@ -46,6 +47,7 @@ secc1_1.value = parseInt(secc1_1.value);
 
 //PERSONAL DE APOYO
 
+var uno_pa_especialidad = $('#uno_pa_especialidad').val();
 var uno_pa_name = $('#uno_pa_name').val();
 var uno_pa_academico = $('#uno_pa_perfil').val();
 var uno_pa_plaza = $('#uno_pa_plaza').val();
@@ -217,32 +219,19 @@ inv_tic.set({
     unidad_responsable: campo1,
     fecha_registro: fecha,
 
+    PR_0: uno_pr,
     PR_1_name: uno_name,
     PR_1_cargo: uno_cargo,
     PR_1_sede: uno_sede,
     PR_1_tel: uno_telefono,
     PR_1_email: uno_correo,
-
-    PR_2_name: dos_name,
-    PR_2_cargo: dos_cargo,
-    PR_2_sede: dos_sede,
-    PR_2_tel: dos_telefono,
-    PR_2_email: dos_correo,
-
-    PR_3_name: tres_name,
-    PR_3_cargo: tres_cargo,
-    PR_3_sede: tres_sede,
-    PR_3_tel: tres_telefono,
-    PR_3_email: tres_correo,
     SECCION1_1: secc1_1.value,
 
+    PA_1_especialidad: uno_pa_especialidad,
     PA_1_name: uno_pa_name,
     PA_1_academico: uno_pa_academico,
     PA_1_plaza: uno_pa_plaza,
 
-    PA_2_name: dos_pa_name,
-    PA_2_academico: dos_pa_academico,
-    PA_2_plaza: dos_pa_plaza,
     SECCION1_2: secc1_2.value,
 
     E_CP_1: E_CP_inmueble,

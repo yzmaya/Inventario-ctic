@@ -21,30 +21,19 @@ var normal = firebase.database().ref(unico2);
 //PERSONAL RESPONSABLE
  
   $('#campo1').val(data.val().unidad_responsable);
+  $('#uno_pr').val(data.val().PR_0);
   $('#uno_name').val(data.val().PR_1_name);
   $('#uno_cargo').val(data.val().PR_1_cargo);
   $('#uno_sede').val(data.val().PR_1_sede);
   $('#uno_telefono').val(data.val().PR_1_tel);
   $('#uno_correo').val(data.val().PR_1_email);
-  $('#dos_name').val(data.val().PR_2_name);
-  $('#dos_cargo').val(data.val().PR_2_cargo);
-  $('#dos_sede').val(data.val().PR_2_sede);
-  $('#dos_telefono').val(data.val().PR_2_tel);
-  $('#dos_correo').val(data.val().PR_2_email);
-  $('#tres_name').val(data.val().PR_3_name);
-  $('#tres_cargo').val(data.val().PR_3_cargo);
-  $('#tres_sede').val(data.val().PR_3_sede);
-  $('#tres_telefono').val(data.val().PR_3_tel);
-  $('#tres_correo').val(data.val().PR_3_email);
+  
 
   //PERSONAL DE APOYO
-
+  $('#uno_pa_especialidad').val(data.val().PA_1_especialidad);
   $('#uno_pa_name').val(data.val().PA_1_name);
   $('#uno_pa_perfil').val(data.val().PA_1_academico);
   $('#uno_pa_plaza').val(data.val().PA_1_plaza);
-  $('#dos_pa_name').val(data.val().PA_2_name);
-  $('#dos_pa_perfil').val(data.val().PA_2_academico);
-  $('#dos_pa_plaza').val(data.val().PA_2_plaza);
 
 
 //COMPUTADORAS PERSONALES
