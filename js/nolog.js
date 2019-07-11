@@ -63,12 +63,23 @@ $('#uno_pa_perfiltics_other_especialidad').val(data.val().PA_PERFIL_TICS_especia
   $('#uno_pa_db_plaza').val(data.val().PA_PERFIL_DATABASE_plaza);
 
 
-//COMPUTADORAS PERSONALES
+//COMPUTADORAS EN OPERACIÓN
 
-$('#E_CP_inmueble').val(data.val().E_CP_1);
-$('#E_CP_perfil_sac').val(data.val().E_CP_2);
-$('#E_CP_cantidad').val(data.val().E_CP_3);
-$('#E_CP_origen').val(data.val().E_CP_4);
+$('#E_CP_OPERACION_inmueble').val(data.val().E_CP_OPERACION_1);
+$('#E_CP_OPERACION_tipo').val(data.val().E_CP_OPERACION_2);
+$('#E_CP_OPERACION_cantidad').val(data.val().E_CP_OPERACION_3);
+$('#E_CP_OPERACION_antiguedad').val(data.val().E_CP_OPERACION_4);
+$('#E_CP_OPERACION_mtto').val(data.val().E_CP_OPERACION_5);
+$('#E_CP_OPERACION_origen').val(data.val().E_CP_OPERACION_6);
+
+//COMPUTADORAS SIN USO
+
+$('#E_CP_SINUSO_inmueble').val(data.val().E_CP_SINUSO_1);
+$('#E_CP_SINUSO_tipo').val(data.val().E_CP_SINUSO_2);
+$('#E_CP_SINUSO_cantidad').val(data.val().E_CP_SINUSO_3);
+$('#E_CP_SINUSO_antiguedad').val(data.val().E_CP_SINUSO_4);
+$('#E_CP_SINUSO_razon').val(data.val().E_CP_SINUSO_5);
+$('#E_CP_SINUSO_origen').val(data.val().E_CP_SINUSO_6);
 
 //SERVIDORES
 
@@ -76,7 +87,7 @@ $('#E_SERV_ubicacion').val(data.val().E_SERV_1);
 $('#E_SERV_resumen').val(data.val().E_SERV_2);
 $('#E_SERV_cantidad').val(data.val().E_SERV_3);
 $('#E_SERV_origen').val(data.val().E_SERV_4);
-$('#E_SERV_proposito').val(data.val().E_SERV5);
+$('#E_SERV_proposito').val(data.val().E_SERV_5);
 
 //IMPRESORAS Y ESCANERES
 
@@ -84,6 +95,7 @@ $('#E_IMP_ESC_inmueble').val(data.val().E_IMP_ESC_1);
 $('#E_IMP_ESC_perfil_said').val(data.val().E_IMP_ESC_2);
 $('#E_IMP_ESC_cantidad').val(data.val().E_IMP_ESC_3);
 $('#E_IMP_ESC_origen').val(data.val().E_IMP_ESC_4);
+$('#E_IMP_ESC_conectividad').val(data.val().E_IMP_ESC_5);
 
 //EQUIPOS AUDIOVISUALES
 
@@ -115,19 +127,22 @@ $('#SC_IR_ptos_inused').val(data.val().SC_IR_5);
 $('#SC_IR_switch_available').val(data.val().SC_IR_6);
 $('#SC_IR_origen').val(data.val().SC_IR_7);
 
-//OTROS SERVICIOS
-$('#SC_OS_inmueble').val(data.val().SC_OS_1);
-$('#SC_OS_resumen').val(data.val().SC_OS_2);
-$('#SC_OS_cantidad').val(data.val().SC_OS_3);
-$('#SC_OS_origen').val(data.val().SC_OS_4);
+//ENLACES A INTERNET DISTINTOS A RIMA
+$('#SC_OS_tipo').val(data.val().SC_OS_1);
+$('#SC_OS_anchobanda').val(data.val().SC_OS_2);
+$('#SC_OS_proveedor').val(data.val().SC_OS_3);
+$('#SC_OS_area_usuaria').val(data.val().SC_OS_4);
+$('#SC_OS_cantidad').val(data.val().SC_OS_5);
+$('#SC_OS_nombre_cash').val(data.val().SC_OS_6);
 
 //SOFTWARE COMERCIAL
 
 $('#L_SC_paquete').val(data.val().L_SC_1);
 $('#L_SC_version').val(data.val().L_SC_2);
 $('#L_SC_so').val(data.val().L_SC_3);
-$('#L_SC_cant_lic').val(data.val().L_SC_4);
-$('#L_SC_origen').val(data.val().L_SC_5);
+$('#L_SC_cant_total_lic').val(data.val().L_SC_4);
+$('#L_SC_cant_lic_en_uso').val(data.val().L_SC_5);
+$('#L_SC_origen').val(data.val().L_SC_6);
 
 //SOFTWARE LIBRE
 
@@ -151,6 +166,14 @@ $('#SA_SID_proposito').val(data.val().SA_SID_2);
 $('#SA_SID_desarrollo').val(data.val().SA_SID_3);
 $('#SA_SID_pregunta').val(data.val().SA_SID_4);
 $('#SA_SID_cantidad').val(data.val().SA_SID_5);
+
+//MATERIAL AUDIOVISUAL
+
+$('#M_AV_titulo').val(data.val().M_AV_1);
+$('#M_AV_descripcion').val(data.val().M_AV_2);
+$('#M_AV_publico').val(data.val().M_AV_3);
+$('#M_AV_ano').val(data.val().M_AV_4);
+$('#M_AV_autor').val(data.val().M_AV_5);
 
 //NECESIUDADES
 

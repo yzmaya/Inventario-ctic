@@ -71,7 +71,7 @@
     </div>
 
     <div class="alert alert-success">
-    <strong>I Recursos Humanos</strong> Este apartado capta información de los trabajadores para saber los conocimientos en general con base en su experiencia laboral.
+    <strong>I Recursos Humanos</strong> Personal encargado de coordinar las tareas de TIC, personal regular de apoyo y otros servidores públicos con estudios o experiencia aunque actualmente desempeñe funciones diferentes a TIC 
   </div>
     <p><strong>PERSONAL RESPONSABLE</strong></p>
   <div class="table-responsive form-horizontal">          
@@ -514,7 +514,7 @@
 
 
 <div class="alert alert-success">
-    <strong>II Equipamiento</strong> Este apartado está hecho para capatar el equipo que se encuentra en uso, en reparación y derivados.
+    <strong>II Equipamiento</strong> Equipos para procesamiento y almacenamiento de información, para impresión y digitalización, así como otros periféricos, tanto propiedad de la Secretaría como proporcionados por contratos de servicios administrados de la DGTIC
   </div>
   <p><strong>COMPUTADORAS PERSONALES EN OPERACIÓN</strong></p>
 
@@ -528,13 +528,13 @@
         <td>Antigüedad (Años)</td>
         <td>¿Mtto preventivo el último año?</td>
         <td>Origen</td>
-        <td><input type="text" size="1" value="0" id="contador5"/></td>
+        <td><input type="text" size="1" value="0" id="contador6"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>
-         <select class="form-control" id="E_CP_inmueble">
+         <select class="form-control" id="E_CP_OPERACION_inmueble">
             <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
             <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
             <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
@@ -542,28 +542,28 @@
          </select>
         </td>
         <td>
-          <select class="form-control" id="E_CP_tipo">
+          <select class="form-control" id="E_CP_OPERACION_tipo">
             <option value="Escritorio">Escritorio</option>
             <option value="Lap Top">Lap Top</option>
          </select>
         </td>
-        <td><input type="number" class="form-control" id="E_CP_cantidad"></td>
-        <td><input type="number" class="form-control" id="E_CP_antiguedad"></td>
+        <td><input type="number" class="form-control" id="E_CP_OPERACION_cantidad"></td>
+        <td><input type="number" class="form-control" id="E_CP_OPERACION_antiguedad"></td>
         <td>
-            <select class="form-control" id="E_CP_mtto">
+            <select class="form-control" id="E_CP_OPERACION_mtto">
             <option value="Sí">Sí</option>
             <option value="No">No</option>
          </select>
         </td>
         
         <td>
-        <select class="form-control" id="E_CP_origen">
+        <select class="form-control" id="E_CP_OPERACION_origen">
             <option value="Contrato con DGTIC">Contrato con DGTIC</option>
             <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
             <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
          </select>
         </td>
-        <td><button type="button" class="btn btn-success" onclick="agregarFilaCompusPersonales()">+</button></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaCompusPersonalesOperacion()">+</button></td>
       </tr>
     </tbody>
   </table>
@@ -581,13 +581,13 @@
         <td>Antigüedad (Años)</td>
         <td>Causa</td>
         <td>Origen</td>
-        <td><input type="text" size="1" value="0" id="contador5"/></td>
+        <td><input type="text" size="1" value="0" id="contador7"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>
-         <select class="form-control" id="E_CP_inmueble">
+         <select class="form-control" id="E_CP_SINUSO_inmueble">
             <option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option>
             <option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option>
             <option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option>
@@ -595,15 +595,15 @@
          </select>
         </td>
         <td>
-          <select class="form-control" id="E_CP_tipo">
+          <select class="form-control" id="E_CP_SINUSO_tipo">
             <option value="Escritorio">Escritorio</option>
             <option value="Lap Top">Lap Top</option>
          </select>
         </td>
-        <td><input type="number" class="form-control" id="E_CP_cantidad"></td>
-        <td><input type="number" class="form-control" id="E_CP_antiguedad"></td>
+        <td><input type="number" class="form-control" id="E_CP_SINUSO_cantidad"></td>
+        <td><input type="number" class="form-control" id="E_CP_SINUSO_antiguedad"></td>
         <td>
-            <select class="form-control" id="E_CP_mtto">
+            <select class="form-control" id="E_CP_SINUSO_razon">
             <option value="Obsoletas">Obsoletas</option>
             <option value="Sin refacciones">Sin refacciones</option>
             <option value="En reparación">En reparación</option>
@@ -615,13 +615,13 @@
         </td>
         
         <td>
-        <select class="form-control" id="E_CP_origen">
+        <select class="form-control" id="E_CP_SINUSO_origen">
             <option value="Contrato con DGTIC">Contrato con DGTIC</option>
             <option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option>
             <option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option>
          </select>
         </td>
-        <td><button type="button" class="btn btn-success" onclick="agregarFilaCompusPersonales()">+</button></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaCompusPersonalesSinuso()">+</button></td>
       </tr>
     </tbody>
   </table>
@@ -639,7 +639,7 @@
         <td>Cantidad</td>
         <td>Origen</td>
         <td>Propósito</td>
-        <td><input type="text" size="1" value="0" id="contador6"/></td>
+        <td><input type="text" size="1" value="0" id="contador8"/></td>
       </tr>
     </thead>  
     <tbody>
@@ -680,7 +680,7 @@
         <td>Cantidad</td>
         <td>Origen</td>
         <td>Conectividad</td>
-        <td><input type="text" size="1" value="0" id="contador7"/></td>
+        <td><input type="text" size="1" value="0" id="contador9"/></td>
       </tr>
     </thead>
     <tbody>
@@ -724,7 +724,7 @@
         <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td><input type="text" value="0" size="1" id="contador8"/></td>
+        <td><input type="text" value="0" size="1" id="contador10"/></td>
       </tr>
     </thead>
     <tbody>
@@ -762,7 +762,7 @@
         <td>Resúmen de características </td>
         <td>Cantidad</td>
         <td>Origen</td>
-        <td><input type="text" value="0" size="1" id="contador9"/></td>
+        <td><input type="text" value="0" size="1" id="contador11"/></td>
       </tr>
     </thead>
     <tbody>
@@ -791,7 +791,7 @@
   </div>
 
 <div class="alert alert-success">
-    <strong>III Servicios de Comunicaciones</strong>En esta sección se pretende tener un inventario con la información dedicada a redes de computación.
+    <strong>III Servicios de Comunicaciones</strong> Equipos y servicios para transferencia de información y telefonía, tanto propiedad de la Secretaría como contratados directamente por el área o por medio de la DGTIC.
   </div>
   <p><strong>TELEFONÍA IP</strong></p>
 
@@ -802,7 +802,7 @@
         <td>Inmueble</td>
         <td>Perfil RIMA</td>
         <td>Cantidad</td>
-        <td><input type="text" value="0" size="1" id="contador10"/></td>
+        <td><input type="text" value="0" size="1" id="contador12"/></td>
       </tr>
     </thead>
     <tbody>
@@ -836,7 +836,7 @@
         <td>#Puertos Desocupados</td>
         <td>#Switches desocupados</td>
         <td>Origen</td>
-        <td><input type="text" value="0" size="1" id="contador11"/></td>
+        <td><input type="text" value="0" size="1" id="contador13"/></td>
       </tr>
     </thead>
     <tbody>
@@ -879,27 +879,27 @@
         <td>Área usuaria del enlace</td>
         <td>Cantidad de equipos conectados</td>
         <td>Nombre de quien paga el servicio</td>
-        <td><input type="text" value="0" size="1" id="contador12"/></td>
+        <td><input type="text" value="0" size="1" id="contador14"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>
-           <select class="form-control" id="SC_OS_inmueble">
+           <select class="form-control" id="SC_OS_tipo">
             <option value="Dedicado">Dedicado</option>
             <option value="Asimétrico">Asimétrico</option>
             <option value="Satelital">Satelital</option>
          </select>
         </td>
-        <td><input type="text" class="form-control" placeholder="" id="SC_OS_resumen" data-toggle="tooltip" title="" ></td>
-        <td><input type="text" class="form-control" placeholder="" id="SC_OS_resumen" data-toggle="tooltip" title="" ></td>
+        <td><input type="text" class="form-control" placeholder="" id="SC_OS_anchobanda" data-toggle="tooltip" title="" ></td>
+        <td><input type="text" class="form-control" placeholder="" id="SC_OS_proveedor" data-toggle="tooltip" title="" ></td>
         <td>
-        <select class="form-control" id="SC_OS_origen">
+        <select class="form-control" id="SC_OS_area_usuaria">
 
          </select>
         </td>
         <td><input type="number" class="form-control" id="SC_OS_cantidad"></td>
-         <td><input type="text" class="form-control" placeholder="" id="SC_OS_resumen" data-toggle="tooltip" title="" ></td>
+         <td><input type="text" class="form-control" placeholder="" id="SC_OS_nombre_cash" data-toggle="tooltip" title="" ></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaOtrosServicios()">+</button></td>
       </tr>
     </tbody>
@@ -907,7 +907,7 @@
   </div>
 
 <div class="alert alert-success">
-    <strong>IV Licenciamiento</strong> Esta sección pretende conocer los sistemas, aplicativos y portales web, para saber si usan de software comercial o libre.
+    <strong>IV Licenciamiento</strong> Licencias de paquetes de software, perpetuas o temporales vigentes, adquiridas directamente por el área o proporcionadas por la DGTIC.
   </div>
   <p><strong>SOFTWARE COMERCIAL</strong></p>
 
@@ -921,7 +921,7 @@
         <td>Total de Licencias</td>
         <td>Licencias en uso</td>
         <td>Origen</td>
-        <td><input type="text" value="0" size="1" id="contador13"/></td>
+        <td><input type="text" value="0" size="1" id="contador15"/></td>
       </tr>
     </thead>
     <tbody>
@@ -937,8 +937,8 @@
          </select>
 
         </td>
-        <td><input type="number" class="form-control" id="L_SC_cant_lic"></td>
-        <td><input type="number" class="form-control" id="L_SC_cant_lic"></td>
+        <td><input type="number" class="form-control" id="L_SC_cant_total_lic"></td>
+        <td><input type="number" class="form-control" id="L_SC_cant_lic_en_uso"></td>
         <td>
         <select class="form-control" id="L_SC_origen">
             <option value="Contrato con DGTIC">Contrato con DGTIC</option>
@@ -962,7 +962,7 @@
         <td>Versión</td>
         <td>Sistema Operativo</td>
         <td>Cantidad de Instalaciones</td>
-        <td><input type="text" value="0" size="1" id="contador14"/></td>
+        <td><input type="text" value="0" size="1" id="contador16"/></td>
       </tr>
     </thead>
     <tbody>
@@ -985,7 +985,7 @@
   </div>
 
   <div class="alert alert-success">
-    <strong>V Sistemas y aplicaciones</strong>Este apartado recaba información que tiene que ver con los sistemas, aplicaciones y portales web en desarrollo o producción
+    <strong>V Sistemas y aplicaciones</strong> Páginas de Internet o sistemas informáticos, contratados por el área o desarrollados con personal propio, en producción o en desarrollo, diferentes a los sistemas para uso general proporcionados la DGTIC, la SHCP y otras instancias.
   </div>
   <p><strong>SISTEMAS INFORMÁTICOS EN PRODUCCIÓN</strong></p>
 
@@ -998,7 +998,7 @@
         <td>Desarrollo Interno o Contratado</td>
         <td>¿Está debidamente Documentado?</td>
         <td>Cantidad Estimada de Usuarios</td>
-        <td><input type="text" value="0" size="1" id="contador15"/></td>
+        <td><input type="text" value="0" size="1" id="contador17"/></td>
       </tr>
     </thead>
     <tbody>
@@ -1026,7 +1026,7 @@
         <td>Desarrollo Interno o Contratado</td>
         <td>Fecha estimada de conclusión de Desarrollo</td>
         <td>Cantidad Estimada de Usuarios</td>
-        <td><input type="text" value="0" size="1" id="contador16"/></td>
+        <td><input type="text" value="0" size="1" id="contador18"/></td>
       </tr>
     </thead>
     <tbody>
@@ -1044,14 +1044,14 @@
 
 
 <div class="alert alert-success">
-    <strong>VI Otros Recursos</strong>Esta sección, unicamente capta las necesidades de cada área de TIC, con esto se preveerán algunas necesidades.
+    <strong>VI Otros Recursos</strong> Necesidades no atendidas por los contratos de servicios administrados de la DGTIC, así como otro tipo de necesidades que no hayan logrado atenderse.
   </div>
 
 
    <p><strong>MATERIAL AUDIO VISUAL</strong></p>
 
   <div class="table-responsive">          
-  <table style="text-align: center;"   class="table table-bordered" id="tablaNecesidades">
+  <table style="text-align: center;"   class="table table-bordered" id="tablaMaterialAudiovisual">
     <thead>
       <tr>
         <td>Título del material o colección</td>
@@ -1059,15 +1059,15 @@
         <td>Público Objetivo</td>
         <td>Año de creación</td>
         <td>Titular de los derechos de autor</td>
-        <td><input type="text" value="0" size="1" id="contador17"/></td>
+        <td><input type="text" value="0" size="1" id="contador19"/></td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><input type="text" class="form-control" id="N_OR_proposito" ></td>
-        <td><input type="text" class="form-control" id="N_OR_proposito" ></td>
+        <td><input type="text" class="form-control" id="M_AV_titulo" ></td>
+        <td><input type="text" class="form-control" id="M_AV_descripcion" ></td>
         <td>
-            <select class="form-control" id="N_OR_tipo">
+            <select class="form-control" id="M_AV_publico">
             <option value="Estudiantes">Estudiantes</option>
             <option value="Docentes">Docentes</option>
             <option value="Padres de familia">Padres de familia</option>
@@ -1075,8 +1075,8 @@
             <option value="Público en general">Público en general</option>
          </select>
         </td>
-        <td><input type="number" class="form-control" id="N_OR_cantidad"></td>
-        <td><input type="text" class="form-control" id="N_OR_causa" placeholder="" name=""></td>
+        <td><input type="number" class="form-control" id="M_AV_ano"></td>
+        <td><input type="text" class="form-control" id="M_AV_autor" placeholder="" name=""></td>
         <td><button type="button" class="btn btn-success" onclick="agregarFilaNecesidades()">+</button></td>
       </tr>
     </tbody>
@@ -1096,7 +1096,7 @@
         <td>Principales Características</td>
         <td>Cantidad Requerida</td>
         <td>Causa de la falta de atención</td>
-        <td><input type="text" value="0" size="1" id="contador17"/></td>
+        <td><input type="text" value="0" size="1" id="contador20"/></td>
       </tr>
     </thead>
     <tbody>

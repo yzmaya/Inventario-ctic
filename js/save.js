@@ -30,17 +30,6 @@ var uno_sede = $('#uno_sede').val();
 var uno_telefono = $('#uno_telefono').val();
 var uno_correo = $('#uno_correo').val();
 
-var dos_name = $('#dos_name').val();
-var dos_cargo = $('#dos_cargo').val();
-var dos_sede = $('#dos_sede').val();
-var dos_telefono = $('#dos_telefono').val();
-var dos_correo = $('#dos_correo').val();
-
-var tres_name = $('#tres_name').val();
-var tres_cargo = $('#tres_cargo').val();
-var tres_sede = $('#tres_sede').val();
-var tres_telefono = $('#tres_telefono').val();
-var tres_correo = $('#tres_correo').val();
 secc1_1 = document.getElementById('contador1');
 secc1_1.value = parseInt(secc1_1.value);
 
@@ -52,6 +41,9 @@ var uno_pa_name = $('#uno_pa_name').val();
 var uno_pa_academico = $('#uno_pa_perfil').val();
 var uno_pa_plaza = $('#uno_pa_plaza').val();
 
+secc1_2 = document.getElementById('contador2');
+secc1_2.value = parseInt(secc1_2.value);
+
 //PERSONAL DE APOYO CON PERFIL DE TICS DEDICANDOSE A OTRA COSA
 
 
@@ -59,6 +51,9 @@ var uno_pa_perfiltics_other_especialidad = $('#uno_pa_perfiltics_other_especiali
 var uno_pa_perfiltics_other_name = $('#uno_pa_perfiltics_other_name').val();
 var uno_pa_perfiltics_other_perfil = $('#uno_pa_perfiltics_other_perfil').val();
 var uno_pa_perfiltics_other_plaza = $('#uno_pa_perfiltics_other_plaza').val();
+
+secc2_1 = document.getElementById('contador3');
+secc2_1.value = parseInt(secc2_1.value);
 
 //PERSONAL DE APOYO CON PERFIL DE DESARROLLADOR DE APLICACIONES WEB
 
@@ -70,6 +65,9 @@ var uno_pa_apps_arquitectura = $('#uno_pa_apps_arquitectura').val();
 var uno_pa_apps_name = $('#uno_pa_apps_name').val();
 var uno_pa_apps_perfil = $('#uno_pa_apps_perfil').val();
 var uno_pa_apps_plaza = $('#uno_pa_apps_plaza').val();
+
+secc2_2 = document.getElementById('contador4');
+secc2_2.value = parseInt(secc2_2.value);
 
 //PERSONAL DE APOYP CON PERFIL DE BASES DE DATOS
 
@@ -84,12 +82,26 @@ var uno_pa_db_plaza = $('#uno_pa_db_plaza').val();
 secc1_2 = document.getElementById('contador2');
 secc1_2.value = parseInt(secc1_2.value);
 
-//COMPUTADORAS PERSONALES
+//COMPUTADORAS PERSONALES EN OPERACIÓN
 
-var E_CP_inmueble = $('#E_CP_inmueble').val();
-var E_CP_perfil_sac = $('#E_CP_perfil_sac').val();
-var E_CP_cantidad = $('#E_CP_cantidad').val();
-var E_CP_origen = $('#E_CP_origen').val();
+var E_CP_OPERACION_inmueble = $('#E_CP_OPERACION_inmueble').val();
+var E_CP_OPERACION_tipo = $('#E_CP_OPERACION_tipo').val();
+var E_CP_OPERACION_cantidad = $('#E_CP_OPERACION_cantidad').val();
+var E_CP_OPERACION_antiguedad = $('#E_CP_OPERACION_antiguedad').val();
+var E_CP_OPERACION_mtto = $('#E_CP_OPERACION_mtto').val();
+var E_CP_OPERACION_origen = $('#E_CP_OPERACION_origen').val();
+
+secc2_1 = document.getElementById('contador3');
+secc2_1.value = parseInt(secc2_1.value);
+
+//COMPUTADORAS PERSONALES SIN USO
+
+var E_CP_SINUSO_inmueble = $('#E_CP_SINUSO_inmueble').val();
+var E_CP_SINUSO_tipo = $('#E_CP_SINUSO_tipo').val();
+var E_CP_SINUSO_cantidad = $('#E_CP_SINUSO_cantidad').val();
+var E_CP_SINUSO_antiguedad = $('#E_CP_SINUSO_antiguedad').val();
+var E_CP_SINUSO_razon = $('#E_CP_SINUSO_razon').val();
+var E_CP_SINUSO_origen = $('#E_CP_SINUSO_origen').val();
 
 secc2_1 = document.getElementById('contador3');
 secc2_1.value = parseInt(secc2_1.value);
@@ -113,6 +125,8 @@ var E_IMP_ESC_inmueble = $('#E_IMP_ESC_inmueble').val();
 var E_IMP_ESC_perfil_said = $('#E_IMP_ESC_perfil_said').val();
 var E_IMP_ESC_cantidad = $('#E_IMP_ESC_cantidad').val();
 var E_IMP_ESC_origen = $('#E_IMP_ESC_origen').val();
+var E_IMP_ESC_conectividad = $('#E_IMP_ESC_conectividad').val();
+
 
 
 secc2_3 = document.getElementById('contador5');
@@ -168,10 +182,12 @@ secc3_2.value = parseInt(secc3_2.value);
 
 //OTROS SERVICIOS
 
-var SC_OS_inmueble = $('#SC_OS_inmueble').val();
-var SC_OS_resumen = $('#SC_OS_resumen').val();
+var SC_OS_tipo = $('#SC_OS_tipo').val();
+var SC_OS_anchobanda = $('#SC_OS_anchobanda').val();
+var SC_OS_proveedor = $('#SC_OS_proveedor').val();
+var SC_OS_area_usuaria = $('#SC_OS_area_usuaria').val();
 var SC_OS_cantidad = $('#SC_OS_cantidad').val();
-var SC_OS_origen = $('#SC_OS_origen').val();
+var SC_OS_nombre_cash = $('#SC_OS_nombre_cash').val();
 
 secc3_3 = document.getElementById('contador10');
 secc3_3.value = parseInt(secc3_3.value);
@@ -182,7 +198,8 @@ secc3_3.value = parseInt(secc3_3.value);
 var L_SC_paquete = $('#L_SC_paquete').val();
 var L_SC_version = $('#L_SC_version').val();
 var L_SC_so = $('#L_SC_so').val();
-var L_SC_cant_lic = $('#L_SC_cant_lic').val();
+var L_SC_cant_total_lic = $('#L_SC_cant_total_lic').val();
+var L_SC_cant_lic_en_uso = $('#L_SC_cant_lic_en_uso').val();
 var L_SC_origen = $('#L_SC_origen').val();
 
 secc4_1 = document.getElementById('contador11');
@@ -219,6 +236,18 @@ var SA_SID_proposito = $('#SA_SID_proposito').val();
 var SA_SID_desarrollo = $('#SA_SID_desarrollo').val();
 var SA_SID_pregunta = $('#SA_SID_pregunta').val();
 var SA_SID_cantidad = $('#SA_SID_cantidad').val();
+
+
+secc5_2 = document.getElementById('contador14');
+secc5_2.value = parseInt(secc5_2.value);
+
+//MATERIALES AUDIOVISUALES
+
+var M_AV_titulo = $('#M_AV_titulo').val();
+var M_AV_descripcion = $('#M_AV_descripcion').val();
+var M_AV_publico = $('#M_AV_publico').val();
+var M_AV_ano = $('#M_AV_ano').val();
+var M_AV_autor = $('#M_AV_autor').val();
 
 
 secc5_2 = document.getElementById('contador14');
@@ -284,10 +313,20 @@ inv_tic.set({
 
     SECCION1_2: secc1_2.value,
 
-    E_CP_1: E_CP_inmueble,
-    E_CP_2: E_CP_perfil_sac,
-    E_CP_3: E_CP_cantidad,
-    E_CP_4: E_CP_origen,
+    E_CP_OPERACION_1: E_CP_OPERACION_inmueble,
+    E_CP_OPERACION_2: E_CP_OPERACION_tipo,
+    E_CP_OPERACION_3: E_CP_OPERACION_cantidad,
+    E_CP_OPERACION_4: E_CP_OPERACION_antiguedad,
+    E_CP_OPERACION_5: E_CP_OPERACION_mtto,
+    E_CP_OPERACION_6: E_CP_OPERACION_origen,
+
+    E_CP_SINUSO_1: E_CP_SINUSO_inmueble,
+    E_CP_SINUSO_2: E_CP_SINUSO_tipo,
+    E_CP_SINUSO_3: E_CP_SINUSO_cantidad,
+    E_CP_SINUSO_4: E_CP_SINUSO_antiguedad,
+    E_CP_SINUSO_5: E_CP_SINUSO_razon,
+    E_CP_SINUSO_6: E_CP_SINUSO_origen,
+
     SECCION2_1: secc2_1.value,
 
     E_SERV_1: E_SERV_ubicacion,
@@ -301,6 +340,7 @@ inv_tic.set({
     E_IMP_ESC_2: E_IMP_ESC_perfil_said,
     E_IMP_ESC_3: E_IMP_ESC_cantidad,
     E_IMP_ESC_4: E_IMP_ESC_origen,
+    E_IMP_ESC_5: E_IMP_ESC_conectividad,
     SECCION2_3: secc2_3.value,
 
     E_EA_1: E_EA_inmueble,
@@ -329,17 +369,20 @@ inv_tic.set({
     SC_IR_7: SC_IR_origen,
     SECCION3_2: secc3_2.value,
 
-    SC_OS_1: SC_OS_inmueble,
-    SC_OS_2: SC_OS_resumen,
-    SC_OS_3: SC_OS_cantidad,
-    SC_OS_4: SC_OS_origen,
+    SC_OS_1: SC_OS_tipo,
+    SC_OS_2: SC_OS_anchobanda,
+    SC_OS_3: SC_OS_proveedor,
+    SC_OS_4: SC_OS_area_usuaria,
+    SC_OS_5: SC_OS_cantidad,
+    SC_OS_6: SC_OS_nombre_cash,
     SECCION3_3: secc3_3.value,
 
     L_SC_1: L_SC_paquete,
     L_SC_2: L_SC_version,
     L_SC_3: L_SC_so,
-    L_SC_4: L_SC_cant_lic,
-    L_SC_5: L_SC_origen,
+    L_SC_4: L_SC_cant_total_lic,
+    L_SC_5: L_SC_cant_lic_en_uso,
+    L_SC_6: L_SC_origen,
     SECCION4_1: secc4_1.value,
 
     L_SL_1: L_SL_paquete,
@@ -361,6 +404,13 @@ inv_tic.set({
     SA_SID_3: SA_SID_desarrollo,
     SA_SID_4: SA_SID_pregunta,
     SA_SID_5: SA_SID_cantidad,
+    SECCION5_2: secc5_2.value, 
+
+    M_AV_1: M_AV_titulo,
+    M_AV_2: M_AV_descripcion,
+    M_AV_3: M_AV_publico,
+    M_AV_4: M_AV_ano,
+    M_AV_5: M_AV_autor,
     SECCION5_2: secc5_2.value, 
 
     N_OR_1: N_OR_tipo,
