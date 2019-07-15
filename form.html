@@ -1151,7 +1151,9 @@ if (res.value == 0) {
     var telefono = res.value + '_telefono';
     var correo = res.value + '_correo';
 
-  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><input type=text id='+PersonalR + ' class=form-control></td><td><input type=text id= ' +nombre + ' class=form-control></td><td><input type=text id=' +cargo + ' class=form-control></td><td><input type=text id=' + sede + ' class=form-control></td><td><input type=text id=' + telefono + ' class=form-control></td><td><input type=text id=' + correo + ' class=form-control></td><td></td>';
+
+
+  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><select class=form-control id='+PersonalR + '><option value="Responsable de TIC en la UR">Responsable de TIC en la UR</option><option value="Responsable de desarrollo y mantenimiento de sistema informáticos">Responsable de desarrollo y mantenimiento de sistema informáticos</option><option value="Responsable de soporte técnico y enlace informático ante la DGTIC">Responsable de soporte técnico y enlace informático ante la DGTIC</option></select></td><td><input type=text id= ' +nombre + ' class=form-control></td><td><select class=form-control id=' +cargo + ' ><option value="Asistente">Asistente</option><option value="Director General">Director General</option><option value="Coordinador">Coordinador</option><option value="Jefe de la Unidad (encargado)">Jefe de la Unidad (encargado)</option><option value="Operativo">Operativo</option> <option value="Subdirector de Área">Subdirector de Área</option></select></td><td><select class=form-control id=' + sede + ' ><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text id=' + telefono + ' class=form-control></td><td><input type=text id=' + correo + ' class=form-control></td><td></td>';
 }else{
   //EXTRAS SECCION 1_!
 var ajua = uuid + '/E_PR' + res.value;
@@ -1183,7 +1185,9 @@ var PersonalR = res.value + '_PersonalR';
     var telefono = res.value + '_telefono';
     var correo = res.value + '_correo';
 
-  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><input type=text id='+PersonalR + ' class=form-control></td><td><input type=text id= ' +nombre + ' class=form-control></td><td><input type=text id=' +cargo + ' class=form-control></td><td><input type=text id=' + sede + ' class=form-control></td><td><input type=text id=' + telefono + ' class=form-control></td><td><input type=text id=' + correo + ' class=form-control></td><td></td>';
+     
+
+  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><select class=form-control id='+PersonalR + '><option value="Responsable de TIC en la UR">Responsable de TIC en la UR</option><option value="Responsable de desarrollo y mantenimiento de sistema informáticos">Responsable de desarrollo y mantenimiento de sistema informáticos</option><option value="Responsable de soporte técnico y enlace informático ante la DGTIC">Responsable de soporte técnico y enlace informático ante la DGTIC</option></select></td><td><input type=text id= ' +nombre + ' class=form-control></td><td><input type=text id=' +cargo + ' class=form-control></td><td><input type=text id=' + sede + ' class=form-control></td><td><input type=text id=' + telefono + ' class=form-control></td><td><input type=text id=' + correo + ' class=form-control></td><td></td>';
 
 }
 
