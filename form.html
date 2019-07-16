@@ -519,7 +519,7 @@
   <p><strong>COMPUTADORAS PERSONALES EN OPERACIÓN</strong></p>
 
   <div class="table-responsive">          
-  <table style="text-align: center;"   class="table table-bordered" id="tablaCompuPersonal">
+  <table style="text-align: center;"   class="table table-bordered" id="tablaCompuEnOperacion">
     <thead>
       <tr>
         <td>Inmueble</td>
@@ -572,7 +572,7 @@
   <p><strong>COMPUTADORAS PERSONALES SIN USO</strong></p>
 
   <div class="table-responsive">          
-  <table style="text-align: center;"   class="table table-bordered" id="tablaCompuPersonal">
+  <table style="text-align: center;"   class="table table-bordered" id="tablaCompuSinUso">
     <thead>
       <tr>
         <td>Inmueble</td>
@@ -1077,7 +1077,7 @@
         </td>
         <td><input type="number" class="form-control" id="M_AV_ano"></td>
         <td><input type="text" class="form-control" id="M_AV_autor" placeholder="" name=""></td>
-        <td><button type="button" class="btn btn-success" onclick="agregarFilaNecesidades()">+</button></td>
+        <td><button type="button" class="btn btn-success" onclick="agregarFilaAudioVisual()">+</button></td>
       </tr>
     </tbody>
   </table>
@@ -1187,7 +1187,12 @@ var PersonalR = res.value + '_PersonalR';
 
      
 
-  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><select class=form-control id='+PersonalR + '><option value="Responsable de TIC en la UR">Responsable de TIC en la UR</option><option value="Responsable de desarrollo y mantenimiento de sistema informáticos">Responsable de desarrollo y mantenimiento de sistema informáticos</option><option value="Responsable de soporte técnico y enlace informático ante la DGTIC">Responsable de soporte técnico y enlace informático ante la DGTIC</option></select></td><td><input type=text id= ' +nombre + ' class=form-control></td><td><input type=text id=' +cargo + ' class=form-control></td><td><input type=text id=' + sede + ' class=form-control></td><td><input type=text id=' + telefono + ' class=form-control></td><td><input type=text id=' + correo + ' class=form-control></td><td></td>';
+  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><select class=form-control id='+PersonalR + '><option value="Responsable de TIC en la UR">Responsable de TIC en la UR</option><option value="Responsable de desarrollo y mantenimiento de sistema informáticos">Responsable de desarrollo y mantenimiento de sistema informáticos</option><option value="Responsable de soporte técnico y enlace informático ante la DGTIC">Responsable de soporte técnico y enlace informático ante la DGTIC</option></select></td><td><input type=text id= ' +nombre + ' class=form-control></td><td><select class=form-control id=' +cargo + ' ><option value="Asistente">Asistente</option><option value="Director General">Director General</option><option value="Coordinador">Coordinador</option><option value="Jefe de la Unidad (encargado)">Jefe de la Unidad (encargado)</option><option value="Operativo">Operativo</option> <option value="Subdirector de Área">Subdirector de Área</option></select></td><td><select class=form-control id=' + sede + ' ><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text id=' + telefono + ' class=form-control></td><td><input type=text id=' + correo + ' class=form-control></td><td></td>';
+
+ 
+
+
+
 
 }
 
@@ -1208,7 +1213,7 @@ if (res.value == 0) {
     var PA_perfil = res.value + '_PA_perfil';
     var PA_tipo = res.value + '_PA_tipo';
 
-  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id=' +PA_especialidad+ '  class=form-control></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><input type=text id='+ PA_perfil + '  class=form-control></td><td><select class=form-control id=' + PA_tipo + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><select class=form-control id=' +PA_especialidad+ ' ><option value="  Desarrollo y mantenimiento de sistema informáticos">  Desarrollo y mantenimiento de sistema informáticos</option><option value="Soporte Técnico">Soporte Técnico</option></select></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><select class=form-control id='+ PA_perfil + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + PA_tipo + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
 }else{
   //EXTRAS SECCION 1_!
 var ajua = uuid + '/E_PA' + res.value;
@@ -1235,15 +1240,16 @@ var PA_especialidad = res.value + '_PA_especialidad';
     var PA_perfil = res.value + '_PA_perfil';
     var PA_tipo = res.value + '_PA_tipo';
 
-  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id=' +PA_especialidad+ '  class=form-control></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><input type=text id='+ PA_perfil + '  class=form-control></td><td><select class=form-control id=' + PA_tipo + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><select class=form-control id=' +PA_especialidad+ ' ><option value="  Desarrollo y mantenimiento de sistema informáticos">  Desarrollo y mantenimiento de sistema informáticos</option><option value="Soporte Técnico">Soporte Técnico</option></select></td><td><input type=text id=' + PA_nombre + ' class=form-control></td><td><select class=form-control id='+ PA_perfil + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + PA_tipo + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+
+
 
 }
 
 }
 
-
-function agregarFilaCompusPersonales(){
-    var uuid = $('p:first').text()
+function agregarFilaPersonalPerfilTics(){
+  var uuid = $('p:first').text()
 
 
   res = document.getElementById("contador3");
@@ -1252,12 +1258,211 @@ function agregarFilaCompusPersonales(){
 if (res.value == 0) {
     res.value = parseInt(res.value)+1;
 
+    var PA_perfiltics_especialidad = res.value + '_PA_perfiltics_especialidad';
+    var PA_perfiltics_name = res.value + '_PA_perfiltics_name';
+    var PA_perfiltics_perfil = res.value + '_PA_perfiltics_perfil';
+    var PA_perfiltics_plaza = res.value + '_PA_perfiltics_plaza';
+
+  document.getElementById("tablaPersonalApoyoTicsOtros").insertRow(-1).innerHTML = '<td><select class=form-control id='+ PA_perfiltics_especialidad +'><option value="  Desarrollo y mantenimiento de sistema informáticos">  Desarrollo y mantenimiento de sistema informáticos</option><option value="Soporte Técnico">Soporte Técnico</option></select></td><td><input type=text id=' + PA_perfiltics_name + ' class=form-control></td><td><select class=form-control id='+ PA_perfiltics_perfil + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + PA_perfiltics_plaza + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+
+}else{
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_PA_PERFILTICS' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+
+var A = $('#'+res.value +'_PA_perfiltics_especialidad').val();
+var B = $('#'+res.value +'_PA_perfiltics_name').val();
+var C = $('#'+res.value +'_PA_perfiltics_perfil').val();
+var D = $('#'+res.value +'_PA_perfiltics_plaza').val();
+
+ajua2.set({
+  
+    E_PA_PERFILTICS1: A,
+    E_PA_PERFILTICS2: B,
+    E_PA_PERFILTICS3: C,
+    E_PA_PERFILTICS4: D
+  }); 
+
+//console.log(ajua);
+res.value++;
+
+var PA_perfiltics_especialidad = res.value + '_PA_perfiltics_especialidad';
+    var PA_perfiltics_name = res.value + '_PA_perfiltics_name';
+    var PA_perfiltics_perfil = res.value + '_PA_perfiltics_perfil';
+    var PA_perfiltics_plaza = res.value + '_PA_perfiltics_plaza';
+
+  document.getElementById("tablaPersonalApoyoTicsOtros").insertRow(-1).innerHTML = '<td><select class=form-control id=' +PA_perfiltics_especialidad+ ' ><option value="  Desarrollo y mantenimiento de sistema informáticos">  Desarrollo y mantenimiento de sistema informáticos</option><option value="Soporte Técnico">Soporte Técnico</option></select></td><td><input type=text id=' + PA_perfiltics_name + ' class=form-control></td><td><select class=form-control id='+ PA_perfiltics_perfil + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + PA_perfiltics_plaza + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+
+
+}
+
+}
+
+
+
+
+function agregarFilaPersonalApoyoDesarrollador(){
+  var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador4");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var PA_WAPPS_especialidad = res.value + '_PA_WAPPS_especialidad';
+    var PA_WAPPS_paradigma = res.value + '_PA_WAPPS_paradigma';
+    var PA_WAPPS_lenguaje = res.value + '_PA_WAPPS_lenguaje';
+    var PA_WAPPS_arquitectura = res.value + '_PA_WAPPS_arquitectura';
+    var PA_WAPPS_nombre = res.value + '_PA_WAPPS_nombre';
+    var PA_WAPPS_perfil = res.value + '_PA_WAPPS_perfil';
+    var PA_WAPPS_plaza = res.value + '_PA_WAPPS_plaza';
+
+     
+
+  document.getElementById("tablaPersonalApoyoWebDeveloper").insertRow(-1).innerHTML = '<td><select class=form-control id='+ PA_WAPPS_especialidad +'><option value="Front End">Front End</option><option value="Fullstack">Fullstack</option></select></td><td><select class=form-control id='+ PA_WAPPS_paradigma +'><option value="Programación Estructurada">Programación Estructurada</option><option value="Programación Orientada a Objetos">Programación Orientada a Objetos</option><option value="Programación basada en componentes">Programación basada en componentes</option></select></td><td><select class=form-control id='+ PA_WAPPS_lenguaje +'><option value="Java">Java</option><option value="Php">Php</option><option value="Programación basada en componentes">Visual Basic</option><option value="Javascript">Javascript</option><option value="Python">Python</option><option value="C#">C#</option><option value="Tyscript">Tyscript</option><option value="Ruby">Ruby</option>          </select></td><td><select class=form-control id='+ PA_WAPPS_arquitectura +'><option value="Servidor (Mainframe)">Servidor (Mainframe)</option><option value="Cliente/Servidor">Cliente/Servidor</option><option value="Stand Alone o p2p">Stand Alone o p2p</option><option value="MVC">MVC</option><option alue="Microservicios">Microservicios</option></select></td><td><input type=text id=' + PA_WAPPS_nombre + ' class=form-control></td><td><select class=form-control id='+ PA_WAPPS_perfil + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><select class=form-control id=' + PA_WAPPS_plaza + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select><td></td>';
+
+}else{
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_PA_PERFIL_WEBAPPS' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+
+var A = $('#'+res.value +'_PA_WAPPS_especialidad').val();
+var B = $('#'+res.value +'_PA_WAPPS_paradigma').val();
+var C = $('#'+res.value +'_PA_WAPPS_lenguaje').val();
+var D = $('#'+res.value +'_PA_WAPPS_arquitectura').val();
+var E = $('#'+res.value +'_PA_WAPPS_nombre').val();
+var F = $('#'+res.value +'_PA_WAPPS_perfil').val();
+var G = $('#'+res.value +'_PA_WAPPS_plaza').val();
+
+
+
+ajua2.set({
+  
+    E_PA_PERFIL_WEBAPPS1: A,
+    E_PA_PERFIL_WEBAPPS2: B,
+    E_PA_PERFIL_WEBAPPS3: C,
+    E_PA_PERFIL_WEBAPPS4: D,
+    E_PA_PERFIL_WEBAPPS5: E,
+    E_PA_PERFIL_WEBAPPS6: F,
+    E_PA_PERFIL_WEBAPPS7: G
+  }); 
+
+//console.log(ajua);
+res.value++;
+
+    var PA_WAPPS_especialidad = res.value + '_PA_WAPPS_especialidad';
+    var PA_WAPPS_paradigma = res.value + '_PA_WAPPS_paradigma';
+    var PA_WAPPS_lenguaje = res.value + '_PA_WAPPS_lenguaje';
+    var PA_WAPPS_arquitectura = res.value + '_PA_WAPPS_arquitectura';
+    var PA_WAPPS_nombre = res.value + '_PA_WAPPS_nombre';
+    var PA_WAPPS_perfil = res.value + '_PA_WAPPS_perfil';
+    var PA_WAPPS_plaza = res.value + '_PA_WAPPS_plaza';
+
+
+
+  document.getElementById("tablaPersonalApoyoWebDeveloper").insertRow(-1).innerHTML = '<td><select class=form-control id='+ PA_WAPPS_especialidad +'><option value="Front End">Front End</option><option value="Fullstack">Fullstack</option></select></td><td><select class=form-control id='+ PA_WAPPS_paradigma +'><option value="Programación Estructurada">Programación Estructurada</option><option value="Programación Orientada a Objetos">Programación Orientada a Objetos</option><option value="Programación basada en componentes">Programación basada en componentes</option></select></td><td><select class=form-control id='+ PA_WAPPS_lenguaje +'><option value="Java">Java</option><option value="Php">Php</option><option value="Programación basada en componentes">Visual Basic</option><option value="Javascript">Javascript</option><option value="Python">Python</option><option value="C#">C#</option><option value="Tyscript">Tyscript</option><option value="Ruby">Ruby</option>          </select></td><td><select class=form-control id='+ PA_WAPPS_arquitectura +'><option value="Servidor (Mainframe)">Servidor (Mainframe)</option><option value="Cliente/Servidor">Cliente/Servidor</option><option value="Stand Alone o p2p">Stand Alone o p2p</option><option value="MVC">MVC</option><option alue="Microservicios">Microservicios</option></select></td><td><input type=text id=' + PA_WAPPS_nombre + ' class=form-control></td><td><select class=form-control id='+ PA_WAPPS_perfil + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><select class=form-control id=' + PA_WAPPS_plaza + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select><td></td>';
+
+
+}
+
+}
+
+
+
+
+function agregarFilaPersonalApoyoDBA(){
+  var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador5");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var PA_DBA_especialidad = res.value + '_PA_DBA_especialidad';
+    var PA_DBA_paradigma = res.value + '_PA_DBA_paradigma';
+    var PA_DBA_basededatos = res.value + '_PA_DBA_basededatos';
+    var PA_DBA_arquitectura = res.value + '_PA_DBA_arquitectura';
+    var PA_DBA_nombre = res.value + '_PA_DBA_nombre';
+    var PA_DBA_perfil = res.value + '_PA_DBA_perfil';
+    var PA_DBA_plaza = res.value + '_PA_DBA_plaza';
+
+  
+
+  document.getElementById("tablaPersonalApoyoDBA").insertRow(-1).innerHTML = '<td><select class=form-control id='+ PA_DBA_especialidad +'><option value="Front End">Back End</option><option value="DBA">DBA</option><option value="Fullstack">Fullstack</option></select></td><td><select class=form-control id='+ PA_DBA_paradigma +'><option value="Programación Estructurada">Programación Estructurada</option><option value="Programación Orientada a Objetos">Programación Orientada a Objetos</option><option value="Programación basada en componentes">Programación basada en componentes</option></select></td><td> <select class=form-control id='+ PA_DBA_basededatos +'>            <option value="Sql Server">Sql Server</option><option value="Oracle">Oracle</option><option value="IBM DB2">IBM DB2</option><option value="SAP Sybase">SAP Sybase</option><option value="Informix">Informix</option><option value="Mysql">Mysql</option><option value="Mongo DB">Mongo DB</option><option value="Postgres SQL">Postgres SQL</option></select></td><td><select class=form-control id='+ PA_DBA_arquitectura +'><option value="Servidor (Mainframe)">Servidor (Mainframe)</option><option value="Cliente/Servidor">Cliente/Servidor</option><option value="Stand Alone o p2p">Stand Alone o p2p</option><option value="MVC">MVC</option><option alue="Microservicios">Microservicios</option></select></td><td><input type=text id=' + PA_DBA_nombre + ' class=form-control></td><td><select class=form-control id='+ PA_DBA_perfil + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + PA_DBA_plaza + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+
+}else{
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_PA_PERFIL_DBA' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+
+var A = $('#'+res.value +'_PA_DBA_especialidad').val();
+var B = $('#'+res.value +'_PA_DBA_paradigma').val();
+var C = $('#'+res.value +'_PA_DBA_basededatos').val();
+var D = $('#'+res.value +'_PA_DBA_arquitectura').val();
+var E = $('#'+res.value +'_PA_DBA_nombre').val();
+var F = $('#'+res.value +'_PA_DBA_perfil').val();
+var G = $('#'+res.value +'_PA_DBA_plaza').val();
+
+
+
+ajua2.set({
+  
+    E_PA_PERFIL_DBA1: A,
+    E_PA_PERFIL_DBA2: B,
+    E_PA_PERFIL_DBA3: C,
+    E_PA_PERFIL_DBA4: D,
+    E_PA_PERFIL_DBA5: E,
+    E_PA_PERFIL_DBA6: F,
+    E_PA_PERFIL_DBA7: G
+  }); 
+
+//console.log(ajua);
+res.value++;
+
+    var PA_DBA_especialidad = res.value + '_PA_DBA_especialidad';
+    var PA_DBA_paradigma = res.value + '_PA_DBA_paradigma';
+    var PA_DBA_basededatos = res.value + '_PA_DBA_basededatos';
+    var PA_DBA_arquitectura = res.value + '_PA_DBA_arquitectura';
+    var PA_DBA_nombre = res.value + '_PA_DBA_nombre';
+    var PA_DBA_perfil = res.value + '_PA_DBA_perfil';
+    var PA_DBA_plaza = res.value + '_PA_DBA_plaza';
+
+
+
+  document.getElementById("tablaPersonalApoyoDBA").insertRow(-1).innerHTML = '<td><select class=form-control id='+ PA_DBA_especialidad +'><option value="Front End">Back End</option><option value="DBA">DBA</option><option value="Fullstack">Fullstack</option></select></td><td><select class=form-control id='+ PA_DBA_paradigma +'><option value="Programación Estructurada">Programación Estructurada</option><option value="Programación Orientada a Objetos">Programación Orientada a Objetos</option><option value="Programación basada en componentes">Programación basada en componentes</option></select></td><td> <select class=form-control id='+ PA_DBA_basededatos +'>            <option value="Sql Server">Sql Server</option><option value="Oracle">Oracle</option><option value="IBM DB2">IBM DB2</option><option value="SAP Sybase">SAP Sybase</option><option value="Informix">Informix</option><option value="Mysql">Mysql</option><option value="Mongo DB">Mongo DB</option><option value="Postgres SQL">Postgres SQL</option></select></td><td><select class=form-control id='+ PA_DBA_arquitectura +'><option value="Servidor (Mainframe)">Servidor (Mainframe)</option><option value="Cliente/Servidor">Cliente/Servidor</option><option value="Stand Alone o p2p">Stand Alone o p2p</option><option value="MVC">MVC</option><option alue="Microservicios">Microservicios</option></select></td><td><input type=text id=' + PA_DBA_nombre + ' class=form-control></td><td><select class=form-control id='+ PA_DBA_perfil + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + PA_DBA_plaza + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+
+
+}
+
+}
+
+
+
+function agregarFilaCompusPersonalesOperacion(){
+    var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador6");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
     var CP_inmueble = res.value + '_CP_inmueble';
-    var CP_perfil = res.value + '_CP_perfil';
+    var CP_tipo = res.value + '_CP_tipo';
     var CP_cantidad = res.value + '_CP_cantidad';
+    var CP_antiguedad = res.value + '_CP_antiguedad';
+    var CP_mtto = res.value + '_CP_mtto';
     var CP_origen = res.value + '_CP_origen';
 
-  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+CP_inmueble+ '  class=form-control></td><td><input type=text  placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo."  id='+CP_perfil + ' class=form-control></td><td><input type=number id='+CP_cantidad + ' class=form-control></td><td><input type=text id='+CP_origen+ ' class=form-control placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td><td></td>';
+  document.getElementById("tablaCompuEnOperacion").insertRow(-1).innerHTML = '<td><select class=form-control id='+ CP_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><select class=form-control id='+ CP_tipo +'>            <option value="Escritorio">Escritorio</option><option value="Lap Top">Lap Top</option></select></td> <td><input type="number" class=form-control id='+ CP_cantidad +'></td><td><input type="number" class=form-control id='+ CP_antiguedad +'></td><td><select class=form-control id='+ CP_mtto +'><option value="Sí">Sí</option><option value="No">No</option></select></td><td><select class=form-control id='+ CP_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 }else{
 
   //EXTRAS SECCION 1_!
@@ -1265,37 +1470,103 @@ var ajua = uuid + '/E_CP' + res.value;
 var ajua2 = firebase.database().ref(ajua);
 
 var A = $('#'+res.value +'_CP_inmueble').val();
-var B = $('#'+res.value +'_CP_perfil').val();
+var B = $('#'+res.value +'_CP_tipo').val();
 var C = $('#'+res.value +'_CP_cantidad').val();
-var D = $('#'+res.value +'_CP_origen').val();
+var D = $('#'+res.value +'_CP_antiguedad').val();
+var E = $('#'+res.value +'_CP_mtto').val();
+var F = $('#'+res.value +'_CP_origen').val();
 
 ajua2.set({
   
     E_CP1: A,
     E_CP2: B,
     E_CP3: C,
-    E_CP4: D
+    E_CP4: D,
+    E_CP5: E,
+    E_CP6: F
   }); 
 
 //console.log(ajua);
 res.value++;
 
-  var CP_inmueble = res.value + '_CP_inmueble';
-    var CP_perfil = res.value + '_CP_perfil';
+ var CP_inmueble = res.value + '_CP_inmueble';
+    var CP_tipo = res.value + '_CP_tipo';
     var CP_cantidad = res.value + '_CP_cantidad';
+    var CP_antiguedad = res.value + '_CP_antiguedad';
+    var CP_mtto = res.value + '_CP_mtto';
     var CP_origen = res.value + '_CP_origen';
 
-  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+CP_inmueble+ '  class=form-control></td><td><input type=text  placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+CP_perfil + ' class=form-control></td><td><input type=number id='+CP_cantidad + ' class=form-control></td><td><input type=text id='+CP_origen+ ' class=form-control placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc."></td><td></td>';
+  document.getElementById("tablaCompuEnOperacion").insertRow(-1).innerHTML = '<td><select class=form-control id='+ CP_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><select class=form-control id='+ CP_tipo +'>            <option value="Escritorio">Escritorio</option><option value="Lap Top">Lap Top</option></select></td> <td><input type="number" class=form-control id='+ CP_cantidad +'></td><td><input type="number" class=form-control id='+ CP_antiguedad +'></td><td><select class=form-control id='+ CP_mtto +'><option value="Sí">Sí</option><option value="No">No</option></select></td><td><select class=form-control id='+ CP_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 }
 
 }
+
+
+function agregarFilaCompusPersonalesSinuso(){
+    var uuid = $('p:first').text()
+
+
+  res = document.getElementById("contador7");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+    var CP_SINUSO_inmueble = res.value + '_CP_SINUSO_inmueble';
+    var CP_SINUSO_tipo = res.value + '_CP_SINUSO_tipo';
+    var CP_SINUSO_cantidad = res.value + '_CP_SINUSO_cantidad';
+    var CP_SINUSO_antiguedad = res.value + '_CP_SINUSO_antiguedad';
+    var CP_SINUSO_causa = res.value + '_CP_SINUSO_causa';
+    var CP_SINUSO_origen = res.value + '_CP_SINUSO_origen';
+
+  document.getElementById("tablaCompuSinUso").insertRow(-1).innerHTML = '<td><select class=form-control id='+ CP_SINUSO_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><select class=form-control id='+ CP_SINUSO_tipo +'>            <option value="Escritorio">Escritorio</option><option value="Lap Top">Lap Top</option></select></td> <td><input type="number" class=form-control id='+ CP_SINUSO_cantidad +'></td><td><input type="number" class=form-control id='+ CP_SINUSO_antiguedad +'></td><td><select class=form-control id='+ CP_SINUSO_causa +'><option value="Sí">Sí</option><option value="No">No</option></select></td><td><select class=form-control id='+ CP_SINUSO_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
+}else{
+
+  //EXTRAS SECCION 1_!
+var ajua = uuid + '/E_CP_SINUSO' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_CP_SINUSO_inmueble').val();
+var B = $('#'+res.value +'_CP_SINUSO_tipo').val();
+var C = $('#'+res.value +'_CP_SINUSO_cantidad').val();
+var D = $('#'+res.value +'_CP_SINUSO_antiguedad').val();
+var E = $('#'+res.value +'_CP_SINUSO_causa').val();
+var F = $('#'+res.value +'_CP_SINUSO_origen').val();
+
+ajua2.set({
+  
+    E_CP_SINUSO1: A,
+    E_CP_SINUSO2: B,
+    E_CP_SINUSO3: C,
+    E_CP_SINUSO4: D,
+    E_CP_SINUSO5: E,
+    E_CP_SINUSO6: F
+  }); 
+
+//console.log(ajua);
+res.value++;
+
+ 
+    var CP_SINUSO_inmueble = res.value + '_CP_SINUSO_inmueble';
+    var CP_SINUSO_tipo = res.value + '_CP_SINUSO_tipo';
+    var CP_SINUSO_cantidad = res.value + '_CP_SINUSO_cantidad';
+    var CP_SINUSO_antiguedad = res.value + '_CP_SINUSO_antiguedad';
+    var CP_SINUSO_causa = res.value + '_CP_SINUSO_causa';
+    var CP_SINUSO_origen = res.value + '_CP_SINUSO_origen';
+
+  document.getElementById("tablaCompuSinUso").insertRow(-1).innerHTML = '<td><select class=form-control id='+ CP_SINUSO_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><select class=form-control id='+ CP_SINUSO_tipo +'>            <option value="Escritorio">Escritorio</option><option value="Lap Top">Lap Top</option></select></td> <td><input type="number" class=form-control id='+ CP_SINUSO_cantidad +'></td><td><input type="number" class=form-control id='+ CP_SINUSO_antiguedad +'></td><td><select class=form-control id='+ CP_SINUSO_causa +'><option value="Sí">Sí</option><option value="No">No</option></select></td><td><select class=form-control id='+ CP_SINUSO_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
+
+}
+
+}
+
 
 function agregarFilaServidores(){
     var uuid = $('p:first').text()
 
 
-  res = document.getElementById("contador4");
+  res = document.getElementById("contador8");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1307,7 +1578,11 @@ if (res.value == 0) {
     var SERV_origen = res.value + '_SERV_origen';
     var SERV_proposito = res.value + '_SERV_proposito';
 
-  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+SERV_ubicacion + ' class=form-control></td><td><input type=text placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+SERV_origen + ' class=form-control></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
+
+ 
+
+
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><select class=form-control id='+ SERV_ubicacion +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><select class=form-control id='+ SERV_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
 }else{
   //EXTRAS SECCION 1_!
 var ajua = uuid + '/E_SERVS' + res.value;
@@ -1337,7 +1612,7 @@ res.value++;
     var SERV_origen = res.value + '_SERV_origen';
     var SERV_proposito = res.value + '_SERV_proposito';
 
-  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+SERV_ubicacion + ' class=form-control></td><td><input type=text placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+SERV_origen + ' class=form-control></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><select class=form-control id='+ SERV_ubicacion +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+SERV_resumen + ' class=form-control></td><td><input type=text id='+SERV_cantidad + '  class=form-control></td><td><select class=form-control id='+ SERV_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td><input type=text id='+SERV_proposito + ' class=form-control></td><td></td>';
 }
 
 }
@@ -1346,7 +1621,7 @@ function agregarFilaImpresorasEscaneres(){
    var uuid = $('p:first').text()
 
 
-  res = document.getElementById("contador5");
+  res = document.getElementById("contador9");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1356,8 +1631,11 @@ if (res.value == 0) {
     var IE_perfil = res.value + '_IE_perfil';
     var IE_cantidad = res.value + '_IE_cantidad';
     var IE_origen = res.value + '_IE_origen';
+    var IE_conectividad = res.value + '_IE_conectividad';
 
-  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+IE_inmueble + '  class=form-control></td><td><input type=text placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución." id='+IE_perfil + ' class=form-control></td><td><input type=number id='+IE_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+IE_origen + ' class=form-control></td><td>';
+
+
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = ' <td><select class=form-control id='+ IE_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución." id='+IE_perfil + ' class=form-control></td><td><input type=number id='+IE_cantidad + ' class=form-control></td><td><select class=form-control id='+ IE_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td><select class=form-control id='+ IE_conectividad +'><option value="Conectada a la red (Uso compartido)">Conectada a la red (Uso compartido)</option><option value="Conectado a un equipo (Uso personal)">Conectado a un equipo (Uso personal)</option></select></td><td></td>';
 }else{
   //EXTRAS SECCION 1_!
 var ajua = uuid + '/E_IMP_ESC' + res.value;
@@ -1367,13 +1645,15 @@ var A = $('#'+res.value +'_IE_inmueble').val();
 var B = $('#'+res.value +'_IE_perfil').val();
 var C = $('#'+res.value +'_IE_cantidad').val();
 var D = $('#'+res.value +'_IE_origen').val();
+var E = $('#'+res.value +'_IE_conectividad').val();
 
 ajua2.set({
   
     E_IE1: A,
     E_IE2: B,
     E_IE3: C,
-    E_IE4: D
+    E_IE4: D,
+    E_IE5: E
   }); 
 
 //console.log(ajua);
@@ -1383,8 +1663,9 @@ res.value++;
     var IE_perfil = res.value + '_IE_perfil';
     var IE_cantidad = res.value + '_IE_cantidad';
     var IE_origen = res.value + '_IE_origen';
+    var IE_conectividad = res.value + '_IE_conectividad';
 
-  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+IE_inmueble + '  class=form-control></td><td><input type=text placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución." id='+IE_perfil + ' class=form-control></td><td><input type=number id='+IE_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+IE_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = ' <td><select class=form-control id='+ IE_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución." id='+IE_perfil + ' class=form-control></td><td><input type=number id='+IE_cantidad + ' class=form-control></td><td><select class=form-control id='+ IE_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td><select class=form-control id='+ IE_conectividad +'><option value="Conectada a la red (Uso compartido)">Conectada a la red (Uso compartido)</option><option value="Conectado a un equipo (Uso personal)">Conectado a un equipo (Uso personal)</option></select></td><td></td>';
 }
 }
 
@@ -1392,7 +1673,7 @@ function agregarFilaEquiAudiovisual(){
   var uuid = $('p:first').text()
 
 
-  res = document.getElementById("contador6");
+  res = document.getElementById("contador10");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1403,7 +1684,7 @@ if (res.value == 0) {
     var EA_cantidad = res.value + '_EA_cantidad';
     var EA_origen = res.value + '_EA_origen';
 
-  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+EA_inmueble + '  class=form-control></td><td><input type=text placeholder="Resolución, luminosidad, etc."  id='+EA_perfil + ' class=form-control></td><td><input type=number id='+EA_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+EA_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><select class=form-control id='+ EA_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Resolución, luminosidad, etc."  id='+EA_perfil + ' class=form-control></td><td><input type=number id='+EA_cantidad + ' class=form-control></td><td><select class=form-control id='+ EA_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 }else{
 var ajua = uuid + '/E_EA' + res.value;
@@ -1430,7 +1711,7 @@ res.value++;
     var EA_cantidad = res.value + '_EA_cantidad';
     var EA_origen = res.value + '_EA_origen';
 
-  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+EA_inmueble + '  class=form-control></td><td><input type=text placeholder="Resolución, luminosidad, etc."  id='+EA_perfil + ' class=form-control></td><td><input type=number id='+EA_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+EA_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaEquipAudiovisual").insertRow(-1).innerHTML = '<td><select class=form-control id='+ EA_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Resolución, luminosidad, etc."  id='+EA_perfil + ' class=form-control></td><td><input type=number id='+EA_cantidad + ' class=form-control></td><td><select class=form-control id='+ EA_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 }
 
@@ -1441,7 +1722,7 @@ function agregarFilaOtrosDispositivos(){
    var uuid = $('p:first').text()
 
 
-  res = document.getElementById("contador7");
+  res = document.getElementById("contador11");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1452,7 +1733,7 @@ if (res.value == 0) {
     var OD_cantidad = res.value + '_OD_cantidad';
     var OD_origen = res.value + '_OD_origen';
 
-  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+OD_inmueble + '  class=form-control></td><td><input type=text placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id='+OD_perfil + ' class=form-control></td><td><input type=number id='+OD_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+OD_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><select class=form-control id='+ OD_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id='+OD_perfil + ' class=form-control></td><td><input type=number id='+OD_cantidad + ' class=form-control></td><td><select class=form-control id='+ OD_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 
 }else{
@@ -1480,7 +1761,7 @@ var OD_inmueble = res.value + '_OD_inmueble';
     var OD_cantidad = res.value + '_OD_cantidad';
     var OD_origen = res.value + '_OD_origen';
 
-  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+OD_inmueble + '  class=form-control></td><td><input type=text placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id='+OD_perfil + ' class=form-control></td><td><input type=number id='+OD_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+OD_origen + ' class=form-control></td><td></td>';
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><select class=form-control id='+ OD_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id='+OD_perfil + ' class=form-control></td><td><input type=number id='+OD_cantidad + ' class=form-control></td><td><select class=form-control id='+ OD_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 }
 
@@ -1490,7 +1771,7 @@ function agregarFilaTelIp(){
     var uuid = $('p:first').text()
 
 
-  res = document.getElementById("contador8");
+  res = document.getElementById("contador12");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1501,7 +1782,7 @@ if (res.value == 0) {
     var T_IP_cantidad = res.value + '_T_IP_cantidad';
     
 
-  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><input type=text id='+T_IP_inmueble + '  class=form-control></td><td><input type=text id='+T_IP_perfil + ' class=form-control></td><td><input type=text id='+T_IP_cantidad + ' class=form-control></td><td></td>';
+  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><select class=form-control id='+ T_IP_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text id='+T_IP_perfil + ' class=form-control></td><td><input type=text id='+T_IP_cantidad + ' class=form-control></td><td></td>';
 
 }else{
   var ajua = uuid + '/E_T_IP' + res.value;
@@ -1525,7 +1806,7 @@ res.value++;
     var T_IP_cantidad = res.value + '_T_IP_cantidad';
     
 
-  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><input type=text id='+T_IP_inmueble + '  class=form-control></td><td><input type=text id='+T_IP_perfil + ' class=form-control></td><td><input type=text id='+T_IP_cantidad + ' class=form-control></td><td></td>';
+  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><select class=form-control id='+ T_IP_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text id='+T_IP_perfil + ' class=form-control></td><td><input type=text id='+T_IP_cantidad + ' class=form-control></td><td></td>';
 
 }
 
@@ -1536,7 +1817,7 @@ function agregarFilaRedes(){
     var uuid = $('p:first').text()
 
 
-  res = document.getElementById("contador9");
+  res = document.getElementById("contador13");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1545,9 +1826,12 @@ if (res.value == 0) {
     var IR_inmueble = res.value + '_IR_inmueble';
     var IR_resumen = res.value + '_IR_resumen';
     var IR_cantidad = res.value + '_IR_cantidad';
+    var IR_puertos_ocupados = res.value + '_IR_puertos_ocupados';
+    var IR_puertos_desocupados= res.value + '_IR_puertos_desocupados';
+    var IR_switches_desocupados = res.value + '_IR_switches_desocupados';
     var IR_origen = res.value + '_IR_origen';
 
-  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+IR_inmueble + '  class=form-control></td><td><input type=text placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." id='+IR_resumen + ' class=form-control></td><td><input type=number id='+IR_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+IR_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><select class=form-control id='+ IR_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." id='+IR_resumen + ' class=form-control></td><td><input type=number id='+IR_cantidad + ' class=form-control></td><td><input type=number id='+IR_puertos_ocupados + ' class=form-control></td><td><input type=number id='+IR_puertos_desocupados + ' class=form-control></td><td><input type=number id='+IR_switches_desocupados + ' class=form-control></td><td><select class=form-control id='+ IR_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 
 }else{
@@ -1557,25 +1841,34 @@ var ajua2 = firebase.database().ref(ajua);
 var A = $('#'+res.value +'_IR_inmueble').val();
 var B = $('#'+res.value +'_IR_resumen').val();
 var C = $('#'+res.value +'_IR_cantidad').val();
-var D = $('#'+res.value +'_IR_origen').val();
+var D = $('#'+res.value +'_IR_puertos_ocupados').val();
+var E = $('#'+res.value +'_IR_puertos_desocupados').val();
+var F = $('#'+res.value +'_IR_switches_desocupados').val();
+var G = $('#'+res.value +'_IR_origen').val();
 
 ajua2.set({
   
     E_IR1: A,
     E_IR2: B,
     E_IR3: C,
-    E_IR4: D
+    E_IR4: D,
+    E_IR5: E,
+    E_IR6: F,
+    E_IR7: G
   }); 
 
 //console.log(ajua);
 res.value++;
 
-var IR_inmueble = res.value + '_IR_inmueble';
+ var IR_inmueble = res.value + '_IR_inmueble';
     var IR_resumen = res.value + '_IR_resumen';
     var IR_cantidad = res.value + '_IR_cantidad';
+    var IR_puertos_ocupados = res.value + '_IR_puertos_ocupados';
+    var IR_puertos_desocupados= res.value + '_IR_puertos_desocupados';
+    var IR_switches_desocupados = res.value + '_IR_switches_desocupados';
     var IR_origen = res.value + '_IR_origen';
 
- document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+IR_inmueble + '  class=form-control></td><td><input type=text placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." id='+IR_resumen + ' class=form-control></td><td><input type=number id='+IR_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+IR_origen + ' class=form-control></td><td>';
+ document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><select class=form-control id='+ IR_inmueble +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." id='+IR_resumen + ' class=form-control></td><td><input type=number id='+IR_cantidad + ' class=form-control></td><td><input type=number id='+IR_puertos_ocupados + ' class=form-control></td><td><input type=number id='+IR_puertos_desocupados + ' class=form-control></td><td><input type=number id='+IR_switches_desocupados + ' class=form-control></td><td><select class=form-control id='+ IR_origen +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 }
 
@@ -1585,46 +1878,56 @@ function agregarFilaOtrosServicios(){
   var uuid = $('p:first').text()
 
 
-  res = document.getElementById("contador10");
+  res = document.getElementById("contador14");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
     res.value = parseInt(res.value)+1;
 
-    var OS_inmueble = res.value + '_OS_inmueble';
-    var OS_resumen = res.value + '_OS_resumen';
+    var OS_tipo = res.value + '_OS_tipo';
+    var OS_ancho_banda = res.value + '_OS_ancho_banda';
+    var OS_proveedor = res.value + '_OS_proveedor';
+    var OS_area = res.value + '_OS_area';
     var OS_cantidad = res.value + '_OS_cantidad';
-    var OS_origen = res.value + '_OS_origen';
+    var OS_nombre = res.value + '_OS_nombre';
 
-  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+OS_inmueble + '  class=form-control></td><td><input type=text id='+OS_resumen + ' class=form-control></td><td><input type=number id='+OS_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+OS_origen + ' class=form-control></td><td>';
+
+
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><select class=form-control id='+ OS_tipo +'><option value="Dedicado">Dedicado</option><option value="Asimétrico">Asimétrico</option><option value="Satelital">Satelital</option></select></td><td><input type=text id='+OS_ancho_banda + ' class=form-control></td><td><input type=text id='+OS_proveedor + ' class=form-control></td><td><input type=text id='+OS_area + ' class=form-control></td><td><input type=number id='+OS_cantidad + ' class=form-control></td><td><input type=text id='+OS_nombre + ' class=form-control></td><td></td>';
 
 
 }else{
 var ajua = uuid + '/E_OS' + res.value;
 var ajua2 = firebase.database().ref(ajua);
 
-var A = $('#'+res.value +'_OS_inmueble').val();
-var B = $('#'+res.value +'_OS_resumen').val();
-var C = $('#'+res.value +'_OS_cantidad').val();
-var D = $('#'+res.value +'_OS_origen').val();
+var A = $('#'+res.value +'_OS_tipo').val();
+var B = $('#'+res.value +'_OS_ancho_banda').val();
+var C = $('#'+res.value +'_OS_proveedor').val();
+var D = $('#'+res.value +'_OS_area').val();
+var E = $('#'+res.value +'_OS_cantidad').val();
+var F = $('#'+res.value +'_OS_nombre').val();
 
 ajua2.set({
   
     E_OS1: A,
     E_OS2: B,
     E_OS3: C,
-    E_OS4: D
+    E_OS4: D,
+    E_OS3: E,
+    E_OS4: F
   }); 
 
 //console.log(ajua);
 res.value++;
 
-var OS_inmueble = res.value + '_OS_inmueble';
-    var OS_resumen = res.value + '_OS_resumen';
+var OS_tipo = res.value + '_OS_tipo';
+    var OS_ancho_banda = res.value + '_OS_ancho_banda';
+    var OS_proveedor = res.value + '_OS_proveedor';
+    var OS_area = res.value + '_OS_area';
     var OS_cantidad = res.value + '_OS_cantidad';
-    var OS_origen = res.value + '_OS_origen';
+    var OS_nombre = res.value + '_OS_nombre';
 
-  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+OS_inmueble + '  class=form-control></td><td><input type=text id='+OS_resumen + ' class=form-control></td><td><input type=number id='+OS_cantidad + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+OS_origen + ' class=form-control></td><td>';
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><select class=form-control id='+ OS_tipo +'><option value="Dedicado">Dedicado</option><option value="Asimétrico">Asimétrico</option><option value="Satelital">Satelital</option></select></td><td><input type=text id='+OS_ancho_banda + ' class=form-control></td><td><input type=text id='+OS_proveedor + ' class=form-control></td><td><input type=text id='+OS_area + ' class=form-control></td><td><input type=number id='+OS_cantidad + ' class=form-control></td><td><input type=text id='+OS_nombre + ' class=form-control></td><td></td>';
 
 
 }
@@ -1634,7 +1937,7 @@ var OS_inmueble = res.value + '_OS_inmueble';
 function agregarFilaSoftware(){
   var uuid = $('p:first').text()
 
-  res = document.getElementById("contador11");
+  res = document.getElementById("contador15");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1644,9 +1947,11 @@ if (res.value == 0) {
    var SC_version = res.value + '_SC_version';
    var SC_so = res.value + '_SC_so';
    var SC_licencias = res.value + '_SC_licencias';
+   var SC_licencias_en_uso = res.value + '_SC_licencias_en_uso';
    var SC_origen = res.value + '_SC_origen';
 
-  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><input type=text id='+SC_so + ' class=form-control></td><td><input type=number  id='+SC_licencias + ' class=form-control></td><td><input placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." type=text id='+SC_origen + ' class=form-control></td><td></td>';
+
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><select class=form-control id='+ SC_so +'><option value="Linux">Linux</option><option value="Mac">Mac</option><option value="Windows 10">Windows 10</option><option value="Windows Server">Windows Server</option>         </select></td><td><input type=number  id='+SC_licencias + ' class=form-control></td><td><input type=number  id='+SC_licencias_en_uso + ' class=form-control></td><td><select class=form-control id='+SC_origen+'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 }else{
 var ajua = uuid + '/E_SC' + res.value;
@@ -1656,7 +1961,8 @@ var A = $('#'+res.value +'_SC_paquete').val();
 var B = $('#'+res.value +'_SC_version').val();
 var C = $('#'+res.value +'_SC_so').val();
 var D = $('#'+res.value +'_SC_licencias').val();
-var E = $('#'+res.value +'_SC_origen').val();
+var E = $('#'+res.value +'_SC_licencias_en_uso').val();
+var F = $('#'+res.value +'_SC_origen').val();
 
 ajua2.set({
   
@@ -1664,7 +1970,8 @@ ajua2.set({
     E_SC2: B,
     E_SC3: C,
     E_SC4: D,
-    E_SC5: E
+    E_SC5: E,
+    E_SC6: F
   }); 
 
 //console.log(ajua);
@@ -1673,9 +1980,10 @@ var SC_paquete = res.value + '_SC_paquete';
    var SC_version = res.value + '_SC_version';
    var SC_so = res.value + '_SC_so';
    var SC_licencias = res.value + '_SC_licencias';
+   var SC_licencias_en_uso = res.value + '_SC_licencias_en_uso';
    var SC_origen = res.value + '_SC_origen';
 
-  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><input type=text id='+SC_so + ' class=form-control></td><td><input type=number id='+SC_licencias + ' class=form-control></td><td><input type=text placeholder="Contrato de la DGTIC, adquisición con recursos PROFORHCOM, adquisición con recursos COMIPEMS, etc." id='+SC_origen + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+SC_paquete + '  class=form-control></td><td><input type=text id='+SC_version + ' class=form-control></td><td><select class=form-control id='+ SC_so +'><option value="Linux">Linux</option><option value="Mac">Mac</option><option value="Windows 10">Windows 10</option><option value="Windows Server">Windows Server</option>         </select></td><td><input type=number  id='+SC_licencias + ' class=form-control></td><td><input type=number  id='+SC_licencias_en_uso + ' class=form-control></td><td><select class=form-control id='+SC_origen+'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
 }
 
@@ -1684,7 +1992,7 @@ var SC_paquete = res.value + '_SC_paquete';
 function agregarFilaSoftwareFree(){
    var uuid = $('p:first').text()
 
-  res = document.getElementById("contador12");
+  res = document.getElementById("contador16");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1696,7 +2004,7 @@ if (res.value == 0) {
    var SL_licencias = res.value + '_SL_licencias';
 
 
-  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><input type=text id='+SL_so + ' class=form-control></td><td><input type=number id='+SL_licencias + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><select class=form-control id='+ SL_so +'><option value="Linux">Linux</option><option value="Mac">Mac</option><option value="Windows 10">Windows 10</option><option value="Windows Server">Windows Server</option>         </select></td><td><input type=number id='+SL_licencias + ' class=form-control></td><td></td>';
 
 }else{
 var ajua = uuid + '/E_SL' + res.value;
@@ -1723,7 +2031,7 @@ var SL_paquete = res.value + '_SL_paquete';
    var SL_licencias = res.value + '_SL_licencias';
 
 
-  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><input type=text id='+SL_so + ' class=form-control></td><td><input type=number id='+SL_licencias + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSoftwareFree").insertRow(-1).innerHTML = '<td><input type=text id='+SL_paquete + '  class=form-control></td><td><input type=text id='+SL_version + ' class=form-control></td><td><select class=form-control id='+ SL_so +'><option value="Linux">Linux</option><option value="Mac">Mac</option><option value="Windows 10">Windows 10</option><option value="Windows Server">Windows Server</option>         </select></td><td><input type=number id='+SL_licencias + ' class=form-control></td><td></td>    ';
 
 }
 
@@ -1732,7 +2040,7 @@ var SL_paquete = res.value + '_SL_paquete';
 function agregarFilaSystemProd(){
    var uuid = $('p:first').text()
 
-  res = document.getElementById("contador13");
+  res = document.getElementById("contador17");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1784,7 +2092,7 @@ res.value++;
 function agregarFilaSystemDes(){
      var uuid = $('p:first').text()
 
-  res = document.getElementById("contador14");
+  res = document.getElementById("contador18");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1833,10 +2141,65 @@ res.value++;
 
 }
 
+function agregarFilaAudioVisual(){
+     var uuid = $('p:first').text()
+
+  res = document.getElementById("contador19");
+    res.value = parseInt(res.value);
+
+if (res.value == 0) {
+    res.value = parseInt(res.value)+1;
+
+   var M_A_titulo = res.value + '_M_A_titulo';
+   var M_A_descripcion = res.value + '_M_A_descripcion';
+   var M_A_p_objetivo = res.value + '_M_A_p_objetivo';
+   var M_A_ano_creacion = res.value + '_M_A_ano_creacion';
+   var M_A_autor = res.value + '_M_A_autor';
+
+
+  document.getElementById("tablaMaterialAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+M_A_titulo + '  class=form-control></td><td><input type=text id='+M_A_descripcion + '  class=form-control></td><td><select class=form-control id='+M_A_p_objetivo+'><option value="Estudiantes">Estudiantes</option><option value="Docentes">Docentes</option><option value="Padres de familia">Padres de familia</option><option value="Personal directivo ó administrativo">Personal directivo ó administrativo</option><option value="Público en general">Público en general</option></select></td><td><input type=number id='+M_A_ano_creacion + ' class=form-control></td><td><input type=text id='+M_A_autor + ' class=form-control></td><td></td>';
+}else{
+var ajua = uuid + '/E_M_A' + res.value;
+var ajua2 = firebase.database().ref(ajua);
+
+var A = $('#'+res.value +'_M_A_titulo').val();
+var B = $('#'+res.value +'_M_A_descripcion').val();
+var C = $('#'+res.value +'_M_A_p_objetivo').val();
+var D = $('#'+res.value +'_M_A_ano_creacion').val();
+var E = $('#'+res.value +'_M_A_autor').val();
+
+ajua2.set({
+  
+    E_M_A1: A,
+    E_M_A2: B,
+    E_M_A3: C,
+    E_M_A4: D,
+    E_M_A5: E
+  }); 
+
+//console.log(ajua);
+res.value++;
+
+   var M_A_titulo = res.value + '_M_A_titulo';
+   var M_A_descripcion = res.value + '_M_A_descripcion';
+   var M_A_p_objetivo = res.value + '_M_A_p_objetivo';
+   var M_A_ano_creacion = res.value + '_M_A_ano_creacion';
+   var M_A_autor = res.value + '_M_A_autor';
+
+
+  document.getElementById("tablaMaterialAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+M_A_titulo + '  class=form-control></td><td><input type=text id='+M_A_descripcion + '  class=form-control></td><td><select class=form-control id='+M_A_p_objetivo+'><option value="Estudiantes">Estudiantes</option><option value="Docentes">Docentes</option><option value="Padres de familia">Padres de familia</option><option value="Personal directivo ó administrativo">Personal directivo ó administrativo</option><option value="Público en general">Público en general</option></select></td><td><input type=number id='+M_A_ano_creacion + ' class=form-control></td><td><input type=text id='+M_A_autor + ' class=form-control></td><td></td>';
+ 
+  
+}
+
+}
+
+
+
 function agregarFilaNecesidades(){
    var uuid = $('p:first').text()
 
-  res = document.getElementById("contador15");
+  res = document.getElementById("contador20");
     res.value = parseInt(res.value);
 
 if (res.value == 0) {
@@ -1848,7 +2211,9 @@ if (res.value == 0) {
      var NTIC_cantidad = res.value + '_NTIC_cantidad';
       var NTIC_causa = res.value + '_NTIC_causa';
 
-  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text placeholder="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc." id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=number id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
+
+
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><select class=form-control id='+NTIC_tipo+'><option value="licencias de software">licencias de software</option><option value="personal para soporte técnico">personal para soporte técnico</option><option value="Equipo de computo">Equipo de computo</option><option value="Capacitación de uso de software">Capacitación de uso de software</option></select></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=number id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
 }else{
 var ajua = uuid + '/E_NTIC' + res.value;
 var ajua2 = firebase.database().ref(ajua);
@@ -1876,7 +2241,7 @@ res.value++;
      var NTIC_cantidad = res.value + '_NTIC_cantidad';
       var NTIC_causa = res.value + '_NTIC_causa';
 
-  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text placeholder="Tipo de hardware, licencias de software, DBA, programadores, personal para soporte técnico, etc." id='+NTIC_tipo + '  class=form-control></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=number id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><select class=form-control id='+NTIC_tipo+'><option value="licencias de software">licencias de software</option><option value="personal para soporte técnico">personal para soporte técnico</option><option value="Equipo de computo">Equipo de computo</option><option value="Capacitación de uso de software">Capacitación de uso de software</option></select></td><td><input type=text id='+NTIC_proposito + ' class=form-control></td><td><input type=text id='+NTIC_caracteristicas + ' class=form-control></td><td><input type=number id='+NTIC_cantidad + ' class=form-control></td><td><input type=text id='+NTIC_causa + ' class=form-control></td><td></td>';
 
 }
 

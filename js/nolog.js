@@ -214,7 +214,7 @@ var uuid = $('p:first').text()
     const F = cont1 + '_correo';
 
 
-  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td><input type=text id=' + F + ' class=form-control></td><td></td>';
+  document.getElementById("tablaPersonalResponsable").insertRow(-1).innerHTML = ' <td><select class=form-control id='+ A + '><option value="Responsable de TIC en la UR">Responsable de TIC en la UR</option><option value="Responsable de desarrollo y mantenimiento de sistema informáticos">Responsable de desarrollo y mantenimiento de sistema informáticos</option><option value="Responsable de soporte técnico y enlace informático ante la DGTIC">Responsable de soporte técnico y enlace informático ante la DGTIC</option></select></td><td><input type=text id= ' +B + ' class=form-control></td><td><select class=form-control id=' +C + ' ><option value="Asistente">Asistente</option><option value="Director General">Director General</option><option value="Coordinador">Coordinador</option><option value="Jefe de la Unidad (encargado)">Jefe de la Unidad (encargado)</option><option value="Operativo">Operativo</option> <option value="Subdirector de Área">Subdirector de Área</option></select></td><td><select class=form-control id=' + D + ' ><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text id=' + E + ' class=form-control></td><td><input type=text id=' + F + ' class=form-control></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
@@ -268,7 +268,7 @@ var uuid = $('p:first').text()
     const D = cont1 + '_PA_tipo';
 
 
-  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><select class=form-control id=' + D + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select><td></td>';
+  document.getElementById("tablaPersonalApoyo").insertRow(-1).innerHTML = '<td><select class=form-control id=' +A+ ' ><option value="  Desarrollo y mantenimiento de sistema informáticos">  Desarrollo y mantenimiento de sistema informáticos</option><option value="Soporte Técnico">Soporte Técnico</option></select></td><td><input type=text id=' + B + ' class=form-control></td><td><select class=form-control id='+ C + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + D + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
 
 
 
@@ -293,11 +293,9 @@ var uuid = $('p:first').text()
 
 };
 
-
-
-///////////////////////////// SECCION 2_1 /////////////////////////////////////////////////7
- var SECCION2_1 = data.val().SECCION2_1;
-  $('#contador3').val(SECCION2_1);
+///////////////////////////// SECCION 1_3 /////////////////////////////////////////////////7
+ var SECCION1_3 = data.val().SECCION1_3;
+  $('#contador3').val(SECCION1_3);
   var calcular = $('#contador3').val();
   
 
@@ -314,23 +312,23 @@ for (var i=0; i< res.value; i++) {
 
 
 var uuid = $('p:first').text()
-  var ch_pr = uuid + '/E_CP' + cont1;
+  var ch_pr = uuid + '/E_PA_PERFILTICS' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-    const A = cont1 + '_CP_inmueble';
-    const B = cont1 + '_CP_perfil';
-    const C = cont1 + '_CP_cantidad';
-    const D = cont1 + '_CP_origen';
+    const A = cont1 + '_PA_perfiltics_especialidad';
+    const B = cont1 + '_PA_perfiltics_name';
+    const C = cont1 + '_PA_perfiltics_perfil';
+    const D = cont1 + '_PA_perfiltics_plaza';
 
 
-  document.getElementById("tablaCompuPersonal").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
+  document.getElementById("tablaPersonalApoyoTicsOtros").insertRow(-1).innerHTML = ' <td><select class=form-control id='+ A +'><option value="  Desarrollo y mantenimiento de sistema informáticos">  Desarrollo y mantenimiento de sistema informáticos</option><option value="Soporte Técnico">Soporte Técnico</option></select></td><td><input type=text id=' + B + ' class=form-control></td><td><select class=form-control id='+ C + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + D + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
-    var a = data.val().E_CP1;
-    var b = data.val().E_CP2;
-    var c = data.val().E_CP3;
-    var d = data.val().E_CP4;
+    var a = data.val().E_PA_PERFILTICS1;
+    var b = data.val().E_PA_PERFILTICS2;
+    var c = data.val().E_PA_PERFILTICS3;
+    var d = data.val().E_PA_PERFILTICS4;
    
 
     $('#'+A+'').val(a);
@@ -344,10 +342,9 @@ var uuid = $('p:first').text()
 
 };
 
-
-///////////////////////////// SECCION 2_2 /////////////////////////////////////////////////7
- var SECCION2_2 = data.val().SECCION2_2;
-  $('#contador4').val(SECCION2_2);
+///////////////////////////// SECCION 1_4 /////////////////////////////////////////////////7
+ var SECCION1_4 = data.val().SECCION1_4;
+  $('#contador4').val(SECCION1_4);
   var calcular = $('#contador4').val();
   
 
@@ -356,6 +353,238 @@ if (calcular == 0) {
 }else{
 
 res = document.getElementById("contador4");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_PA_PERFIL_WEBAPPS' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_PA_WAPPS_especialidad';
+    const B = cont1 + '_PA_WAPPS_paradigma';
+    const C = cont1 + '_PA_WAPPS_lenguaje';
+    const D = cont1 + '_PA_WAPPS_arquitectura';
+    const E = cont1 + '_PA_WAPPS_nombre';
+    const F = cont1 + '_PA_WAPPS_perfil';
+    const G = cont1 + '_PA_WAPPS_plaza';
+
+
+  document.getElementById("tablaPersonalApoyoWebDeveloper").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Front End">Front End</option><option value="Fullstack">Fullstack</option></select></td><td><select class=form-control id='+ B +'><option value="Programación Estructurada">Programación Estructurada</option><option value="Programación Orientada a Objetos">Programación Orientada a Objetos</option><option value="Programación basada en componentes">Programación basada en componentes</option></select></td><td><select class=form-control id='+ C +'><option value="Java">Java</option><option value="Php">Php</option><option value="Programación basada en componentes">Visual Basic</option><option value="Javascript">Javascript</option><option value="Python">Python</option><option value="C#">C#</option><option value="Tyscript">Tyscript</option><option value="Ruby">Ruby</option>          </select></td><td><select class=form-control id='+ D +'><option value="Servidor (Mainframe)">Servidor (Mainframe)</option><option value="Cliente/Servidor">Cliente/Servidor</option><option value="Stand Alone o p2p">Stand Alone o p2p</option><option value="MVC">MVC</option><option alue="Microservicios">Microservicios</option></select></td><td><input type=text id=' + E + ' class=form-control></td><td><select class=form-control id='+ F + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + G + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_PA_PERFIL_WEBAPPS1;
+    var b = data.val().E_PA_PERFIL_WEBAPPS2;
+    var c = data.val().E_PA_PERFIL_WEBAPPS3;
+    var d = data.val().E_PA_PERFIL_WEBAPPS4;
+    var e = data.val().E_PA_PERFIL_WEBAPPS5;
+    var f = data.val().E_PA_PERFIL_WEBAPPS6;
+    var g = data.val().E_PA_PERFIL_WEBAPPS7;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+    $('#'+F+'').val(f);
+    $('#'+G+'').val(g);
+    
+  
+  });
+  
+}
+
+};
+
+
+///////////////////////////// SECCION 1_5 /////////////////////////////////////////////////7
+ var SECCION1_5 = data.val().SECCION1_5;
+  $('#contador5').val(SECCION1_5);
+  var calcular = $('#contador5').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador5");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_PA_PERFIL_DBA' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_PA_DBA_especialidad';
+    const B = cont1 + '_PA_DBA_paradigma';
+    const C = cont1 + '_PA_DBA_basededatos';
+    const D = cont1 + '_PA_DBA_arquitectura';
+    const E = cont1 + '_PA_DBA_nombre';
+    const F = cont1 + '_PA_DBA_perfil';
+    const G = cont1 + '_PA_DBA_plaza';
+
+
+  document.getElementById("tablaPersonalApoyoDBA").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Front End">Back End</option><option value="DBA">DBA</option><option value="Fullstack">Fullstack</option></select></td><td><select class=form-control id='+ B +'><option value="Programación Estructurada">Programación Estructurada</option><option value="Programación Orientada a Objetos">Programación Orientada a Objetos</option><option value="Programación basada en componentes">Programación basada en componentes</option></select></td><td> <select class=form-control id='+ C +'>            <option value="Sql Server">Sql Server</option><option value="Oracle">Oracle</option><option value="IBM DB2">IBM DB2</option><option value="SAP Sybase">SAP Sybase</option><option value="Informix">Informix</option><option value="Mysql">Mysql</option><option value="Mongo DB">Mongo DB</option><option value="Postgres SQL">Postgres SQL</option></select></td><td><select class=form-control id='+ D +'><option value="Servidor (Mainframe)">Servidor (Mainframe)</option><option value="Cliente/Servidor">Cliente/Servidor</option><option value="Stand Alone o p2p">Stand Alone o p2p</option><option value="MVC">MVC</option><option alue="Microservicios">Microservicios</option></select></td><td><input type=text id=' + E + ' class=form-control></td><td><select class=form-control id='+ F + '><option value="Preparatoria trunca">Preparatoria trunca</option><option value="Preparatoria terminada">Preparatoria terminada</option><option value="Técnico Bachiller Universitario">Técnico Bachiller Universitario</option><option value="Licenciatura en Administración">Licenciatura en Administración</option><option value="Lic en Administración de empresas">Licenciatura en Administración de empresas</option><option value="Licenciatura en ioquímica">Licenciatura en Bioquímica</option><option value="Licenciatura en Biotecnología">Licenciatura en Biotecnología</option><option value="Licenciatura en Ciencia y Tecnología de los Alimentos">Licenciatura en Ciencia y Tecnología de los Alimentos</option><option value="Licenciatura en Ciencias Biológicas">Licenciatura en Ciencias Biológicas</option><option value="Licenciatura en Ciencias de la Computación ">Licenciatura en Ciencias de la Computación </option><option value="Licenciatura en Comunicación Social">Licenciatura en Comunicación Social</option><option value="Licenciatura en Contaduría pública">Licenciatura en Contaduría pública</option><option value="Licenciatura en Derecho">Licenciatura en Derecho</option><option value="Licenciatura en Enfermería ">Licenciatura en Enfermería </option><option value="Licenciatura en Física ">Licenciatura en Física</option><option value="Licenciatura en Informática">Licenciatura en Informática</option><option value="Licenciatura en Marketing">Licenciatura en Marketing</option><option value="Licenciatura en Nutrición">Licenciatura en Nutrición</option><option value="Licenciatura en Pedagogía">Licenciatura en Pedagogía</option><option value="Licenciatura en Periodismo">Licenciatura en Periodismo</option><option value="Licenciatura en Producción de Radio y Televisión">Licenciatura en Producción de Radio y Televisión</option><option value="Licenciatura en Psicología">Licenciatura en Psicología</option>            <option value="Licenciatura en Química">Licenciatura en Química</option><option value="Licenciatura en Telecomunicaciones">Licenciatura en Telecomunicaciones</option><option value="Licenciatura en Turismo">Licenciatura en Turismo</option><option value="Ingeniería Agronómica">Ingeniería Agronómica</option><option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option><option value="Ingeniería Electrónica">Ingeniería Electrónica</option><option value="Ingeniería Electrónica con Orientación en Sistemas Digitales">Ingeniería Electrónica con Orientación en Sistemas Digitales</option><option value="Ingeniería en Alimentos">Ingeniería en Alimentos</option><option value="Ingeniería en Informática">Ingeniería en Informática</option><option value="Ingeniería Industrial">Ingeniería Industrial</option><option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option><option value="Ingeniería Química">Ingeniería Química</option></select></td><td><select class=form-control id=' + G + ' ><option selected>Selecciona una Opción</option><option value="Estructura">Estructura</option><option value="Eventual">Eventual</option><option value="Honorarios">Honorarios</option><option value="Docente">Docente</option><option value="Confianza">Confianza</option><option value="Base">Base</option></select></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_PA_PERFIL_DBA1;
+    var b = data.val().E_PA_PERFIL_DBA2;
+    var c = data.val().E_PA_PERFIL_DBA3;
+    var d = data.val().E_PA_PERFIL_DBA4;
+    var e = data.val().E_PA_PERFIL_DBA5;
+    var f = data.val().E_PA_PERFIL_DBA6;
+    var g = data.val().E_PA_PERFIL_DBA7;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+    $('#'+F+'').val(f);
+    $('#'+G+'').val(g);
+    
+  
+  });
+  
+}
+
+};
+
+
+
+
+///////////////////////////// SECCION 2_1 /////////////////////////////////////////////////7
+ var SECCION2_1 = data.val().SECCION2_1;
+  $('#contador6').val(SECCION2_1);
+  var calcular = $('#contador6').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador6");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_CP' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_CP_inmueble';
+    const B = cont1 + '_CP_tipo';
+    const C = cont1 + '_CP_cantidad';
+    const D = cont1 + '_CP_antiguedad';
+    const E = cont1 + '_CP_mtto';
+    const F = cont1 + '_CP_origen';
+
+
+  document.getElementById("tablaCompuEnOperacion").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><select class=form-control id='+ B +'>            <option value="Escritorio">Escritorio</option><option value="Lap Top">Lap Top</option></select></td> <td><input type="number" class=form-control id='+ C +'></td><td><input type="number" class=form-control id='+ D +'></td><td><select class=form-control id='+ E +'><option value="Sí">Sí</option><option value="No">No</option></select></td><td><select class=form-control id='+ F +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_CP1;
+    var b = data.val().E_CP2;
+    var c = data.val().E_CP3;
+    var d = data.val().E_CP4;
+    var e = data.val().E_CP5;
+    var f = data.val().E_CP6;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+    $('#'+F+'').val(f);
+  
+  });
+  
+}
+
+};
+
+///////////////////////////// SECCION 2_1 /////////////////////////////////////////////////7
+ var SECCION2_2 = data.val().SECCION2_2;
+  $('#contador7').val(SECCION2_2);
+  var calcular = $('#contador7').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador7");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_CP_SINUSO' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_CP_SINUSO_inmueble';
+    const B = cont1 + '_CP_SINUSO_tipo';
+    const C = cont1 + '_CP_SINUSO_cantidad';
+    const D = cont1 + '_CP_SINUSO_antiguedad';
+    const E = cont1 + '_CP_SINUSO_causa';
+    const F = cont1 + '_CP_SINUSO_origen';
+
+  document.getElementById("tablaCompuSinUso").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><select class=form-control id='+ B +'>            <option value="Escritorio">Escritorio</option><option value="Lap Top">Lap Top</option></select></td> <td><input type="number" class=form-control id='+ C +'></td><td><input type="number" class=form-control id='+ D +'></td><td><select class=form-control id='+ E +'><option value="Sí">Sí</option><option value="No">No</option></select></td><td><select class=form-control id='+ F +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
+
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_CP_SINUSO1;
+    var b = data.val().E_CP_SINUSO2;
+    var c = data.val().E_CP_SINUSO3;
+    var d = data.val().E_CP_SINUSO4;
+    var e = data.val().E_CP_SINUSO5;
+    var f = data.val().E_CP_SINUSO6;
+   
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+    $('#'+F+'').val(f);
+  
+  });
+  
+}
+
+};
+
+
+///////////////////////////// SECCION 2_3 /////////////////////////////////////////////////7
+ var SECCION2_3 = data.val().SECCION2_3;
+  $('#contador8').val(SECCION2_3);
+  var calcular = $('#contador8').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador8");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -374,7 +603,7 @@ var uuid = $('p:first').text()
     const E = cont1 + '_SERV_proposito';
 
 
-  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td></td>';
+  document.getElementById("tablaServidores").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Procesador, núcleos, RAM, capacidad de almacenamiento, sistema operativo." id='+B + ' class=form-control></td><td><input type=text id='+C + '  class=form-control></td><td><select class=form-control id='+ D +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td><input type=text id='+E + ' class=form-control></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
@@ -398,17 +627,17 @@ var uuid = $('p:first').text()
 
 
 
-///////////////////////////// SECCION 2_3 /////////////////////////////////////////////////7
- var SECCION2_3 = data.val().SECCION2_3;
-  $('#contador5').val(SECCION2_3);
-  var calcular = $('#contador5').val();
+///////////////////////////// SECCION 2_4 /////////////////////////////////////////////////7
+ var SECCION2_4 = data.val().SECCION2_4;
+  $('#contador9').val(SECCION2_4);
+  var calcular = $('#contador9').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador5");
+res = document.getElementById("contador9");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -424,23 +653,25 @@ var uuid = $('p:first').text()
     const B = cont1 + '_IE_perfil';
     const C = cont1 + '_IE_cantidad';
     const D = cont1 + '_IE_origen';
+    const E = cont1 + '_IE_conectividad';
 
 
 
-  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
-
+  document.getElementById("tablaImpEsc").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Tipo de impresión o digitalización, velocidad, máxima resolución." id='+B + ' class=form-control></td><td><input type=number id='+C + ' class=form-control></td><td><select class=form-control id='+ D +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td><select class=form-control id='+ E +'><option value="Conectada a la red (Uso compartido)">Conectada a la red (Uso compartido)</option><option value="Conectado a un equipo (Uso personal)">Conectado a un equipo (Uso personal)</option></select></td><td></td>';
  ch_pr2.on('value', function(data) {
 
     var a = data.val().E_IE1;
     var b = data.val().E_IE2;
     var c = data.val().E_IE3;
     var d = data.val().E_IE4;
+    var e = data.val().E_IE5;
    
 
     $('#'+A+'').val(a);
     $('#'+B+'').val(b);
     $('#'+C+'').val(c);
     $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
   
   });
   
@@ -448,17 +679,17 @@ var uuid = $('p:first').text()
 
 };
 
-///////////////////////////// SECCION 2_4 /////////////////////////////////////////////////7
- var SECCION2_4 = data.val().SECCION2_4;
-  $('#contador6').val(SECCION2_4);
-  var calcular = $('#contador6').val();
+///////////////////////////// SECCION 2_5 /////////////////////////////////////////////////7
+ var SECCION2_5 = data.val().SECCION2_5;
+  $('#contador10').val(SECCION2_5);
+  var calcular = $('#contador10').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador6");
+res = document.getElementById("contador10");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -499,17 +730,17 @@ var uuid = $('p:first').text()
 };
 
 
-///////////////////////////// SECCION 2_5 /////////////////////////////////////////////////7
- var SECCION2_5 = data.val().SECCION2_5;
-  $('#contador7').val(SECCION2_5);
-  var calcular = $('#contador7').val();
+///////////////////////////// SECCION 2_6 /////////////////////////////////////////////////7
+ var SECCION2_6 = data.val().SECCION2_6;
+  $('#contador11').val(SECCION2_6);
+  var calcular = $('#contador11').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador7");
+res = document.getElementById("contador11");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -527,7 +758,7 @@ var uuid = $('p:first').text()
     const D = cont1 + '_OD_origen';
 
 
-  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td></td>';
+  document.getElementById("tablaOtrosDispositivos").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="Controles de acceso, relojes checadores, lectores de huellas, lectores de código de barras, etc." id='+B + ' class=form-control></td><td><input type=number id='+C + ' class=form-control></td><td><select class=form-control id='+ D +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
@@ -551,15 +782,15 @@ var uuid = $('p:first').text()
 
 ///////////////////////////// SECCION 3_1 /////////////////////////////////////////////////7
  var SECCION3_1 = data.val().SECCION3_1;
-  $('#contador8').val(SECCION3_1);
-  var calcular = $('#contador8').val();
+  $('#contador12').val(SECCION3_1);
+  var calcular = $('#contador12').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador8");
+res = document.getElementById("contador12");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -576,7 +807,7 @@ var uuid = $('p:first').text()
     const C = cont1 + '_T_IP_cantidad';
 
 
-  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td></td>';
+  document.getElementById("tablaTelefoniaIp").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text id='+B + ' class=form-control></td><td><input type=text id='+C + ' class=form-control></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
@@ -597,15 +828,15 @@ var uuid = $('p:first').text()
 
 ///////////////////////////// SECCION 3_2 /////////////////////////////////////////////////7
  var SECCION3_2 = data.val().SECCION3_2;
-  $('#contador9').val(SECCION3_2);
-  var calcular = $('#contador9').val();
+  $('#contador13').val(SECCION3_2);
+  var calcular = $('#contador13').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador9");
+res = document.getElementById("contador13");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -620,10 +851,13 @@ var uuid = $('p:first').text()
     const A = cont1 + '_IR_inmueble';
     const B = cont1 + '_IR_resumen';
     const C = cont1 + '_IR_cantidad';
-    const D = cont1 + '_IR_origen';
+    const D = cont1 + '_IR_puertos_ocupados';
+    const E = cont1 + '_IR_puertos_desocupados';
+    const F = cont1 + '_IR_switches_desocupados';
+    const G = cont1 + '_IR_origen';
 
 
-  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' +D + ' class=form-control></td><td></td>';
+  document.getElementById("tablaRedes").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Argentina 28, Colonia Centro">Argentina 28, Colonia Centro</option><option value="Brasil 31, Colonia Centro">Brasil 31, Colonia Centro</option><option value="Revolución 1425, Colonia Campestre">Revolución 1425, Colonia Campestre</option><option value="Universidad 1200, Colonia Coyoacan">Universidad 1200, Colonia Coyoacan</option></select></td><td><input type=text placeholder="No incluir equipos administrados por la DGTIC: switches, access point, cámaras de video vigilancia, etc." id='+B + ' class=form-control></td><td><input type=number id='+C + ' class=form-control></td><td><input type=number id='+D + ' class=form-control></td><td><input type=number id='+E + ' class=form-control></td><td><input type=number id='+F + ' class=form-control></td><td><select class=form-control id='+ G +'><option value="Contrato con DGTIC">Contrato con DGTIC</option><option value="Adquisición de Recursos PROFORHCOM">Adquisición de Recursos PROFORHCOM</option><option value="Adquisición de Recursos COMIPEMS">Adquisición de Recursos COMIPEMS</option></select></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
@@ -631,12 +865,18 @@ var uuid = $('p:first').text()
     var b = data.val().E_IR2;
     var c = data.val().E_IR3;
     var d = data.val().E_IR4;
+    var e = data.val().E_IR5;
+    var f = data.val().E_IR6;
+    var g = data.val().E_IR7;
    
 
     $('#'+A+'').val(a);
     $('#'+B+'').val(b);
     $('#'+C+'').val(c);
     $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+    $('#'+F+'').val(f);
+    $('#'+G+'').val(g);
   
   });
   
@@ -647,15 +887,15 @@ var uuid = $('p:first').text()
 
 ///////////////////////////// SECCION 3_3/////////////////////////////////////////////////7
  var SECCION3_3 = data.val().SECCION3_3
-  $('#contador10').val(SECCION3_3);
- var calcular = $('#contador10').val();
+  $('#contador14').val(SECCION3_3);
+ var calcular = $('#contador14').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador10");
+res = document.getElementById("contador14");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -667,13 +907,15 @@ var uuid = $('p:first').text()
   var ch_pr = uuid + '/E_OS' + cont1;
   var ch_pr2 = firebase.database().ref(ch_pr);
 
-    const A = cont1 + '_OS_inmueble';
-    const B = cont1 + '_OS_resumen';
-    const C = cont1 + '_OS_cantidad';
-    const D = cont1 + '_OS_origen';
+    const A = cont1 + '_OS_tipo';
+    const B = cont1 + '_OS_ancho_banda';
+    const C = cont1 + '_OS_proveedor';
+    const D = cont1 + '_OS_area';
+    const E = cont1 + '_OS_cantidad';
+    const F = cont1 + '_OS_nombre';
 
 
-  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' +D + ' class=form-control></td><td></td>';
+  document.getElementById("tablaOtrosServicios").insertRow(-1).innerHTML = '<td><select class=form-control id='+ A +'><option value="Dedicado">Dedicado</option><option value="Asimétrico">Asimétrico</option><option value="Satelital">Satelital</option></select></td><td><input type=text id='+B + ' class=form-control></td><td><input type=text id='+C + ' class=form-control></td><td><input type=text id='+D + ' class=form-control></td><td><input type=number id='+E + ' class=form-control></td><td><input type=text id='+F + ' class=form-control></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
@@ -681,12 +923,16 @@ var uuid = $('p:first').text()
     var b = data.val().E_OS2;
     var c = data.val().E_OS3;
     var d = data.val().E_OS4;
+    var e = data.val().E_OS5;
+    var f = data.val().E_OS6;
    
 
     $('#'+A+'').val(a);
     $('#'+B+'').val(b);
     $('#'+C+'').val(c);
     $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+    $('#'+F+'').val(f);
   
   });
   
@@ -697,15 +943,15 @@ var uuid = $('p:first').text()
 
 ///////////////////////////// SECCION 4_1 /////////////////////////////////////////////////7
  var SECCION4_1 = data.val().SECCION4_1;
-  $('#contador11').val(SECCION4_1);
-  var calcular = $('#contador11').val();
+  $('#contador15').val(SECCION4_1);
+  var calcular = $('#contador15').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador11");
+res = document.getElementById("contador15");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -721,10 +967,11 @@ var uuid = $('p:first').text()
     const B = cont1 + '_SC_version';
     const C = cont1 + '_SC_so';
     const D = cont1 + '_SC_licencias';
-    const E = cont1 + '_SC_origen';
+    const E = cont1 + '_SC_licencias_en_uso';
+    const F = cont1 + '_SC_origen';
 
 
-  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td></td>';
+  document.getElementById("tablaSoftware").insertRow(-1).innerHTML = '<td><input type=text id='+A + '  class=form-control></td><td><input type=text id='+B + ' class=form-control></td><td><select class=form-control id='+ C +'><option value="Linux">Linux</option><option value="Mac">Mac</option><option value="Windows 10">Windows 10</option><option value="Windows Server">Windows Server</option>         </select></td><td><input type=number id='+D + ' class=form-control></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
@@ -733,12 +980,15 @@ var uuid = $('p:first').text()
     var c = data.val().E_SC3;
     var d = data.val().E_SC4;
     var e = data.val().E_SC5;
+    var f = data.val().E_SC6;
 
     $('#'+A+'').val(a);
     $('#'+B+'').val(b);
     $('#'+C+'').val(c);
     $('#'+D+'').val(d);
     $('#'+E+'').val(e);
+    $('#'+F+'').val(f);
+  
   
   });
   
@@ -750,15 +1000,15 @@ var uuid = $('p:first').text()
 
 ///////////////////////////// SECCION 4_2/////////////////////////////////////////////////7
  var SECCION4_2 = data.val().SECCION4_2
-  $('#contador12').val(SECCION4_2);
- var calcular = $('#contador12').val();
+  $('#contador16').val(SECCION4_2);
+ var calcular = $('#contador16').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador12");
+res = document.getElementById("contador16");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -801,15 +1051,15 @@ var uuid = $('p:first').text()
 
 ///////////////////////////// SECCION 5_1 /////////////////////////////////////////////////7
  var SECCION5_1 = data.val().SECCION5_1;
-  $('#contador13').val(SECCION5_1);
-  var calcular = $('#contador13').val();
+  $('#contador17').val(SECCION5_1);
+  var calcular = $('#contador17').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador13");
+res = document.getElementById("contador17");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -852,15 +1102,15 @@ var uuid = $('p:first').text()
 
 ///////////////////////////// SECCION 5_2 /////////////////////////////////////////////////7
  var SECCION5_2 = data.val().SECCION5_2;
-  $('#contador14').val(SECCION5_2);
-  var calcular = $('#contador14').val();
+  $('#contador18').val(SECCION5_2);
+  var calcular = $('#contador18').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador14");
+res = document.getElementById("contador18");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -902,19 +1152,67 @@ var uuid = $('p:first').text()
 };
 
 
-
-
 ///////////////////////////// SECCION 6_1 /////////////////////////////////////////////////7
  var SECCION6_1 = data.val().SECCION6_1;
-  $('#contador15').val(SECCION6_1);
-  var calcular = $('#contador15').val();
+  $('#contador19').val(SECCION6_1);
+  var calcular = $('#contador19').val();
   
 
 if (calcular == 0) {    
 //console.log('no hay nada extra dude');
 }else{
 
-res = document.getElementById("contador15");
+res = document.getElementById("contador19");
+ res.value = parseInt(res.value);
+
+for (var i=0; i< res.value; i++) {
+
+  var cont1 = 1 + i;
+
+
+var uuid = $('p:first').text()
+  var ch_pr = uuid + '/E_M_A' + cont1;
+  var ch_pr2 = firebase.database().ref(ch_pr);
+
+    const A = cont1 + '_M_A_titulo';
+    const B = cont1 + '_M_A_descripcion';
+    const C = cont1 + '_M_A_p_objetivo';
+    const D = cont1 + '_M_A_ano_creacion';
+    const E = cont1 + '_M_A_autor';
+
+
+  document.getElementById("tablaMaterialAudiovisual").insertRow(-1).innerHTML = '<td><input type=text id='+A + '  class=form-control></td><td><input type=text id='+B + '  class=form-control></td><td><select class=form-control id='+C+'><option value="Estudiantes">Estudiantes</option><option value="Docentes">Docentes</option><option value="Padres de familia">Padres de familia</option><option value="Personal directivo ó administrativo">Personal directivo ó administrativo</option><option value="Público en general">Público en general</option></select></td><td><input type=number id='+D + ' class=form-control></td><td><input type=text id='+E + ' class=form-control></td><td></td>';
+ ch_pr2.on('value', function(data) {
+
+    var a = data.val().E_M_A1;
+    var b = data.val().E_M_A2;
+    var c = data.val().E_M_A3;
+    var d = data.val().E_M_A4;
+    var e = data.val().E_M_A5;
+
+    $('#'+A+'').val(a);
+    $('#'+B+'').val(b);
+    $('#'+C+'').val(c);
+    $('#'+D+'').val(d);
+    $('#'+E+'').val(e);
+  
+  });
+  
+}
+
+};
+
+///////////////////////////// SECCION 6_2 /////////////////////////////////////////////////7
+ var SECCION6_2 = data.val().SECCION6_2;
+  $('#contador20').val(SECCION6_2);
+  var calcular = $('#contador20').val();
+  
+
+if (calcular == 0) {    
+//console.log('no hay nada extra dude');
+}else{
+
+res = document.getElementById("contador20");
  res.value = parseInt(res.value);
 
 for (var i=0; i< res.value; i++) {
@@ -933,7 +1231,7 @@ var uuid = $('p:first').text()
     const E = cont1 + '_NTIC_causa';
 
 
-  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><input type=text id='+A + ' class=form-control></td><td><input type=text id= ' +B + ' class=form-control></td><td><input type=text id=' +C + ' class=form-control></td><td><input type=text id=' + D + ' class=form-control></td><td><input type=text id=' + E + ' class=form-control></td><td></td>';
+  document.getElementById("tablaNecesidades").insertRow(-1).innerHTML = '<td><select class=form-control id='+A+'><option value="licencias de software">licencias de software</option><option value="personal para soporte técnico">personal para soporte técnico</option><option value="Equipo de computo">Equipo de computo</option><option value="Capacitación de uso de software">Capacitación de uso de software</option></select></td><td><input type=text id='+B + ' class=form-control></td><td><input type=text id='+C + ' class=form-control></td><td><input type=number id='+D + ' class=form-control></td><td><input type=text id='+E + ' class=form-control></td><td></td>';
 
  ch_pr2.on('value', function(data) {
 
@@ -959,8 +1257,6 @@ var uuid = $('p:first').text()
   //aqui termina el serializado value(data)
 });
 
-
-     
 
 
 
